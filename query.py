@@ -77,7 +77,7 @@ Antwort:
 
         answer = response.json().get("response")
         if answer:
-            print("\n🤖 Antwort:\n", answer.strip())
+            print("\n▸ ", answer.strip())
         else:
             print("\n⚠️ Keine Antwort vom Modell.")
             print("Raw response:", response.json())
