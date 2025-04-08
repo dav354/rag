@@ -1,0 +1,806 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Knowledge graph automated - Rag Tool docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-einleitung" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Rag Tool docs" class="md-header__button md-logo" aria-label="Rag Tool docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rag Tool docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Knowledge graph automated
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Rag Tool docs" class="md-nav__button md-logo" aria-label="Rag Tool docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Rag Tool docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/black/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Black
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/commitizen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commitizen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/fragen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testfragen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/first_results.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erster Test
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Research
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Research
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scraping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scraping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_quality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Quality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vector_database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vectordb
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-einleitung" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Einleitung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-grundlagen-was-ist-ein-website-knowledge-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Grundlagen / Was ist ein Website-Knowledge-Graph?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-warum-automatisierung-wichtig-ist" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Warum Automatisierung wichtig ist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technische-grundlagen-und-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Technische Grundlagen und Architektur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-anbieter-tools-und-bibliotheken" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Anbieter, Tools und Bibliotheken
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-best-practices-empfehlungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Best Practices &amp; Empfehlungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-fazit-ausblick" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Fazit &amp; Ausblick
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Knowledge graph automated</h1>
+
+<h2 id="1-einleitung">1. Einleitung</h2>
+<p>Ein <strong>Knowledge Graph</strong> (Wissensgraph) wandelt die unstrukturierten Inhalte einer Website in ein strukturiertes Netzwerk aus Wissen um. Dadurch können Informationen über Zusammenhänge explizit gemacht und leichter abgefragt werden. Insbesondere für Websites wie <strong>fiw.thws.de</strong> (Fakultät Informatik und Wirtschaftsinformatik der THWS) bietet ein Wissensgraph Mehrwert: Zum Beispiel ermöglicht er <strong>semantische Suche</strong> und <strong>intelligente Navigation</strong>, da Nutzer Anfragen auf konzeptueller Ebene stellen können (z. B. <em>„Zeige alle Module im Studiengang Informatik“</em>). Ebenso kann ein Wissensgraph die Grundlage für <strong>QA-Chatbots</strong> bilden, die Nutzern präzise Antworten liefern, indem sie strukturierte Fakten anstelle von Stichwortsuche verwenden. Durch die maschinenlesbare Darstellung der Inhalte lassen sich außerdem <strong>Empfehlungssysteme</strong> (z. B. verwandte Studiengänge oder Module) realisieren. Kurz gesagt: Ein Wissensgraph erhöht die <strong>Auffindbarkeit und Wiederverwendbarkeit</strong> von Web-Inhalten und schafft die Basis für fortgeschrittene Anwendungen der Datenanalyse.</p>
+<h2 id="2-grundlagen-was-ist-ein-website-knowledge-graph">2. Grundlagen / Was ist ein Website-Knowledge-Graph?</h2>
+<p>Ein Website-Knowledge-Graph ist eine <strong>strukturierte Darstellung</strong> der Entitäten (Objekte) und Beziehungen, die in den Inhalten einer Website vorkommen. Anstatt Informationen nur in Seiten und Absätzen vorzuhalten, werden sie als Knoten (Entitäten) und Kanten (Relationen) in einem Graphenmodell organisiert. Das Ziel ist, Wissen explizit und vernetzt abzubilden, sodass Computer es <strong>verstehen und verarbeiten</strong> können.</p>
+<p><strong>Begriffsklärung:</strong> Ein <em>Wissensgraph</em> wurde erstmals 2012 von Google populär gemacht und beschreibt ein Netz aus Knoten (z. B. Personen, Orte, Objekte) und Kanten (semantische Beziehungen zwischen diesen Knoten). Im Kontext einer Hochschul-Website wie fiw.thws.de könnten <strong>typische Knoten-Typen</strong> folgende sein:</p>
+<ul>
+<li><strong>Studiengang:</strong> z. B. <em>Informatik (B.Eng.)</em>, <em>E-Commerce (B.Sc.)</em>, <em>Wirtschaftsinformatik (B.Sc.)</em>. Jeder Studiengang ist ein Knoten.</li>
+<li><strong>Modul:</strong> einzelne Lehrveranstaltungen oder Module, die in Studiengängen vorkommen (ggf. aus Modulhandbüchern extrahiert).</li>
+<li><strong>Ansprechpartner:</strong> Personen wie Professoren, Mitarbeitende oder Studiengangsleiter. Diese sind als Knoten <em>Person</em> modellierbar, mit Attributen (E-Mail, Telefon etc.).</li>
+<li><strong>Frist/Termin:</strong> Wichtige Termine wie Bewerbungsfristen, Prüfungszeiträume oder Anmeldefristen für Wahlpflichtfächer.</li>
+</ul>
+<p><strong>Beispiel-Relationen:</strong> Zwischen diesen Knoten gibt es sinnvolle Beziehungen, zum Beispiel: <em>“Studiengang enthält Modul”</em>, <em>“Modul wird gelehrt von Ansprechpartner”</em>, <em>“Studiengang hat Abschlussgrad (B.Sc./M.Sc.)”</em>, <em>“Ansprechpartner hat Rolle (Professor, Mitarbeiter)”</em> oder <em>“Studiengang hat Bewerbungsfrist”</em>. Konkret könnte der Graph z. B. ausdrücken: <em>Studiengang Informatik – umfasst – Modul Programmieren I</em>, <em>Prof. Müller – ist Ansprechpartner für – Studiengang Informatik</em>, oder <em>Vertiefung Data Science – Wahlzeitraum_start – Januar 2025</em>. Durch solche Kanten wird implizites Wissen explizit modelliert.</p>
+<p>Ein Website-Wissensgraph verfolgt typischerweise zwei Hauptziele: <strong>(a)</strong> Inhalte der Website <em>vollständig und korrekt</em> abbilden (möglichst jedes relevante Datum wird erfasst), und <strong>(b)</strong> eine <em>Ontologie</em> (Schemastruktur) bereitstellen, die diese Inhalte formal beschreibt (z. B. Klassen wie <em>Studiengang</em>, <em>Modul</em>, <em>Person</em> und Relationen wie <em>hatModul</em>, <em>betreutStudiengang</em> etc.). Mit einer solchen Ontologie kann der Graph validiert und erweitert werden, und externe Daten (etwa aus anderen Hochschulquellen) könnten angebunden werden.</p>
+<h2 id="3-warum-automatisierung-wichtig-ist">3. Warum Automatisierung wichtig ist</h2>
+<p>Die Inhalte einer Hochschul-Webseite ändern sich laufend – neue <strong>Meldungen</strong>, aktualisierte <strong>Studienordnungen</strong>, personelle Änderungen bei <strong>Ansprechpartnern</strong> oder geänderte <strong>Termine</strong>. Eine <strong>automatisierte</strong> Erstellung und Aktualisierung des Wissensgraphen ist daher essentiell, um <em>laufend</em> den aktuellen Stand abzubilden, ohne jedes Mal händisch Daten einpflegen zu müssen. Manuelle Pflege eines Wissensgraphen wäre nicht nur zeitaufwendig, sondern auch fehleranfällig. Automation stellt sicher, dass die Daten <strong>konsistent und aktuell</strong> bleiben, während der Aufwand für Wartung minimiert wird. Traditionell erfordert die Erstellung eines Wissensgraphen viel fachliches Know-how und Handarbeit, doch moderne Ansätze – etwa mit NLP und KI – können große Teile des Prozesses übernehmen.</p>
+<p>Wichtige Gründe für Automatisierung:</p>
+<ul>
+<li><strong>Aktualität:</strong> Änderungen auf der Website (z. B. neue News, geänderte Fristen) sollen zeitnah im Graph reflektiert werden. Ein Crawler kann z. B. täglich die Seite durchsuchen und Differenzen erkennen.</li>
+<li><strong>Wartungsaufwand senken:</strong> Ist der Prozess einmal eingerichtet, läuft er weitgehend selbstständig. Redakteure müssen nicht doppelt arbeiten (Inhalt pflegen <em>und</em> Daten für den Graphen liefern), sondern der Graph zieht die Informationen aus der bestehenden Webseite.</li>
+<li><strong>Delta-Erkennung:</strong> Ein gutes System erkennt <strong>neue oder veränderte Inhalte</strong> automatisch. Zum Beispiel könnte der Crawler beim Vergleich mit dem letzten Lauf feststellen, dass eine neue Person in der Mitarbeiterliste hinzugekommen ist oder dass eine Studiengangsseite aktualisiert wurde. Solche Deltas können markiert und – nach Bestätigung – in den Graph übernommen werden.</li>
+<li><strong>Validierung vor Einfügen:</strong> Automatisierung heißt nicht ungeprüfte Übernahme. Es ist wichtig, neu erkannte Fakten zunächst zu <em>validieren</em>. Dies kann teils automatisiert (etwa durch Schema-Validierung mittels SHACL) geschehen, teils durch kurze manuelle Prüfung. Automatisiert erkannte Inhalte sollten idealerweise von einem Skript oder einem Redakteur gegengeprüft werden, bevor sie endgültig in den Wissensgraph geschrieben werden. Dadurch bleibt die <strong>Datenqualität</strong> hoch.</li>
+<li><strong>Qualitätssicherung (QA):</strong> Mit einem stets aktuellen Wissensgraphen lassen sich auch Qualitätssicherungs-Abfragen formulieren. Beispiel: Gibt es einen Studiengang auf der Website ohne zugeordneten Ansprechpartner im Graph? Solche Anomalien deuten auf Erfassungsprobleme hin. Ein automatisierter Prozess kann solche Fälle melden.</li>
+</ul>
+<p>Insgesamt ermöglicht eine Automatisierung, dass der Wissensgraph <strong>lebendig</strong> bleibt und mit der Website mitwächst, ohne dass dafür erheblicher Mehraufwand entsteht. Die Redakteure können sich auf die Inhaltspflege konzentrieren, während der technische Prozess die Graph-Aktualisierung übernimmt.</p>
+<h2 id="4-technische-grundlagen-und-architektur">4. Technische Grundlagen und Architektur</h2>
+<p>Um einen Wissensgraphen aus einer Website wie fiw.thws.de automatisiert zu erzeugen, bedarf es einer <strong>mehrstufigen Pipeline</strong> mit verschiedenen Komponenten. Im Folgenden werden die Hauptschritte einer möglichen Architektur erläutert, alle vorzugsweise basierend auf dem <strong>Python-Ökosystem</strong> für leichte Wartbarkeit und Open-Source-Unterstützung:</p>
+<ol>
+<li>
+<p><strong>Crawler (Web Scraping):</strong> Zunächst wird ein Crawler benötigt, der die Website <strong>vollständig durchsucht und die HTML-Inhalte</strong> einsammelt. Tools wie <em>Scrapy</em> bieten hierfür ein leistungsfähiges Gerüst – man definiert Regeln für zu besuchende URLs und zu extrahierende Inhalte, den Rest erledigt das Framework. Für dynamische Inhalte (falls Teile der Seite via JavaScript nachgeladen werden) kann ein Headless-Browser wie <em>Playwright</em> oder <em>Selenium</em> integriert werden, um die gerenderte Seite auszulesen. Der Crawler sollte so konfiguriert sein, dass er alle relevanten Unterseiten der fiw.thws.de findet (z. B. durch Folgen aller internen Links oder Auslesen einer Sitemap falls vorhanden). Ergebnis dieses Schritts: eine Sammlung von HTML-Seiten bzw. der rohe Inhalt aller Seiten.</p>
+</li>
+<li>
+<p><strong>Parser &amp; Content-Extractor:</strong> Die rohen HTML-Seiten müssen nun verarbeitet werden, um die <strong>relevanten Daten</strong> zu isolieren. Hier kommen Parser wie <em>BeautifulSoup</em> (Python library zur HTML-Analyse) zum Einsatz, oder man nutzt direkt Scrapy’s Selektoren. Beispielsweise kann der Parser aus einer Personen-Liste die Namen, E-Mail-Adressen und Räume extrahieren, oder aus einer Studiengangsseite die Liste der Module, Abschlussart, Dauer etc. Dieser Schritt erfordert oft individuelles <em>Parsing pro Seitentyp</em> (z. B. anders für News-Meldungen als für Personen-Profile). Das Resultat ist strukturierte Zwischen-Daten, z. B. in Form von Python-Dictionaries oder DataFrames, die z. B. folgendermaßen aussehen könnten: <code>{ "Studiengang": "Informatik", "Abschluss": "B.Eng.", "Module": ["Programmieren I", "..."], "Ansprechpartner": "Prof. X" }</code>.</p>
+</li>
+<li>
+<p><strong>NLP &amp; Entity Recognition:</strong> Viele Inhalte sind in Fließtext eingebettet. Ein <strong>Natural Language Processing</strong>-Schritt kann helfen, Entitäten und Relationen aus solchen Texten zu ziehen. Mit <em>spaCy</em>, einer Open-Source-NLP-Bibliothek in Python (<a href="https://spacy.io/usage/spacy-101#:~:text=spaCy%20is%20a%20free%2C%20open,NLP%29%20in%20Python">spaCy 101: Everything you need to know · spaCy Usage Documentation</a>), lassen sich <strong>Named Entities</strong> erkennen, etwa Personennamen, Organisationen oder Orte. Auf einer Seite mit einer News-Meldung könnten so Namen von Personen oder Institutionen identifiziert werden. Falls komplexe Satzstrukturen vorhanden sind, kann <em>Open Information Extraction (OpenIE)</em> eingesetzt werden, um aus Sätzen automatisch Tripel (Subjekt, Prädikat, Objekt) zu extrahieren (<a href="https://github.com/philipperemy/stanford-openie-python#:~:text=Open%20information%20extraction%20,Obama%3B%20was%20born%20in%3B%20Hawaii">GitHub - philipperemy/stanford-openie-python: Stanford Open Information Extraction made simple!</a>). OpenIE-Tools identifizieren z. B. aus dem Satz <em>„Prof. Müller leitet den Studiengang Informatik“</em> das Tripel <em>(Prof. Müller; leitet; Studiengang Informatik)</em>, ohne dass vordefinierte Schemas nötig sind (<a href="https://github.com/philipperemy/stanford-openie-python#:~:text=Open%20information%20extraction%20,Obama%3B%20was%20born%20in%3B%20Hawaii">GitHub - philipperemy/stanford-openie-python: Stanford Open Information Extraction made simple!</a>). Dieser NLP-Schritt ergänzt die strukturierten Daten aus dem vorherigen Schritt und findet Beziehungen, die nicht offensichtlich aus dem HTML-Layout extrahierbar waren.</p>
+</li>
+<li>
+<p><strong>Mapping zu Ontologie (Daten-Mapping):</strong> Die extrahierten Informationen müssen nun auf das <strong>Schema (Ontologie)</strong> des Wissensgraphen abgebildet werden. Dazu definiert man eine Ontologie, also Klassen und Relationen, die im Graph existieren dürfen (z. B. Klasse <em>Studiengang</em>, Relation <em>hatModul</em> etc.). Das Mapping kann teils regelbasiert erfolgen (z. B. wenn im Parser schon klar ist, dass ein bestimmtes Feld ein Modulname ist, wird daraus eine Entität vom Typ <em>Modul</em>). In komplizierteren Fällen helfen Mapping-Tools oder man schreibt Zuordnungsregeln: z. B. <em>„Wenn ein Person-Name erkannt wurde und Kontext ‘Professor’ auftaucht, instanziiere Knoten vom Typ Professor und verknüpfe mit zugehörigem Studiengang.“</em> Automatische Ontologie-Erstellung ist ebenfalls denkbar (etwa mit Hilfe von KI, die aus den Daten ein Schema vorschlägt), doch gerade in einem abgegrenzten Domain wie Hochschulwebseite ist es meist besser, initial ein schlankes, manuell erstelltes Schema vorzugeben und dieses bei Bedarf zu erweitern.</p>
+</li>
+<li>
+<p><strong>Graph-Erzeugung (Triple Creation):</strong> Nun werden aus den gemappten Daten <strong>Tripel bzw. Graph-Kanten</strong> erzeugt. Mit <em>RDFLib</em>, einer Python-Bibliothek für RDF-Manipulation, lassen sich RDF-Tripel erstellen, in gängige Formate (Turtle, RDF/XML etc.) serialisieren und in ein RDF-Repository laden. Alternativ kann man die Daten auch direkt via API in eine Graph-Datenbank schreiben (z. B. mit Treibern für Neo4j, falls man ein Property-Graph-Modell nutzt). In diesem Schritt entsteht der eigentliche <strong>Knowledge Graph</strong>: Jede extrahierte Entität wird zu einem Knoten im Graph, und für jede erkannte Beziehung wird eine Kante zwischen den entsprechenden Knoten eingefügt. Zum Beispiel wird die Entität <em>„Prof. Dr. Tobias Aubele“</em> als Knoten vom Typ <em>Person</em> angelegt, die Entität <em>„Studiengang Informatik“</em> als Knoten vom Typ <em>Studiengang</em>, und durch das Mapping weiß das System, dass Prof. Aubele der Studiengangsleiter ist – folglich wird eine Kante <em>leitet-&gt;</em> von <em>Aubele</em> zu <em>Informatik</em> hinzugefügt.</p>
+</li>
+<li>
+<p><strong>Speicherung im Triple-Store / Graph-DB:</strong> Für Abfragen und die dauerhafte Nutzung muss der Graph in einer entsprechenden <strong>Datenbank</strong> gespeichert werden. Hier gibt es zwei Hauptansätze: Ein RDF-Triplestore (wie z. B. <em>GraphDB</em> oder Apache Jena Fuseki) der auf SPARQL als Abfragesprache setzt, <strong>oder</strong> eine Property-Graph-Datenbank wie <em>Neo4j</em>, welche eine eigene Abfragesprache (Cypher) verwendet. GraphDB ist ein RDF-Store von Ontotext, der sich gut für ontologie-basierte Daten eignet (inkl. inferenzbasierter Abfragen). Neo4j ist eine populäre Graph-DB, die vor allem für hoch performante Traversal-Abfragen und flexible Property-Graph-Modelle bekannt ist. Beide Varianten können mit Python angesteuert werden: RDFLib kann auch als In-Memory-Triplestore dienen und via SPARQL abgefragt werden, während für Neo4j z. B. die <strong>neo4j Python Driver</strong> oder ORMs wie <em>py2neo</em> genutzt werden können. Entscheidend ist, dass das System <strong>regelmäßige Updates</strong> unterstützt – also entweder den Graph inkrementell aktualisiert (neue Tripel hinzufügen, alte bei Bedarf entfernen) oder bei jedem Lauf neu aufbaut (kleinere Graphen lassen sich schnell neu generieren).</p>
+</li>
+<li>
+<p><strong>Validierung und Qualitätssicherung:</strong> Bevor die neu gewonnenen Daten endgültig übernommen werden, sollte ein <em>Validierungsmodul</em> prüfen, ob die Tripel zur Ontologie passen und ob keine offensichtlichen Fehler vorliegen. <em>pySHACL</em> kann z. B. verwendet werden, um den Graph gegen definierte SHACL-Regeln zu prüfen (Shapes Constraint Language – eine Art Schema für RDF), und etwa zu melden, wenn ein Pflichtattribut fehlt oder ein Datentyp nicht stimmt. Diese Validierung stellt sicher, dass nur konsistente und brauchbare Informationen im Wissensgraph landen.</p>
+</li>
+</ol>
+<p>Diese Architektur lässt sich so aufsetzen, dass jeder Schritt automatisiert abläuft, aber dennoch transparent und debug-freundlich bleibt. Durch Logging kann nachvollzogen werden, welche neuen Entitäten erkannt wurden und welche Änderungen erfolgt sind. Im Kern greift diese Pipeline auf etablierte Technologien zurück – von Web Scraping über NLP bis zum Semantic Web Stack – und ist so gestaltet, dass sie modular erweiterbar ist (z. B. könnte man später einen <strong>Übersetzungsservice</strong> ergänzen, um zweisprachige Knoten <em>Deutsch/Englisch</em> für Studiengangsnamen zu erzeugen).</p>
+<h2 id="5-anbieter-tools-und-bibliotheken">5. Anbieter, Tools und Bibliotheken</h2>
+<p>Für jede der obigen Phasen gibt es bewährte <strong>Tools</strong> und <strong>Bibliotheken</strong>. Im Folgenden eine kurze Übersicht der empfohlenen Lösungen – möglichst als Open-Source und in Python nutzbar – gegliedert nach Aufgabenschritt:</p>
+<ul>
+<li>
+<p><strong>Crawler &amp; Extraktion:</strong></p>
+<ul>
+<li><strong>Scrapy:</strong> Ein populäres, schnelles Web-Scraping-Framework in Python. Ermöglicht das effiziente Crawlen ganzer Websites und das Extrahieren strukturierter Daten anhand von Regeln. Ideal für statische Seiten mit konsistentem HTML-Aufbau.</li>
+<li><strong>Playwright (mit Python):</strong> Ein moderner Headless-Browser von Microsoft, der über Python angesprochen werden kann. Eignet sich für dynamische oder JavaScript-lastige Seiten, da er die Seite wie ein echter Browser rendert. Kann z. B. genutzt werden, um die Navigation auf fiw.thws.de nachzuahmen, wenn bestimmte Inhalte erst nach Klick sichtbar werden.</li>
+<li><strong>Diffbot:</strong> Kommerzielle API, die KI-gestützt beliebige Webseiten in strukturierte JSON-Daten umwandelt. <em>Diffbot</em> <strong>automatisiert</strong> die Web-Datenextraktion und transformiert unstrukturierten Web-Content in durchsuchbare, strukturierte Daten (<a href="https://tooldirectory.ai/tools/diffbot-ai-web-data-extraction#:~:text=Diffbot%20automates%20web%20data%20extraction,knowledge%20graph%20of%20web%20information">AI-Powered Web Data Extraction | Diffbot</a>). Es erkennt Artikel, Produkte, Personen etc. per KI (Computer Vision, NLP) und füllt damit einen eigenen Knowledge Graph. Vorteil: Wenig eigener Aufwand; Nachteil: kostenpflichtig und Blackbox. Für ein Open-Source-Projekt würde man eher Scrapy + eigene Logik vorziehen, aber Diffbot zeigt, was technisch möglich ist.</li>
+</ul>
+</li>
+<li>
+<p><strong>NLP &amp; Semantik:</strong></p>
+<ul>
+<li><strong>spaCy:</strong> Eine leistungsfähige NLP-Bibliothek in Python, optimiert für den Produktionseinsatz. Sie bietet schnelle <strong>Named Entity Recognition (NER)</strong>, Part-of-Speech-Tagging, Dependency Parsing u.v.m. out-of-the-box (<a href="https://spacy.io/usage/spacy-101#:~:text=spaCy%20is%20a%20free%2C%20open,NLP%29%20in%20Python">spaCy 101: Everything you need to know · spaCy Usage Documentation</a>). Mit dem deutschen Modell kann spaCy z. B. Namen von Personen, Orten, Organisationen aus Texten der Website erkennen.</li>
+<li><strong>Haystack (deepset):</strong> Ein Open-Source-Framework aus Deutschland, das speziell für <strong>QA-Systeme und semantische Suche</strong> entwickelt wurde. Haystack ermöglicht das Bauen von <em>Retrieval-Augmented Generation</em>-(RAG) Pipelines, kombiniert also dokumentenbasiertes Retrieval mit generativen LLMs ([</li>
+</ul>
+<p>What is Haystack? | Haystack</p>
+</li>
+</ul>
+<p>](https://haystack.deepset.ai/overview/intro#:~:text=Haystack%20is%20an%C2%A0open%20source%20framework%C2%A0for,flexible%20and%20easy%20to%20use)). Für unseren Zweck lässt sich Haystack z. B. einsetzen, um Fragen der Nutzer gegen den Wissensgraph (oder die zugrundeliegenden Texte) zu beantworten. Außerdem bietet es Module zum Vorverarbeiten von Texten, Indexieren und komplexe Pipeline-Orchestrierung.
+    - <strong>Transformers (Hugging Face):</strong> Die <em>Transformers</em>-Bibliothek stellt vortrainierte Sprachmodelle (BERT, GPT-ähnlich, etc.) bereit. Damit kann man z. B. spezialisierte NER oder Relation Extraction durchführen, falls spaCy nicht genügt. Ein feingetunter BERT könnte z. B. erkennen, dass <em>„leitet“</em> im Kontext <em>„Prof. X leitet Studiengang Y“</em> eine <em>Leiter-von-Beziehung</em> darstellt. Transformers sind vor allem dann nützlich, wenn man sehr domänenspezifische Extraktionen automatisieren möchte.
+    - <strong>OpenIE:</strong> Open Information Extraction-Tools wie Stanford OpenIE oder kleinere Python-Implementierungen (z. B. <code>stanford-openie-python</code>). Sie extrahieren <strong>Tripel</strong> direkt aus Sätzen (<a href="https://github.com/philipperemy/stanford-openie-python#:~:text=Open%20information%20extraction%20,Obama%3B%20was%20born%20in%3B%20Hawaii">GitHub - philipperemy/stanford-openie-python: Stanford Open Information Extraction made simple!</a>). Dies ist hilfreich, um Relationen zu finden, ohne sie manuell definieren zu müssen. Allerdings können die Ergebnisse linguistisch bedingt auch Rauschen enthalten – man sollte OpenIE-Ausgaben ggf. durch Nachbearbeitung oder Validierungsregeln filtern.</p>
+<ul>
+<li>
+<p><strong>Graph-Erzeugung &amp; -Speicherung:</strong></p>
+<ul>
+<li><strong>RDFLib:</strong> Eine reine Python-Bibliothek zur Arbeit mit RDF-Daten. Sie kann Tripel speichern, SPARQL-Abfragen ausführen, RDF-Dateien (TTL, XML usw.) einlesen und schreiben. Im Kontext unserer Aufgabe kann RDFLib genutzt werden, um während der Extraktion Tripel anzulegen und am Ende des Prozesses den gesamten Graphen als Turtle-Datei zu serialisieren. Auch das Laden in einen lokalen Triple-Store oder das Absetzen von SPARQL-Updates ist möglich.</li>
+<li><strong>pySHACL:</strong> Ein Python-Validator für SHACL (Shapes Constraint Language). Er erlaubt die Validierung von RDF-Graphen gegen ein Regelwerk (Shapes), das die Ontologie-Bedingungen abbildet (<a href="https://pypi.org/project/pyshacl/0.9.9/#:~:text=pyshacl%20,graphs%20against%20Shapes%20Constraint">pyshacl - PyPI</a>). Beispielsweise kann man definieren: <em>Jeder Knoten vom Typ Studiengang muss mindestens einen Ansprechpartner haben.</em> pySHACL prüft dann den Graphen und meldet Verstöße. Dieses Tool ist wichtig für die Qualitätssicherung, bevor man automatisiert Daten einspielt.</li>
+<li><strong>Neo4j:</strong> Eine hochperformante Graphdatenbank, die das <strong>Property-Graph-Modell</strong> benutzt. Knoten und Kanten können dabei beliebige Eigenschaften (Properties) haben. Abfragen erfolgen in Cypher, einer deklarativen Abfragesprache. Neo4j eignet sich, wenn man viele relationale Abfragen hat (z. B. <em>„Zeige alle Module, die über Prof. X mit Studiengang Y verbunden sind“</em>) und ggf. kürzere Entwicklungszyklen – es ist sehr visualisierungsfreundlich (z. B. via Neo4j Browser). Python-Anbindung per offiziellem Neo4j-Driver oder ORMs. Für unseren Wissensgraph könnte Neo4j eine Alternative zu RDF sein; man würde dann statt RDF-Klassen Label verwenden (z. B. Label <em>Studiengang</em> am Knoten).</li>
+<li><strong>GraphDB (Ontotext):</strong> Ein kommerzieller, aber in begrenztem Umfang auch frei nutzbarer RDF-Triplestore, der sich in vielen Enterprise-Anwendungen bewährt hat. GraphDB unterstützt SPARQL 1.1, Inferenz (Regeln, OWL-Unterstützung) und Skalierung auf große Graphen. In Python kann man GraphDB über SPARQL-Endpunkte ansprechen (z. B. mittels <code>SPARQLWrapper</code>-Bibliothek). Für unsere Zwecke würde GraphDB den Vorteil bieten, dass er direkt RDF und Ontologie-Logik versteht (z. B. Subklassen oder Synonyme, sollte man sowas benötigen).</li>
+</ul>
+</li>
+<li>
+<p><strong>Automatische Ontologie-Erstellung / Mapping:</strong></p>
+<ul>
+<li><strong>SKOS:</strong> Steht für <em>Simple Knowledge Organization System</em>, ein W3C-Standard, um kontrollierte Vokabularien bzw. Thesauri als RDF zu repräsentieren. SKOS ist zwar keine Ontologie-Mapping-Software, aber hilfreich, um beispielsweise Kategorien oder begriffliche Hierarchien der Website abzubilden (etwa Fakultät &gt; Studiengänge &gt; Module). Sollten Fachbegriffe oder Tags auf fiw.thws.de vorkommen, könnte man sie in SKOS-Konzeptschemen überführen.</li>
+<li><strong>D2RQ:</strong> Ein älteres, aber bekanntes Tool, das relationale Datenbanken auf RDF abbildet (Mapping-Rules). Falls die Webseite ihre Daten aus einer Datenbank zieht und man direkten DB-Zugriff hätte, könnte man D2RQ einsetzen, um daraus einen RDF-Graphen zu generieren, ohne den Umweg über Crawling. In unserem Szenario gehen wir aber vom Web-Crawling aus; D2RQ sei der Vollständigkeit halber erwähnt als Mapping-Option für strukturierte Datenquellen.</li>
+<li><strong>Karma (USC):</strong> Eine Open-Source-Software der University of Southern California für <strong>semi-automatisches Daten-Mapping</strong> auf Ontologien. Mit einer GUI kann man Beispiel-Daten (CSV, JSON, Web-APIs etc.) auf Ontologieklassen ziehen, und Karma lernt daraus ein Modell. Dieses kann man exportieren und auf neue Daten anwenden (<a href="https://github.com/usc-isi-i2/Web-Karma#:~:text=Karma%20learns%20to%20recognize%20the,Users%20then">usc-isi-i2/Web-Karma: Information Integration Tool - GitHub</a>). Denkbar wäre, Karma zu nutzen, um anhand einiger annotierter Webseiten-Abschnitte ein Mapping zu erstellen – z. B. markiert man in HTML-Tabellen, welche Spalte der <em>Modulname</em> ist, welche der <em>Dozent</em>, etc., und Karma könnte daraus eine Zuordnung zur Ontologie (Klasse <em>Modul</em>, Beziehung <em>hatDozent</em>) generieren. Im Betrieb würde man aber wahrscheinlich eher direkt in Python die Regeln codieren; Karma ist dennoch nützlich, um das Ontologie-Mapping initial zu beschleunigen.</li>
+<li><strong>Weitere:</strong> Es gibt noch andere Tools wie <em>OpenRefine (mit RDF-Extension)</em> für manuelles Mapping, oder <em>OntoRefine</em> (Teil von GraphDB Workbench) um CSV/JSON zu RDF zu transformieren. Für unser Vorhaben sind diese aber weniger zentral, da wir direkt aus HTML extrahieren. Sollte die THWS-Webseite jedoch über Schnittstellen (RSS-Feeds, APIs) verfügen, könnte man diese Tools ergänzend einsetzen.</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-best-practices-empfehlungen">6. Best Practices &amp; Empfehlungen</h2>
+<p>Bei der Umsetzung eines solchen automatisierten Website-Knowledge-Graphs sollten einige <strong>Best Practices</strong> beachtet werden, um Langlebigkeit, Qualität und Akzeptanz des Systems sicherzustellen:</p>
+<ul>
+<li><strong>Klare Ontologie &amp; Strukturvorgaben:</strong> Definieren Sie <em>vorab</em> ein Schema, welche Klassen und Relationen es geben soll. Eine gut durchdachte Ontologie ist das Rückgrat des Wissensgraphen. Sie sollte die Inhalte der Website passend modellieren (nicht zu fein, nicht zu grob). Halten Sie sich an Standards, wo möglich (z. B. <code>schema.org</code> für Personen oder Organisationen), damit Ihr Graph auch extern verständlich ist.</li>
+<li><strong>Iterative Entwicklung:</strong> Starten Sie mit einem <strong>MVP (Minimum Viable Product)</strong> – beispielsweise zuerst nur die <strong>Studiengänge und zugehörigen Professoren</strong> erfassen. Testen Sie das Durchlaufen der Pipeline, und erweitern Sie schrittweise um weitere Entitäten (Module, Veranstaltungen, News etc.). So bleibt das Projekt überschaubar, und frühe Nutzer können Feedback geben.</li>
+<li><strong>Validierung &amp; Regeln:</strong> Nutzen Sie technische Validierung (z. B. SHACL mit pySHACL) und definieren Sie Regeln, um Fehler abzufangen. Beispiel: Wenn ein Modul ohne zugehörigen Studiengang extrahiert wurde, stimmt etwas nicht – solche Datensätze sollten nicht importiert werden, bevor geklärt ist, ob es sich um einen Fehler handelt. Fangen Sie auch technische Probleme ab (z. B. HTML-Änderungen auf der Website können den Parser brechen – hier sollte der Crawler entsprechende Exceptions loggen, damit Entwickler sie sehen und Anpassungen vornehmen).</li>
+<li><strong>Monitoring &amp; Delta-Reports:</strong> Richten Sie ein Monitoring ein, das z. B. wöchentliche <strong>Änderungsberichte</strong> erzeugt. Eine Liste aller neu hinzugekommenen oder geänderten Knoten/Relationen kann an die Redakteure geschickt werden oder in einem Dashboard landen. So behalten alle den Überblick und können unerwartete Änderungen prüfen.</li>
+<li><strong>Rückkopplung mit Redakteuren:</strong> Beziehen Sie die inhaltlich Verantwortlichen der Website mit ein. Zum einen können diese helfen, die Ontologie festzulegen (welche Begriffe verwendet man offiziell? Welche Beziehungen sind relevant?). Zum anderen sollte es einen <strong>Feedback-Kanal</strong> geben: Falls der Wissensgraph Fehler enthält (weil etwa Inhalte zweideutig waren), müssen Redakteure entweder den Graph anpassen oder idealerweise die Website so anpassen, dass der Crawler es beim nächsten Mal richtig macht. Dieses Zusammenspiel erhöht die Datenqualität auf beiden Seiten.</li>
+<li><strong>Versionskontrolle der Daten:</strong> Behandeln Sie die Wissensgraph-Daten ähnlich wie Code: Es lohnt sich, <em>Versionen</em> der extrahierten RDF-Daten in einem Repository abzulegen (ggf. in JSON-LD oder Turtle Format). So kann man Änderungen über die Zeit nachvollziehen und notfalls auf einen vorherigen Stand zurück. Außerdem erleichtert es Entwicklern die Arbeit, wenn Beispieldaten zur Verfügung stehen, an denen sie Verbesserungen testen können.</li>
+<li><strong>Umgang mit Links und IDs:</strong> Verwenden Sie <strong>stabile Identifier</strong> für Entitäten im Graph. Ideal ist es, wenn die Website bereits IDs bietet (z. B. in URLs oder als HTML-IDs). Diese kann man als URI für die Knoten benutzen, um Konsistenz zu wahren. Wenn die Seite keinen eindeutigen Schlüssel liefert, muss man einen generieren (z. B. aus Name + Typ, was aber bei Namensänderungen zu Duplikaten führen kann). Planen Sie auch eine Strategie für gelöschte Inhalte: Wenn z. B. ein Studiengang von der Webseite entfernt wird (eingestellter Studiengang), soll der entsprechende Knoten im Graph bestehen bleiben (ggf. mit Attribut <em>status: inaktiv</em>) oder entfernt werden? Solche Richtlinien vermeiden später Inkonsistenzen.</li>
+<li><strong>Performance und Skalierung:</strong> Eine Fakultätswebsite ist von der Datenmenge her überschaubar, aber achten Sie trotzdem auf effiziente Verarbeitung. Cachen Sie Ergebnisse, wo sinnvoll (z. B. heruntergeladene Seiten zwischenspeichern, falls sie sich selten ändern). Setzen Sie den Crawler nicht zu aggressiv an (respektieren Sie <code>robots.txt</code> und setzen Sie Pausen zwischen Requests, um den Webserver nicht zu überlasten).</li>
+<li><strong>Sicherheit und Datenschutz:</strong> Da Personeninformationen verarbeitet werden (Ansprechpartner mit Kontaktdaten), stellen Sie sicher, dass der Umgang datenschutzkonform ist. Zwar sind die Daten öffentlich auf der Website, aber bei weiterer Verwendung (z. B. in einem Chatbot) sollten keine über die Quelle hinausgehenden Personenprofile erstellt werden. Halten Sie sich an geltende Richtlinien der Hochschule zur Datenverarbeitung.</li>
+</ul>
+<p>Durch Befolgung dieser Best Practices erhöhen Sie die <strong>Robustheit</strong> Ihres Systems. Das bedeutet: Weniger Ausfälle bei Website-Änderungen, konsistente Daten trotz Automatisierung, und Akzeptanz bei den Nutzern (sowohl intern – Redakteure, Entscheider – als auch extern – Studierende, Chatbot-Anwender). Langfristig soll der Wissensgraph ein zuverlässiges Abbild der Fakultätsinformationen liefern.</p>
+<h2 id="7-fazit-ausblick">7. Fazit &amp; Ausblick</h2>
+<p>Die automatisierte Erstellung eines Knowledge Graphen für die Website fiw.thws.de ist mit heutigen Mitteln <strong>realistisch umsetzbar</strong>. Schon jetzt gibt es alle benötigten Komponenten als Open-Source-Bausteine: Vom Scrapy-Crawler über spaCy-NLP bis hin zu RDFLib und einer Graphdatenbank. Ein mögliches <strong>MVP</strong> (Minimalprodukt) könnte sich zunächst auf Kerninformationen beschränken, z. B. <em>Studiengänge</em>, <em>zugehörige Module</em> und <em>Ansprechpartner</em>. Damit ließe sich bereits ein einfacher Prototyp eines <strong>QA-Chatbots</strong> speisen, der Fragen beantwortet wie <em>„Wer ist der Studiengangsleiter von E-Commerce?“</em> oder <em>„Welche Module gibt es im 5. Semester Informatik?“</em>.</p>
+<p>In weiteren Ausbaustufen kann die <strong>Ontologie laufend verfeinert</strong> werden – etwa um Konzepte wie <em>Labore</em>, <em>Forschungsprojekte</em>, <em>Veranstaltungen</em> oder <em>Alumni-Netzwerk</em> zu integrieren, die auf der Website erwähnt werden. Neue Inhaltstypen der Webseite (z. B. ein neu eingeführter Studiengang oder eine neue Nachrichtenrubrik) können durch den modularen Aufbau relativ leicht ins Mapping aufgenommen werden. Langfristig wäre es interessant, den Graphen auch mit anderen Datenquellen zu verknüpfen – z. B. mit dem zentralen <strong>Hochschul-Knowledge-Graph</strong> der THWS oder mit öffentlichen Wissensgraphen (etwa GND für Personen oder DBpedia). So könnten z. B. Professorenprofile automatisch mit Publikationen verlinkt werden.</p>
+<p>Ein wichtiges zukünftiges Feature ist die <strong>automatische Erkennung neuer Inhalte</strong>: Sobald Redakteure auf fiw.thws.de eine neue Seite anlegen oder eine bestehende ändern, sollte der Crawler dies erkennen. Hier kann man mit <em>Change Detection</em> arbeiten – entweder via Timestamp-Prüfung (letztes Änderungsdatum der Seite) oder inhaltsbasiertem Hash-Vergleich. In Kombination mit einem Benachrichtigungssystem würde das bedeuten, dass keine Erweiterung der Website übersehen wird.</p>
+<p>Für die Nutzung des Wissensgraphen in einem <strong>RAG-Chatbot</strong> (Retrieval-Augmented Generation) zeichnet sich ein spannender Ausblick ab. Tools wie Haystack erlauben bereits heute die Kombination von Wissensgraph-Abfragen mit generativen KI-Modellen ([</p>
+<pre><code>  What is Haystack? | Haystack
+</code></pre>
+<p>](https://haystack.deepset.ai/overview/intro#:~:text=,or%20build%20a%20knowledge%20graph)). Denkbar ist, den Graphen in Vektorsuche und semantische Indizierung einzubeziehen, sodass ein Chatbot komplexe Fragen beantworten kann, indem er zuerst relevante Fakten aus dem Graphen zieht und diese dann in eine Sprachmodell-Antwort einbettet ([</p>
+<pre><code>  What is Haystack? | Haystack
+</code></pre>
+<p>](https://haystack.deepset.ai/overview/intro#:~:text=,or%20build%20a%20knowledge%20graph)). Ein Beispiel: <em>„Welche Veranstaltungen wurden im Sommer 2024 von der Fakultät berichtet?“</em> – der Bot könnte via SPARQL alle News-Knoten zum Sommer 2024 finden und deren Inhalte dann zusammenfassen. Die Integration von Wissensgraph und KI wird derzeit intensiv erforscht, und Ihr Projekt könnte von diesen Fortschritten profitieren.</p>
+<p><strong>Fazit:</strong> Mit vertretbarem Aufwand lässt sich aus der Fakultätswebsite fiw.thws.de ein nachhaltiger, mehrwertstiftender Wissensgraph erzeugen. Wichtig ist, sauber und automatisiert vorzugehen, aber dennoch menschliche Kontrolle einzuplanen. So entsteht schrittweise ein <strong>lebendiges Wissensnetz</strong>, das Studenten, Mitarbeitern und Systemen (wie Chatbots oder Suchanwendungen) gleichermaßen dient. Heute machbar ist ein funktionierender Graph mit Grunddaten; als nächste Schritte winken intelligente Aktualisierungsmechanismen, breitere Ontologie-Abdeckung und die Kopplung mit modernen KI-Services, um das volle Potenzial der Daten auszuschöpfen.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

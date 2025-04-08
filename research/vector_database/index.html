@@ -1,0 +1,1050 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../data_quality/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Vectordb - Rag Tool docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vektordatenbanken-im-projekt" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Rag Tool docs" class="md-header__button md-logo" aria-label="Rag Tool docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rag Tool docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vectordb
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Rag Tool docs" class="md-nav__button md-logo" aria-label="Rag Tool docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Rag Tool docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/black/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Black
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/commitizen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commitizen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/fragen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testfragen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/first_results.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erster Test
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Research
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Research
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scraping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scraping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_quality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Quality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Vectordb
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vectordb
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-einleitung" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Einleitung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-grundlagen-was-ist-eine-vektordatenbank" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Grundlagen / Was ist eine Vektordatenbank?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-warum-eine-vektordatenbank-fur-unser-projekt" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Warum eine Vektordatenbank für unser Projekt?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technische-grundlagen-und-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Technische Grundlagen und Architektur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-anbieter-und-losungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Anbieter und Lösungen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Anbieter und Lösungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-open-source-losungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Open-Source-Lösungen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-cloudmanaged-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Cloud/Managed Services
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-kriterien-fur-die-auswahl" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Kriterien für die Auswahl
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#begrundung-fur-die-wahl-von-qdrant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Begründung für die Wahl von Qdrant
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-best-practices-und-empfehlungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Best Practices und Empfehlungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-fazit-und-ausblick" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Fazit und Ausblick
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-einleitung" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Einleitung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-grundlagen-was-ist-eine-vektordatenbank" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Grundlagen / Was ist eine Vektordatenbank?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-warum-eine-vektordatenbank-fur-unser-projekt" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Warum eine Vektordatenbank für unser Projekt?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technische-grundlagen-und-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Technische Grundlagen und Architektur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-anbieter-und-losungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Anbieter und Lösungen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Anbieter und Lösungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-open-source-losungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Open-Source-Lösungen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-cloudmanaged-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Cloud/Managed Services
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-kriterien-fur-die-auswahl" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Kriterien für die Auswahl
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#begrundung-fur-die-wahl-von-qdrant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Begründung für die Wahl von Qdrant
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-best-practices-und-empfehlungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Best Practices und Empfehlungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-fazit-und-ausblick" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Fazit und Ausblick
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="vektordatenbanken-im-projekt">Vektordatenbanken im Projekt</h1>
+<h2 id="1-einleitung">1. Einleitung</h2>
+<ul>
+<li>
+<p><strong>Kontext:</strong><br />
+  Wir planen, Vektordatenbanken vor allem für unsere semantische Suche einzusetzen. Im Gegensatz zu klassischen Datenbanken ermöglichen Vektordatenbanken eine kontextbezogene (semantische) Suche, die über reine Schlüsselwortabfragen hinausgeht.</p>
+</li>
+<li>
+<p><strong>Relevanz:</strong><br />
+  Klassische relationale Datenbanken stoßen schnell an ihre Grenzen, wenn es um die Suche nach Ähnlichkeiten und Kontexten in unstrukturierten Daten (z. B. Text, Audio, Bilder) geht. Eine Vektordatenbank löst diese Herausforderungen, indem sie Daten in Form von numerischen Vektoren speichert und schnelle Ähnlichkeitssuchen ermöglicht.</p>
+</li>
+</ul>
+<hr />
+<p><img alt="INSER/SELCT V-DB" src="/assets/vectordatabase.jpg" /></p>
+<hr />
+<h2 id="2-grundlagen-was-ist-eine-vektordatenbank">2. Grundlagen / Was ist eine Vektordatenbank?</h2>
+<ul>
+<li>
+<p><strong>Definition:</strong><br />
+  Eine Vektordatenbank ist eine Datenbank, die sich auf das Speichern und Abfragen hochdimensionaler Vektoren spezialisiert. Typischerweise handelt es sich um Embeddings, die mithilfe von KI-Modellen aus verschiedensten Datentypen (Text, Bild, Audio) erzeugt werden.</p>
+</li>
+<li>
+<p><strong>Funktionsprinzip:</strong>  </p>
+</li>
+<li><strong>Vektor-Repräsentationen (Embeddings)</strong>: KI-Modelle (z. B. Transformer-Netzwerke wie BERT oder GPT) wandeln Eingaben (z. B. Sätze, Bilder) in numerische Vektoren um.  </li>
+<li>
+<p><strong>Ähnlichkeitssuche</strong>: Anstatt nach exakten Übereinstimmungen zu suchen, prüft die Datenbank, welche Vektoren sich in einem hochdimensionalen Raum ähneln. Dazu werden Verfahren wie „Nearest Neighbor Search“ eingesetzt, oft in Form von Approximate Nearest Neighbor (ANN).</p>
+</li>
+<li>
+<p><strong>Abgrenzung zu klassischen Datenbanken:</strong><br />
+  Relationale Datenbanken (z. B. MySQL, PostgreSQL) sind auf strukturierte Tabellen ausgerichtet und bieten sich nicht für Ähnlichkeitssuchen in hochdimensionalen Vektorräumen an. Vektordatenbanken ermöglichen hingegen, semantische Beziehungen zwischen Datenpunkten zu erkennen und schnell zu vergleichen.</p>
+</li>
+</ul>
+<hr />
+<h2 id="3-warum-eine-vektordatenbank-fur-unser-projekt">3. Warum eine Vektordatenbank für unser Projekt?</h2>
+<ul>
+<li><strong>Use Cases im Projekt:</strong>  </li>
+<li>Semantische Suche in FAQs, Dokumenten, Studienordnungen etc.  </li>
+<li>Kontextsensitive Antworten im Chatbot (z. B. verschiedene Formulierungen oder Synonyme erkennen).  </li>
+<li>
+<p>Clustering thematisch ähnlicher Beiträge oder Dokumente.</p>
+</li>
+<li>
+<p><strong>Vorteile im Vergleich zu Alternativen:</strong></p>
+</li>
+<li><strong>Einfachere KI-Workflows</strong>: Da Embeddings in Vektordatenbanken direkt abgefragt werden können, entfallen komplizierte Umwege oder Workarounds.  </li>
+<li><strong>Schnellere und genauere Suchergebnisse</strong>: Insbesondere, wenn die Abfragen nicht eindeutig sind, liefert die semantische Suche häufig relevantere Treffer als reine Schlagwortsuche.  </li>
+<li>
+<p><strong>Skalierbarkeit</strong>: Moderne Vektordatenbanken sind auf große Datenmengen optimiert.</p>
+</li>
+<li>
+<p><strong>Konkretes Beispiel im Projekt:</strong><br />
+  Wird eine Anfrage wie „Wie bewerbe ich mich für ein Studium?“ gestellt, kann die semantische Suche nicht nur Dokumente mit den Begriffen „bewerben“ und „Studium“ identifizieren, sondern auch Texte, die sich inhaltlich mit der Thematik beschäftigen („Immatrikulation“, „Einschreibung“, „Zulassungsvoraussetzungen“ etc.).</p>
+</li>
+</ul>
+<hr />
+<h2 id="4-technische-grundlagen-und-architektur">4. Technische Grundlagen und Architektur</h2>
+<ul>
+<li><strong>Aufbau und Indexierung:</strong>  </li>
+<li><strong>Datenspeicherung:</strong> Vektoren werden meist in speziellen Strukturen abgelegt, die auf Ähnlichkeitssuche optimiert sind (z. B. HNSW, IVF, PQ).  </li>
+<li>
+<p><strong>ANN-Algorithmen</strong>: Approximate Nearest Neighbor (ANN) akzeptiert leichte Ungenauigkeiten in der Ergebnismenge, ermöglicht dafür aber deutlich höhere Abfragegeschwindigkeiten.</p>
+</li>
+<li>
+<p><strong>Daten-Workflow:</strong>  </p>
+</li>
+<li><strong>Embeddings erzeugen</strong>: Ein KI-Modell wandelt Text in Vektoren um.  </li>
+<li><strong>Einfügen in die Datenbank</strong>: Die Vektoren werden zusammen mit Metadaten (Titel, ID etc.) gespeichert.  </li>
+<li>
+<p><strong>Abfrage</strong>: Bei einer Suchanfrage wird ebenfalls ein Embedding erzeugt und nach den Vektoren mit der größten Ähnlichkeit gesucht.</p>
+</li>
+<li>
+<p><strong>Integration mit anderen Systemen:</strong>  </p>
+</li>
+<li><strong>APIs und SDKs</strong>: Viele Vektordatenbanken bieten REST- oder gRPC-Schnittstellen, manchmal auch Python-SDKs.  </li>
+<li><strong>Projektarchitektur</strong>: Die Vektordatenbank kann direkt an unseren Chatbot angebunden werden. Das Frontend leitet die Suchanfrage an den Chatbot weiter, der wiederum Embeddings erzeugt und eine Anfrage an die Vektordatenbank stellt.</li>
+</ul>
+<hr />
+<h2 id="5-anbieter-und-losungen">5. Anbieter und Lösungen</h2>
+<h3 id="51-open-source-losungen">5.1 Open-Source-Lösungen</h3>
+<ul>
+<li><strong>Qdrant</strong>  </li>
+<li><strong>Vorteile</strong>: Hohe Performance, leichtgewichtig und in Rust entwickelt, dadurch ressourcenschonend</li>
+<li>
+<p><strong>Nachteile</strong>: Noch relativ jung auf dem Markt, daher weniger etablierte Best Practices</p>
+</li>
+<li>
+<p><strong>FAISS (Facebook AI Similarity Search)</strong>  </p>
+</li>
+<li><strong>Vorteile</strong>: Sehr performante Bibliothek für ähnliche Abfragen, gut für Forschungszwecke und skalierbare Systeme.  </li>
+<li>
+<p><strong>Nachteile</strong>: Keine „fertige“ Datenbank, eher ein Toolkit (v. a. für Python).</p>
+</li>
+<li>
+<p><strong>Haystack (deepset)</strong>  </p>
+</li>
+<li><strong>Vorteile</strong>: Framework für kontextuelle Suche, beinhaltet Vektor-Suche und Pipeline-Management.  </li>
+<li><strong>Nachteile</strong>: Häufig eher Teil einer größeren NLP-Lösung als eine reine Vektordatenbank.</li>
+</ul>
+<h3 id="52-cloudmanaged-services">5.2 Cloud/Managed Services</h3>
+<ul>
+<li><strong>Pinecone</strong>  </li>
+<li><strong>Vorteile</strong>: Vollständig gemanagter Dienst, einfacher Einstieg, Skalierbarkeit auf Knopfdruck.  </li>
+<li>
+<p><strong>Nachteile</strong>: Kosten und Vendor-Lock-in (Monatsgebühr, proprietäre Infrastruktur).</p>
+</li>
+<li>
+<p><strong>Weaviate</strong>  </p>
+</li>
+<li><strong>Vorteile</strong>: Open Source und Managed-Version, flexible Schema-Struktur, Graph-basierter Ansatz.  </li>
+<li>
+<p><strong>Nachteile</strong>: Noch relativ jung, Dokumentation ist zwar umfangreich, aber teils lückenhaft.</p>
+</li>
+<li>
+<p><strong>Azure Cognitive Search (mit Vektor-Suche)</strong>  </p>
+</li>
+<li><strong>Vorteile</strong>: Direkt in das Azure-Ökosystem eingebunden, simpel für bestehende Azure-Kunden.  </li>
+<li>
+<p><strong>Nachteile</strong>: Teilweise eingeschränkte Konfigurationsmöglichkeiten, Vendor-Lock-in.</p>
+</li>
+<li>
+<p><strong>Elasticsearch mit Vektor-Suche</strong>  </p>
+</li>
+<li><strong>Vorteile</strong>: Weit verbreitet, bereits bekanntes Such-Tool, große Community.  </li>
+<li><strong>Nachteile</strong>: Bei sehr hohem Datenvolumen oder besonders hohen Dimensionalitäten kann die Performance schwächeln.</li>
+</ul>
+<h3 id="53-kriterien-fur-die-auswahl">5.3 Kriterien für die Auswahl</h3>
+<ol>
+<li><strong>Performance und Skalierung</strong>: Wichtig bei großen Datenmengen und Echtzeitanwendungen.  </li>
+<li><strong>Kostenmodell</strong>: Open Source vs. kommerziell, laufende Betriebs- und Wartungskosten.  </li>
+<li><strong>Integrationsmöglichkeiten</strong>: APIs, Programmiersprachen, Cloud vs. On-Premise.  </li>
+<li><strong>Community und Dokumentation</strong>: Support, Tutorials, Hilfestellungen.</li>
+</ol>
+<h2 id="begrundung-fur-die-wahl-von-qdrant">Begründung für die Wahl von Qdrant</h2>
+<p>Wir haben uns entschieden, in unserem Projekt <strong>Qdrant</strong> als Vektordatenbank einzusetzen, weil sie einerseits eine hohe Performance bei Ähnlichkeitssuchen bietet und andererseits durch ihre Implementierung in Rust sehr ressourcenschonend ist. Außerdem ist Qdrant open source und lässt sich relativ einfach in unser Projekt integrieren.</p>
+<hr />
+<h2 id="6-best-practices-und-empfehlungen">6. Best Practices und Empfehlungen</h2>
+<ul>
+<li><strong>Datenvorbereitung (Feature Engineering):</strong>  </li>
+<li>Wähle hochwertige Embedding-Modelle.  </li>
+<li>
+<p>Standardisiere deine Daten: Tokenisierung, Normalisierung und ggf. Entfernung von Stop-Wörtern.</p>
+</li>
+<li>
+<p><strong>Index-Tuning:</strong>  </p>
+</li>
+<li>Wähle den passenden Index-Algorithmus je nach Datenmenge und Performancebedarf.  </li>
+<li>
+<p>Teste unterschiedliche Parameter (z. B. Anzahl Nachbarn, Größe von Clustern), um das Optimum für deinen Anwendungsfall zu finden.</p>
+</li>
+<li>
+<p><strong>Skalierung und Hosting:</strong>  </p>
+</li>
+<li><strong>Horizontal</strong>: Sharding großer Datensätze auf mehrere Knoten.  </li>
+<li>
+<p><strong>Vertikal</strong>: Ausreichend RAM, CPU/GPU-Kapazitäten bereitstellen, um Suchanfragen schnell zu bearbeiten.</p>
+</li>
+<li>
+<p><strong>Security und Datenschutz:</strong>  </p>
+</li>
+<li>Verschlüssele Daten im Ruhezustand und bei der Übertragung (TLS).  </li>
+<li>Setze Rollen- und Zugriffsrechte auf, um unbefugte Zugriffe zu verhindern.  </li>
+<li>Stelle sicher, dass beim Speichern von Texten DSGVO-Vorgaben eingehalten werden, insbesondere wenn personenbezogene Daten involviert sind.</li>
+</ul>
+<hr />
+<h2 id="8-fazit-und-ausblick">8. Fazit und Ausblick</h2>
+<ul>
+<li><strong>Zusammenfassung</strong>:<br />
+  Vektordatenbanken sind ein leistungsfähiges Werkzeug, um große Mengen unstrukturierter Daten mittels semantischer Suche schnell zu durchsuchen. Sie bieten deutliche Vorteile gegenüber klassischen Datenbanken, wenn es um kontextuelles Auffinden und Kategorisieren geht.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

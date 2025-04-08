@@ -1,0 +1,612 @@
+<mxfile host="65bd71144e">
+    <diagram name="Seite-1" id="pQ_C8X8x0QOj_yy_IsF6">
+        <mxGraphModel dx="4212" dy="4144" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="g14tzVFC69F2aWd6N6v8-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Zll-033PY1x5qsg0hgXu-1" target="Zll-033PY1x5qsg0hgXu-4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="190" y="319.9999999999998" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Zll-033PY1x5qsg0hgXu-1" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="280" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zll-033PY1x5qsg0hgXu-3" value="Eingabe" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.5;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="250" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Zll-033PY1x5qsg0hgXu-4" target="pPGMjQGaBLtE6NlgupBI-6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zll-033PY1x5qsg0hgXu-4" value="Frontend&lt;div&gt;&lt;div style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;React?&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Streaamlit?&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="270" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-3" target="pPGMjQGaBLtE6NlgupBI-25" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-3" value="Prompt-Validierung &amp;amp; Vorverarbeitung&lt;div&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Prompt Validator&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- LLM Call?&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="960" y="275" width="150" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pPGMjQGaBLtE6NlgupBI-6" target="pPGMjQGaBLtE6NlgupBI-3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-6" value="&amp;nbsp;Request Handling im Backend&lt;div&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;FastAPI Endpoint&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="630" y="280" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pPGMjQGaBLtE6NlgupBI-8" target="pPGMjQGaBLtE6NlgupBI-3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-8" value="&lt;div&gt;Prüfung auf Leerstring, toxische Inhalte, unsupported language&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Normalisierung: Klein-/Großschreibung, Trimming, Entfernen unnötiger Zeichen&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; Sprache erkennen&amp;nbsp; &amp;nbsp; → ggf. Übersetzung vorbereiten&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Extraktion konkrete Frage&lt;div&gt;-&amp;gt; LLM call&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="970" y="481" width="130" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-15" target="Zll-033PY1x5qsg0hgXu-4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-15" value="&lt;div style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;- Chat-Interface&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;- Eigene Seite?&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;background-color: light-dark(rgb(251, 251, 251), rgb(21, 21, 21)); color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;- Auf Startseit einbetten?&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;- CampusPortal?&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="295" y="481" width="110" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pPGMjQGaBLtE6NlgupBI-25" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1620" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-25" value="Vektorisierung der Nutzerfrage&lt;div&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Embedding-Modul&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1270" y="280" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pPGMjQGaBLtE6NlgupBI-29" target="pPGMjQGaBLtE6NlgupBI-25" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-29" value="&lt;div&gt;&lt;code style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot; data-end=&quot;1335&quot; data-start=&quot;1311&quot;&gt;Cloud:&lt;/code&gt;&lt;/div&gt;&lt;code style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot; data-end=&quot;1335&quot; data-start=&quot;1311&quot;&gt;text-embedding-ada-002&lt;/code&gt;&amp;nbsp;(OpenAI)&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Lokal:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;code style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot; data-end=&quot;1371&quot; data-start=&quot;1356&quot;&gt;Instructor-XL&lt;/code&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1290" y="480" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pPGMjQGaBLtE6NlgupBI-30" target="pPGMjQGaBLtE6NlgupBI-6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-30" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;- FastAPI Endpoint?&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-33" target="pPGMjQGaBLtE6NlgupBI-30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-33" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;- Logging der Anfrage-ID und Zeitstempel&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="610" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pPGMjQGaBLtE6NlgupBI-35" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="55" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-35" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;- Studierende?&lt;/span&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; text-wrap-mode: nowrap;&quot;&gt;- Lehrende?&lt;/span&gt;&lt;div style=&quot;forced-color-adjust: none; text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Öffentlich?&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- mit K-Nummer?&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-5" y="480" width="120" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-38" target="pPGMjQGaBLtE6NlgupBI-42" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-38" value="Prompt-Zusammenbau&lt;div&gt;-&amp;nbsp;RAG Prompt Builder&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1621" y="280" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pPGMjQGaBLtE6NlgupBI-39" target="pPGMjQGaBLtE6NlgupBI-38" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-39" value="Kontext-Chunks + Nutzerfrage in ein Template setzen" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1631" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-42" target="pPGMjQGaBLtE6NlgupBI-47" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2280" y="680" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="2280" y="310"/>
+                            <mxPoint x="2280" y="870"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-42" value="Antwortgenerierung&lt;div&gt;- LLM Call&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1970" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-44" target="pPGMjQGaBLtE6NlgupBI-42" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-44" value="Cloud:&lt;div&gt;- Eigenes Modell hosten&lt;/div&gt;&lt;div&gt;- OpenAI,&amp;nbsp;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(71, 71, 71); font-family: Arial, sans-serif; font-size: 14px; text-align: start;&quot;&gt;Anthropic...&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(71, 71, 71); font-family: Arial, sans-serif; font-size: 14px; text-align: start;&quot;&gt;Lokal:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(71, 71, 71); font-family: Arial, sans-serif; font-size: 14px; text-align: start;&quot;&gt;- Wahrscheinlich nicht möglich&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1960" y="480" width="140" height="101" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-47" target="pPGMjQGaBLtE6NlgupBI-61" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-47" value="Post-Processing der Antwort&lt;div&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Response Handler&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1945" y="840" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-49" target="pPGMjQGaBLtE6NlgupBI-47" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-49" value="- Extraktion der Antwort&lt;div&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Anhängen von Quellenangaben (Chunk-Metadaten)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Optional:&lt;/div&gt;&lt;div&gt;- Übersetzung, Kürzung&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1965" y="1000" width="130" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-51" target="pPGMjQGaBLtE6NlgupBI-56" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-51" value="Speicherung &amp;amp; Logging&lt;div&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Logging-Modul&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1290" y="840" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-54" target="pPGMjQGaBLtE6NlgupBI-51" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-54" value="- Anfrage&lt;div&gt;- Embedding ID&lt;/div&gt;&lt;div&gt;- Vektor Matches&lt;/div&gt;&lt;div&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;GPT-4-Request/Antwort&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Antwortzeit&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Feedback?&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1285" y="1000" width="150" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-56" target="pPGMjQGaBLtE6NlgupBI-66" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-56" value="Antwort an das Frontend&lt;div&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;FastAPI Response&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="645" y="840" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pPGMjQGaBLtE6NlgupBI-57" target="pPGMjQGaBLtE6NlgupBI-56" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-57" value="- Antwort&lt;div&gt;- Quellen&lt;/div&gt;&lt;div&gt;-&amp;nbsp;feedback_id?&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="1000" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pPGMjQGaBLtE6NlgupBI-61" target="pPGMjQGaBLtE6NlgupBI-51" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-61" value="Validierung der Antwort&lt;div&gt;- LLM Call?&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1631" y="840" width="139" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-64" target="pPGMjQGaBLtE6NlgupBI-61" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-64" value="Macht die Antwort überhaupt sinn" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1640.5" y="1000" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pPGMjQGaBLtE6NlgupBI-66" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="30" y="310" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-120" y="870"/>
+                            <mxPoint x="-120" y="310"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-66" value="Anzeige im Frontend&lt;div&gt;- React?&lt;/div&gt;&lt;div&gt;- Streamlit?&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="285" y="840" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pPGMjQGaBLtE6NlgupBI-67" target="pPGMjQGaBLtE6NlgupBI-66" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-67" value="- Antworttext&lt;div&gt;- Quellen&lt;/div&gt;&lt;div&gt;- Feedbackbutton (&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;👍 / 👎&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="275" y="970" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-82" target="pPGMjQGaBLtE6NlgupBI-85" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-82" value="Quellenidentifikation" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry y="1720" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-83" target="pPGMjQGaBLtE6NlgupBI-82" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-83" value="- HTML-Webseiten&lt;div&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PDF-Dokumente&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TXT-Dateien&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- DOCX-Dateien&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;CSV-Dateien&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- i&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;nterne Datenbanken&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="17.5" y="1840" width="125" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-85" target="pPGMjQGaBLtE6NlgupBI-91" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-85" value="Datenextraktion&lt;div&gt;- Ingestion Layer&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="1720" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pPGMjQGaBLtE6NlgupBI-87" target="pPGMjQGaBLtE6NlgupBI-85" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-87" value="A) Webseiten (HTML)&lt;div&gt;- BeautifulSoup&lt;/div&gt;&lt;div&gt;- Selenium&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;B) PDFs&lt;/div&gt;&lt;div&gt;&lt;code style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot; data-end=&quot;1423&quot; data-start=&quot;1414&quot;&gt;- PyMuPDF&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot; data-end=&quot;1453&quot; data-start=&quot;1439&quot;&gt;- unstructured&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot; data-end=&quot;1466&quot; data-start=&quot;1455&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;-&amp;nbsp;&lt;/font&gt;LangChain&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot; data-end=&quot;1466&quot; data-start=&quot;1455&quot;&gt;- OCR-Model Mistral o. Anthropic&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot; data-end=&quot;1466&quot; data-start=&quot;1455&quot;&gt;&lt;br&gt;&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot; data-end=&quot;1466&quot; data-start=&quot;1455&quot;&gt;C)FAQs/Datenbanken&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;code style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot; data-end=&quot;1466&quot; data-start=&quot;1455&quot;&gt;-&amp;nbsp;&lt;/code&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Pandas + Custom Parser&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="1840" width="140" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-91" target="55KY6pfOrd_zU6bBp3TD-58" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-91" value="Textbereinigung&lt;div&gt;- Preprocessing&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="595" y="1720" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-93" target="pPGMjQGaBLtE6NlgupBI-91" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-93" value="Entfernen:&lt;div&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;HTML-Tags&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Leerzeilen&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Sonderzeichen&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Vereinhetilichen:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Datumsformat&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Groß-/Kleinschreibung&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="1843" width="130" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-113" value="Chunking" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="1720" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-114" target="pPGMjQGaBLtE6NlgupBI-113" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-114" value="&lt;div&gt;Methoden&lt;/div&gt;- Fixed-size&lt;div&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Sentence-based&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Recursive Text Splitter&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Tools&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;LangChain.TextSplitter&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;unstructured.chunking&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Eigenes Skript&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1030" y="1840" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-117" value="Embedding&lt;div&gt;(Vektoriesierung)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1360" y="1724" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-121" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-119" target="pPGMjQGaBLtE6NlgupBI-117" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-119" value="Modelle&lt;div&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;text-embedding-ada-002 (OpenAI)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- C&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ohere, HuggingFace, SentenceTransformers&lt;/span&gt;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Instructor-XL (Lokal)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1345" y="1840" width="150" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.001;entryY=0.433;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-113" target="pPGMjQGaBLtE6NlgupBI-117" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-122" value="Speicherung in der Vektordatenbank" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1680" y="1724" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="pPGMjQGaBLtE6NlgupBI-123" target="pPGMjQGaBLtE6NlgupBI-122" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-123" value="Beispiele&lt;div&gt;.&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Qdrant&lt;br&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;FAISS (lokal)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;- Weaviate&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;- Pinecone&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;- ChromaDB&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1720" y="1840" width="120" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pPGMjQGaBLtE6NlgupBI-117" target="pPGMjQGaBLtE6NlgupBI-122" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1678" y="1753" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-127" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;strategische &amp;amp; fachliche Fragen&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry y="-880" width="240" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-129" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Technische Fragen&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="-880" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-133" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;Pipeline &amp;amp; Modellbezogene Fragen&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1200" y="-880" width="280" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-134" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Qualität &amp;amp; Feedback&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1880" y="-880" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-135" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Projektorganisation&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;Wer macht was?&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2440" y="-880" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-136" value="" style="endArrow=none;html=1;rounded=0;strokeColor=default;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="440" as="sourcePoint"/>
+                        <mxPoint x="440" y="-880" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-137" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1000" as="sourcePoint"/>
+                        <mxPoint x="1000" y="-880" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-138" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1680" as="sourcePoint"/>
+                        <mxPoint x="1680" y="-880" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-139" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="2240" as="sourcePoint"/>
+                        <mxPoint x="2240" y="-880" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-140" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-200" as="sourcePoint"/>
+                        <mxPoint x="-200" y="-880" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-141" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="2800" as="sourcePoint"/>
+                        <mxPoint x="2800" y="-880" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-143" value="Ziel &amp;amp; Use Case" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-120" y="-800" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-144" value="Dateninhalt &amp;amp; Scope" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="-800" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-145" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Was genau soll der Agent können?&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Öffentlich zugängliche&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Fragen beantworten können&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Im Intervall Website neu Scrapen, um neue Inhalte einzufügen&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;(- Ausgabe von iCal, moodle Links, ...)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-160" y="-720" width="200" height="124" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-146" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Wer ist die Zielgruppe?&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Studierende&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Studieninteressierte&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Profs?&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-160" y="-560" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-147" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Welche Mehrwerte erwarten wir?&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Weniger dumme Fragen an die Profs&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Mehr Transparenz&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- vereinfachter Zugang zu Informationen&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-160" y="-400" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-148" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Welche Inhalte sollen abgedeckt werden?&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Paar Fragen überlegen, die der Bot hinterher beantworten kann&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Unsere Fakultät&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;(- Moodle-Links, iCal-Dateien)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Fivis-Datenbank Zugang?&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Mensa Plan?&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="-720" width="240" height="114" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-149" value="&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Wie vollständig und aktuell sind die Inhalte?&lt;/font&gt;&lt;/div&gt;&lt;div&gt;- Schwierig&lt;/div&gt;&lt;div&gt;- Wir werden es sehen&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="-560" width="240" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-150" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Gibt es rechtliche Einschränkungen?&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Schriftliche Genehmigung Hochschule?&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Beim Scapen: Was erlaubt die Website?&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Infos einholen, wieviel/wie oft wir scrapen dürfen&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="-400" width="240" height="109" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-151" value="Infrastruktur &amp;amp; Hosting" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="-800" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-152" value="Zugriff &amp;amp; Integration" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="-800" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-153" value="Datenverarbeitung" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="-800" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-154" value="&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Wo wird das System gehostet?&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;&quot;&gt;- Im besten Fall Hochschule +&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;API (Standard oder eigenes Modell auf Azure o.ä)&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;- Lokal bei sich + API&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;- Komplett komerzielle Cloud (AWS o.ä)&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;- Testen ob eigenes kleines Modell fine tunen oder einfach standart API call&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="-720" width="160" height="123" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-155" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Wie wird die Skalierbarkeit gehandhabt?&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;- Abwägung eigenes Modell in der cloud vs API zu OpenAI o.ä&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="-560" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-156" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Wer übernimmt das Monitoring und Maintenance?&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 7px;&quot;&gt;- Wissenschaftliche MA&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 7px;&quot;&gt;- Verwaltungspersonal der THWS&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="-400" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-157" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Wo wird der Agent eingebunden?&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Entwicklung Lokal auf eigener Seite&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Maintainence Webseite&lt;/span&gt;&amp;nbsp;Seite&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;Vision:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Eigene Website unter thws.de/&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;- Maintainence Webseite&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Chat-Bubble auf THWS&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="-720" width="160" height="122" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-160" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Soll es eine Authentifizierung geben?&lt;/font&gt;&lt;div&gt;&lt;font size=&quot;1&quot;&gt;- Je nachdem wieviel Zeit&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="-560" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-161" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Welche Datenformate?&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- HTML&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- PDFs&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Bilder/Grafiken?&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- iCal?&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Links/URLs?&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="-720" width="160" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-162" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Daten aktualisiert werden? Wie?&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- In bestimmten Intervall&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Monatlich, wöchentlich scrapen und vergleichen (z.B hashen)&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="-560" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-163" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Wie sensibel sind die Inhalte?&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- eig keine sensiblen Inhalte&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Nur öffentlich zugängliche Daten&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="-400" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-164" value="RAG-Design" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1090" y="-800" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-165" value="&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Nur 1:1 Antworten oder generierte?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;- Wir wollen genrierte Antworten&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="-720" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-171" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Welche Datenbank wird genutzt?&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- qDrant&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Pinecone (Cloud)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Infos sammeln:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Vektordatenbank vs Knowledge-Graph&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Welche Provider&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1460" y="-720" width="180" height="111" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-172" value="Vektordatenbank" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1490" y="-800" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-173" value="LLM &amp;amp; Embedding" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1285" y="-800" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-174" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Welches Embedding-Modell (Lokal/Cloud)?&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;- Kann Lokal laufen&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;- Je nachdem wie es skaliert&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1250" y="-720" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-175" value="Anzahl Chunks pro Anfrage?&lt;div&gt;- Testen/Ausprobieren&lt;/div&gt;&lt;div&gt;- Abhängig vom Modell, Chunkgröße, Overlapping&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="-560" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-176" value="&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Welches LLM wird verwendet?&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- ollama, Mistral (Mixtral)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Hawki&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;- OpenAI&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1250" y="-560" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-177" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Backup-Strategie?&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;- Kommt aufs deployment an&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1460" y="-560" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-181" value="Wie wird der Prompt formuliert?&lt;div&gt;- Wird sich entwickeln&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="-400" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-182" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Wie teuer ist der Betrieb der APIs?&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Werden wir sehen&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1250" y="-400" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-183" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Lokal oder gehostet?&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Lokal:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;- Embedding&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;- Chunking&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Cloud:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;- Antwort generierung&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1460" y="-400" width="180" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-184" value="Gibt es Rollen-Prompts?&lt;div&gt;- Wie bei ChatGPT &quot;Prompt Vorlagen&quot;&lt;/div&gt;&lt;div&gt;- Wir werden es sehen&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="-264" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-185" value="Evaluation" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1780" y="-800" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-186" value="Feedback-Loop" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2030" y="-800" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-187" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Soll der Nutzer Feedback geben können? Wie?&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Erstmal Nein&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Eventuell&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;👍 / 👎&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1960" y="-720" width="240" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-188" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Wie testen wir, ob das System gute Antworten liefert?&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;- Testfragen validieren&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;- 2tes LLM was Antwort überprüft&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;- Vergleich mit der Datenbank (vorallem Hard Facts)&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1720" y="-720" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-189" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Wie messen wir Unsicherheiten?&lt;/font&gt;&lt;div&gt;- Similarity Score zwischen Query und Chunks&lt;/div&gt;&lt;div&gt;- LLM Fragen, ob es einen score genriert&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1720" y="-560" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-190" value="Wird das System nachtrainiert?&lt;div&gt;- Eher Nein&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1960" y="-560" width="240" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pPGMjQGaBLtE6NlgupBI-193" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Wie gehe wir mit Unsicherheiten um?&lt;/font&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Wenn Similaritie Score &amp;lt; 0.7 Antwort, dass keine Antwort gefunden wurden&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- mit Rechtswirksamen Vorbehalt&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1720" y="-400" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-1" target="55KY6pfOrd_zU6bBp3TD-3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-1" value="Vertical Container" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2863" y="607" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-2" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;Dokumente&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="55KY6pfOrd_zU6bBp3TD-1" vertex="1">
+                    <mxGeometry x="27" y="79" width="146" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-3" target="55KY6pfOrd_zU6bBp3TD-5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-3" target="55KY6pfOrd_zU6bBp3TD-4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-3" target="55KY6pfOrd_zU6bBp3TD-6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-3" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;Chunking&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="3191" y="677" width="151" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-4" target="55KY6pfOrd_zU6bBp3TD-7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-4" value="Chunk 1" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="3474" y="607" width="84" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-5" target="55KY6pfOrd_zU6bBp3TD-8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-5" value="Chunk 2" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="3474" y="685.5" width="84" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-6" target="55KY6pfOrd_zU6bBp3TD-9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-6" value="Chunk n" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="3474" y="764" width="84" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-7" value="Embedding 1" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="3705" y="607" width="84" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-8" value="Embeddingt 2" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="3705" y="685.5" width="84" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="55KY6pfOrd_zU6bBp3TD-9" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="3931.25" y="785.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-9" value="Embedding n" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="3705" y="764" width="84" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="55KY6pfOrd_zU6bBp3TD-10" target="55KY6pfOrd_zU6bBp3TD-15" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-10" value="Vertical Container" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="3934" y="607" width="201" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-12" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;Vektor-Datenbank&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="55KY6pfOrd_zU6bBp3TD-10" vertex="1">
+                    <mxGeometry x="-1" y="81.5" width="202" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-13" target="55KY6pfOrd_zU6bBp3TD-18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-13" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="4900" y="439" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="55KY6pfOrd_zU6bBp3TD-14" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="4132.5" y="637" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-14" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Embedding&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="4280" y="607" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-15" target="55KY6pfOrd_zU6bBp3TD-16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-15" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;Relevant Chunks&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="4280" y="750" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="55KY6pfOrd_zU6bBp3TD-16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="4907.5" y="737.875" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-16" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Query +&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Relavant Chunks&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="4534" y="750" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-17" target="55KY6pfOrd_zU6bBp3TD-13" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="5020" y="707"/>
+                            <mxPoint x="5020" y="469"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-17" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;LLM Call&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="4833" y="677" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-18" target="55KY6pfOrd_zU6bBp3TD-14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-18" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;Query&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="4534" y="544" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.004;entryY=0.453;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-8" target="55KY6pfOrd_zU6bBp3TD-12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.001;entryY=0.107;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-7" target="55KY6pfOrd_zU6bBp3TD-10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-36" target="55KY6pfOrd_zU6bBp3TD-7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-36" target="55KY6pfOrd_zU6bBp3TD-14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-36" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Embedding Model&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="3974.5" y="436" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-40" value="Konkrete Fragen Profs:&lt;div&gt;- Was sind meine Verantwortungsbereiche&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-146" y="-246" width="266" height="193" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-41" value="Kategorien Studierende:&lt;div&gt;- FAQ Praxissemester&lt;/div&gt;&lt;div&gt;- FAQ Studienverlauf&lt;/div&gt;&lt;div&gt;- FAQ Studieninhalte&lt;/div&gt;&lt;div&gt;- FAQ Fristen &amp;amp; Voraussetzungen&lt;/div&gt;&lt;div&gt;- FAQ Standard Infos (E-Mails, ...)&lt;/div&gt;&lt;div&gt;- FAQ erstis&lt;/div&gt;&lt;div&gt;- FAQ außerordentliche Studienangebote&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="147" y="-246" width="266" height="193" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-42" value="Konkrete Fragen Studieninteressierte:&lt;div&gt;&lt;div&gt;- FAQ Studienverlauf&lt;/div&gt;&lt;div&gt;- FAQ Studieninhalte&lt;/div&gt;&lt;/div&gt;&lt;div&gt;- FAQ Studiengänge&lt;/div&gt;&lt;div&gt;- FAQ Anreise&lt;/div&gt;&lt;div&gt;- FAQ außerordentliche Studienangebote&lt;/div&gt;&lt;div&gt;- FAQ Anmeldung/Einschreibung&lt;/div&gt;&lt;div&gt;-&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry y="-12" width="266" height="193" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-43" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Stakeholder kommunikation&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Nächstes Treffen mit Rott&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Fragenkatalog an Rott &amp;amp; Schleif&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Schleif einladen zum Kick Off&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Projektteilnehmer in CC&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- Robin&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2258" y="-803" width="186" height="94" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-46" value="Welches LLM für Antwort genrierung (EIgenes kleines Model finetunen oder API call auf GPT 4o-mini)&lt;div&gt;- Für Später&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2363" y="-235" width="213" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-48" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Knowledge Graph&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Noah&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2256" y="-688" width="213" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-49" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Welches Embedding Model?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Chris&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2501" y="-700" width="213" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-50" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Welche Chunking Model?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Robin&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2256" y="-609" width="213" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-51" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;Fragen an Rott&lt;/b&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="3031" y="-880" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-52" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="3508" y="-10" as="sourcePoint"/>
+                        <mxPoint x="3508" y="-890" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-53" value="- Termin mit Rott: Montags oder Dienstags&lt;div&gt;- Hawki API Zugang&lt;/div&gt;&lt;div&gt;- Was brauchen wir alles für die Projektanmeldug?&lt;/div&gt;&lt;div&gt;- Prüfungsform? (Code, Doku, Präsi?)&lt;/div&gt;&lt;div&gt;- Zeitspanne?&lt;/div&gt;&lt;div&gt;- Weiteres vorgehen? Anmeldung etc.&lt;/div&gt;&lt;div&gt;- Welches Interesse haben Profs an dem Bot zur beantwortung von Fragen&lt;/div&gt;&lt;div&gt;- Fivis-Datenbank Zugang sinnvoll? (Datenschutz bei nicht eingeschriebenen) Eventuell nur Teile&lt;/div&gt;&lt;div&gt;- In wiefern ist das Hosting der Website, Backend, Frontend, Scraper über die Hochschule möglich?&lt;/div&gt;&lt;div&gt;- Welche Bedenken hat er bezüglich rechtlichen Implikationen, Müssen wir wegen Scraping bescheid sagen etc.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2863" y="-820" width="529" height="206" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-54" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Scraping - Datenbeschaffung&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Framework?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Aufbereitung?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- PDFs?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- David&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2510" y="-628" width="213" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-55" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Fragenkatalog erstellen zum testen/validieren&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Jeder überlegt sich eine Frage zu jeder FAQ Kateogrie (ganz links unten)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2256" y="-526" width="213" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-56" value="Ergebnisse der Recherche in md aufbereiten&lt;div&gt;Verständlich für Alle!&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2367" y="-407" width="213" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-59" target="55KY6pfOrd_zU6bBp3TD-58" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="55KY6pfOrd_zU6bBp3TD-58" target="pPGMjQGaBLtE6NlgupBI-113" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-58" value="Datenqualität prüfen" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="813" y="1720" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-59" value="Inhalt und korrektheit" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="808" y="1847" width="130" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-63" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Vektor-Datenbanken&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Leander&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2526" y="-526" width="213" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55KY6pfOrd_zU6bBp3TD-64" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Textbereining, Qualitätsmessung automatisieren&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Chris&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2501" y="-800" width="213" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
