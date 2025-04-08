@@ -10,9 +10,14 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 COLLECTION_NAME = "thws_data_chunks"
 QDRANT_URL = "http://localhost:6333"
 EMBED_MODEL_NAME = "BAAI/bge-m3"
-OLLAMA_MODEL = "gemma:7b"  # beste ergebnisse
-# OLLAMA_MODEL = "zephyr"
-# OLLAMA_MODEL = "mixtral"
+# OLLAMA_MODEL = "gemma:7b"  
+
+# OLLAMA_MODEL = "mistral"
+# OLLAMA_MODEL = "qwq" - bestes Ergebnis
+# OLLAMA_MODEL = "zephyr" - Noch nicht getestet
+# OLLAMA_MODEL = "mixtral" - Noch nicht getestet
+# OLLAMA_MODEL = "mistral"
+
 TOP_K = 5
 
 # --- Load Embedding Model with CUDA ---
