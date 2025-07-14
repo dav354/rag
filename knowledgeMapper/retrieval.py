@@ -11,8 +11,8 @@ from lightrag.base import QueryParam
 from knowledgeMapper.utils.local_models import Reranker
 
 # You can now set this to "naive" or "mix" and the code will work
-MODE = "naive"
-RERANKER_TOP_K = 3 # Number of documents to use after reranking
+MODE = "mix"
+RERANKER_TOP_K = 5 # Number of documents to use after reranking
 
 RELIABLE_SYSTEM_PROMPT_TEMPLATE = """
 **SYSTEMBEFEHL FÜR PRÄZISE WISSENSBASIERTE ANTWORTEN:**
@@ -26,7 +26,8 @@ RELIABLE_SYSTEM_PROMPT_TEMPLATE = """
 3.  **PRÄZISION & KONSISTENZ:**
     * Synthetisiere relevante Fakten aus den `Relationships(KG)`- und `Document Chunks(DC)`-Abschnitten zu einer **flüssigen, kohärenten und gut lesbaren Antwort**.
     * Wenn der `KONTEXT` widersprüchliche Informationen zu einem Thema enthält, gib **BEIDE Versionen an** und nenne die jeweiligen Quell-IDs.
-
+    * Formuliere eine Aussagekräftige Antwort auf die gestellte Frage des Users!
+    
 4.  **FALLBACK-PROZEDERE:** Falls die `NUTZERFRAGE` **NICHT** oder **NICHT ausreichend** im `KONTEXT` beantwortet werden kann und **auch keine indirekten, zitierfähigen Informationen** (weder aus DC noch aus KG) vorhanden sind, antworte **AUSSCHLIESSLICH** und wortwörtlich mit:
     "Ich konnte keine passenden Informationen zu Ihrer Anfrage in meiner Wissensdatenbank finden."
     Verändere diese Formulierung **NICHT**.
@@ -124,47 +125,72 @@ async def prepare_and_execute_retrieval(
         rag_instance: LightRAG,
 ) -> Dict[str, Union[str, List[Dict[str, Any]]]]:
     """
-    Orchestrates a reliable RAG process that parses context, reranks document chunks,
-    and returns a clean answer and structured sources.
+    Orchestrates a reliable RAG process with parallel reranking for documents and KG items.
     """
     params_bypass = QueryParam(mode="bypass", top_k=0)
-
-    # Use a large top_k to get enough documents for the reranker to work with.
-    # We need the full context string as it is the only way to get all data.
-    params_context = QueryParam(
-        mode=MODE,
-        top_k=20,
-        only_need_context=True
-    )
+    params_context = QueryParam(mode=MODE, top_k=20, only_need_context=True)
 
     print(f"1. Retrieving initial combined context string in '{MODE}' mode...")
     initial_context_str = await rag_instance.aquery(user_query, param=params_context)
-
     if not initial_context_str:
         return {"answer": "Ich konnte keine passenden Informationen zu Ihrer Anfrage finden.", "sources": []}
 
     print("2. Parsing the context string...")
-    # This function now handles both modes automatically. No changes needed here.
     parsed_context = _parse_context_string(initial_context_str)
-
-    if not parsed_context or not parsed_context.get("doc_chunks"):
+    if not parsed_context:
         return {"answer": "Ich konnte keine passenden Informationen zu Ihrer Anfrage finden.", "sources": []}
 
-    # Rerank only the document chunks
-    doc_chunks = parsed_context["doc_chunks"]
-    documents_to_rerank = [chunk.get("content", "") for chunk in doc_chunks]
-
-    print(f"3. Reranking {len(documents_to_rerank)} document chunks...")
     reranker = Reranker()
-    reranked_indices = reranker.rerank(user_query, documents_to_rerank)
 
-    # Create a new list of document chunks, sorted by relevance and trimmed
-    reranked_chunks = [doc_chunks[i] for i in reranked_indices[:RERANKER_TOP_K]]
+    # --- STAGE 1: Rerank Document Chunks ---
+    doc_chunks = parsed_context.get("doc_chunks", [])
+    reranked_chunks = []
+    if doc_chunks:
+        print(f"3a. Reranking {len(doc_chunks)} document chunks...")
+        doc_texts = [chunk.get("content", "") for chunk in doc_chunks]
+        doc_indices = reranker.rerank(user_query, doc_texts)
+        # Keep the top K documents (e.g., K=3)
+        reranked_chunks = [doc_chunks[i] for i in doc_indices[:RERANKER_TOP_K]]
 
-    print("4. Rebuilding context with reranked documents...")
+        # --- STAGE 2: Rerank Knowledge Graph Items (Entities & Relationships) ---
+    kg_items = []
+    kg_texts = []
+    for entity in parsed_context.get("entities", []):
+        item = entity.copy()
+        item['__source_type'] = 'entity'
+        kg_items.append(item)
+        kg_texts.append(f"Entität: Der Ort '{entity.get('name', '')}' ist vom Typ '{entity.get('type', '')}'.")
+
+    for rel in parsed_context.get("relationships", []):
+        item = rel.copy()
+        item['__source_type'] = 'relationship'
+        kg_items.append(item)
+        kg_texts.append(f"Beziehung: '{rel.get('source', '')}' hat die Beziehung '{rel.get('type', '').replace('_', ' ')}' zu '{rel.get('target', '')}'.")
+
+    reranked_entities = []
+    reranked_relationships = []
+    if kg_items:
+        print(f"3b. Reranking {len(kg_items)} KG items...")
+        kg_indices = reranker.rerank(user_query, kg_texts)
+        # Keep the top K KG items (e.g., K=3)
+        top_kg_items = [kg_items[i] for i in kg_indices[:RERANKER_TOP_K]]
+
+        # Separate them back out
+        reranked_entities = [item for item in top_kg_items if item['__source_type'] == 'entity']
+        reranked_relationships = [item for item in top_kg_items if item['__source_type'] == 'relationship']
+        # Clean up temporary key
+        for item in reranked_entities + reranked_relationships:
+            del item['__source_type']
+
+    # --- STAGE 3: Combine and Rebuild Context ---
+    # Check if we found anything at all after reranking
+    if not reranked_chunks and not reranked_entities and not reranked_relationships:
+        return {"answer": "Ich konnte keine passenden Informationen zu Ihrer Anfrage in meiner Wissensdatenbank finden.", "sources": []}
+
+    print("4. Rebuilding context with the best documents and KG items...")
     reranked_context_str = _rebuild_context_string(
-        entities=parsed_context["entities"],
-        relationships=parsed_context["relationships"],
+        entities=reranked_entities,
+        relationships=reranked_relationships,
         doc_chunks=reranked_chunks
     )
 
@@ -182,7 +208,10 @@ async def prepare_and_execute_retrieval(
         system_prompt=final_system_prompt
     )
 
+    # Combine all top sources for the final output
+    final_sources = reranked_chunks + reranked_entities + reranked_relationships
+
     return {
         "answer": citable_answer_text,
-        "sources": reranked_chunks  # Return the reranked and trimmed chunks as sources
+        "sources": final_sources,
     }
