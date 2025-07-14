@@ -1,8 +1,6 @@
-# File: app.py
-# Description: v4.0 - Angepasst an die flache API-Struktur (answer: string, sources: json) und Fehler in der Chat-Anzeige behoben.
-
 import streamlit as st
 import requests
+import json
 
 # Konfigurierbare Basis-URL der API
 if "api_base" not in st.session_state:
@@ -22,67 +20,76 @@ st.title("askTHWS-ChatBot")
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-
 def submit_callback():
-    user_input = st.session_state.get("user_input")
-    if user_input and user_input.strip():
+    user_input = st.session_state.user_input
+    if user_input.strip():
         # Speichere User-Nachricht
         st.session_state.messages.append({"role": "user", "content": user_input})
-
         # Anfrage an API
         with st.spinner("Bot denkt nach…"):
             try:
-                resp = requests.post(API_URL, json={"query": user_input}, timeout=60)
+                resp = requests.post(API_URL, json={"query": user_input}, timeout=30)
                 resp.raise_for_status()
                 data = resp.json()
-
-                # --- KORRIGIERTE DATEN-EXTRAKTION ---
-                # Die API liefert jetzt eine flache Struktur, wie vom retrieval.py vorgegeben.
-                answer_text = data.get("answer", "Keine Antwort erhalten.")
-                sources = data.get("sources", [])  # "sources" ist der neue Name für den Kontext
+                answer_text = data.get("answer", {}).get("answer", "Keine Antwort erhalten.")
                 duration = str(data.get("duration_seconds", ""))
 
-            except requests.exceptions.RequestException as e:
-                answer_text = f"Fehler bei der API-Anfrage: {e}"
-                duration = ""
-                sources = []
-            except Exception as e:
-                answer_text = f"Ein unerwarteter Fehler ist aufgetreten: {e}"
-                duration = ""
-                sources = []
+                # Hole sources
+                sources = data.get("answer", {}).get("sources", "")
 
-        # Speichere Bot-Antwort. Das Dictionary enthält "answer", aber kein "content".
+                # Wenn sources ein JSON-String ist, versuche ihn zu parsen
+                if isinstance(sources, str):
+                    try:
+                        parsed_sources = json.loads(sources)
+                        if isinstance(parsed_sources, list):
+                            sources_list = parsed_sources
+                        else:
+                            sources_list = [sources]
+                    except json.JSONDecodeError:
+                        # Falls kein valider JSON-String, als einfacher String behandeln
+                        sources_list = [sources]
+                elif isinstance(sources, list):
+                    sources_list = sources
+                else:
+                    sources_list = [str(sources)]
+
+            except Exception as e:
+                answer_text = f"Fehler beim Abruf: {e}"
+                duration = ""
+                sources_list = []
+
+        # Speichere Bot-Antwort
         st.session_state.messages.append({
             "role": "bot",
             "answer": answer_text,
             "duration": duration,
-            "sources": sources
+            "sources": sources_list
         })
 
+    # Input-Feld zurücksetzen
+    st.session_state.user_input = ""
 
-# --- KORRIGIERTE DARSTELLUNG DER CHAT-NACHRICHTEN ---
-for msg in st.session_state.messages:
-    with st.chat_message(msg["role"]):
-        # Unterscheide, welches Feld angezeigt werden soll, je nach Rolle.
-        if msg["role"] == "user":
-            # User-Nachrichten haben den Schlüssel "content"
-            st.markdown(msg.get("content", ""))
-        elif msg["role"] == "bot":
-            # Bot-Nachrichten haben den Schlüssel "answer"
-            st.markdown(msg.get("answer", ""))
+# Darstellung der bisherigen Nachrichten
+for i, msg in enumerate(st.session_state.messages):
+    if msg["role"] == "user":
+        st.markdown(f"**Du:** {msg['content']}")
+    elif msg["role"] == "bot":
+        st.text_area("Antwort", msg.get("answer", ""), key=f"answer_{i}", height=150)
+        st.text_input("Antwortdauer (s)", msg.get("duration", ""), key=f"duration_{i}")
+        st.markdown("**Quellen:**")
+        sources = msg.get("sources", [])
+        if sources:
+            for src in sources:
+                if src:
+                    st.markdown(f"- {src}")
+        else:
+            st.markdown("_Keine Quellen vorhanden._")
 
-            # Die Anzeige für den Kontext (ehemals "sources") bleibt gleich.
-            sources_list = msg.get("sources", [])
-            if sources_list:
-                with st.expander("Verwendeten Kontext anzeigen"):
-                    for src in sources_list:
-                        if isinstance(src, dict):
-                            content = src.get("content", "Kein Inhalt verfügbar.")
-                            st.markdown("---")
-                            st.markdown(content)
-                        else:
-                            st.markdown("---")
-                            st.text(str(src))
-
-# Chat-Eingabe-Formular am unteren Rand
-st.chat_input("Stelle deine Frage...", key="user_input", on_submit=submit_callback)
+# Chat-Eingabe-Formular mit Callback
+with st.form(key="chat_form"):
+    st.text_input(
+        label="Deine Nachricht",
+        placeholder="Schreibe hier deine Frage...",
+        key="user_input"
+    )
+    st.form_submit_button("Senden", on_click=submit_callback)
