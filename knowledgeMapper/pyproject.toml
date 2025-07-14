@@ -1,7 +1,9 @@
-[tool.poetry]
+[project]
 name = "knowledge-mapper"
 version = "0.1.0"
 description = "A RAG-based knowledge mapping application"
+
+[tool.poetry]
 
 [tool.poetry.dependencies]
 python = "~3.11"

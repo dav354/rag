@@ -1,78 +1,131 @@
-# THWS Scraper Project
+# 🕷️ THWS Scraper
 
-A Scrapy-based web scraper for THWS websites, with data storage in MongoDB.
+This project contains a robust and feature-rich Scrapy-based web scraper designed to crawl THWS (University of Applied Sciences Würzburg-Schweinfurt) websites. It intelligently handles various content types, stores data efficiently in MongoDB, and provides real-time monitoring capabilities.
 
-## Setup
+---
 
-1. **Create `.env` File:**
+## ✨ Key Features
 
-   This project uses a `.env` file to manage sensitive configurations like database credentials. Create a file named `.env` in the project's root directory with the following content, replacing placeholder values with your actual credentials:
+- **Multi-Content Type Parsing:**
+    - **HTML:** Parses standard web pages, extracting main content and discovering new links.
+    - **PDF:** Downloads and stores PDF documents.
+    - **iCal:** Parses `.ics` files to extract structured event data.
+- **Efficient MongoDB Storage:**
+    - **GridFS for Large Files:** Automatically uses GridFS to store large files (e.g., PDFs), keeping the main database documents lean and performant.
+    - **Direct Embedding:** Smaller files are embedded directly within MongoDB documents for faster access.
+    - **Indexed Collections:** Creates unique indexes on the `url` field to prevent duplicate entries and ensure data integrity.
+- **Live Monitoring & Statistics:**
+    - **Web Dashboard:** A built-in, lightweight web server provides a live dashboard at `http://localhost:7000/live` to monitor crawl progress in real-time.
+    - **JSON API:** Exposes raw statistics via a JSON endpoint at `http://localhost:7000/stats`.
+    - **Detailed CSV Exports:** Automatically generates a CSV summary of the crawl statistics upon completion.
+- **Intelligent Crawling & Error Handling:**
+    - **Soft Error Detection:** Identifies and ignores "soft 404" pages (e.g., pages that return a 200 OK status but contain messages like "Seite nicht gefunden").
+    - **Configurable URL Filtering:** Allows you to define URL patterns to ignore during a crawl, avoiding irrelevant content.
+    - **Robust Retries:** Automatically retries failed requests for common transient HTTP errors (e.g., 500, 502, 503).
+- **Containerized & Reproducible:**
+    - **Docker Compose:** The entire stack (Scraper, MongoDB, Mongo Express) is managed with Docker Compose for easy, one-command setup.
+    - **Environment-based Configuration:** All sensitive data and settings are managed via a `.env` file, keeping credentials out of the codebase.
 
-   ```env
-   # .env
-   MONGO_USER=scraper
-   MONGO_PASS=password
-   MONGO_DB=askthws_scraper
-   ```
+---
 
-## Running the Scraper
+## 🏗️ System Architecture
 
-1. **Build and Start Services:**
+The scraper is designed as a multi-container Docker application:
 
-   Open a terminal in the project's root directory and run:
+1.  **`thws_scraper` Service:**
+    - The core Scrapy spider that crawls the target websites.
+    - It runs a lightweight `http.server` in a separate thread to serve the live stats dashboard.
+    - It connects to the `mongodb` service to store the data it collects.
 
-   ```bash
-   docker-compose up -d --build
-   ```
+2.  **`mongodb` Service:**
+    - A standard MongoDB instance that persists all scraped data.
+    - It uses a Docker volume (`mongodb_data`) to ensure data is not lost when the container is stopped or restarted.
 
-1. **Access Services:**
+3.  **`mongo-express` Service:**
+    - A web-based administration interface for MongoDB, accessible at `http://localhost:8081`.
+    - It allows you to easily browse the `pages` and `files` collections to inspect the scraped data.
 
-   - **Scraper Logs:** View scraper logs:
+---
 
-     ```bash
-     docker-compose logs -f scraper
-     ```
+## 🔧 Configuration
 
-   - **Mongo Express (Database Admin UI):**
+Create a `.env` file in the project's root directory to configure the application. This file is ignored by Docker and Git to protect your credentials.
 
-     Access Mongo Express in your browser at `http://localhost:8081`.
+```env
+# .env
+MONGO_USER=scraper
+MONGO_PASS=password
+MONGO_DB=askthws_scraper
+```
 
-   - **Live Scraper Stats:**
+---
 
-     View live stats from the scraper at `http://localhost:7000/live`.
+## 🛠 Usage
 
-## Exporting Data from MongoDB
+### 1. Build and Start the Services
 
-The project includes a script to export the scraper's database (`askthws_scraper`) from the MongoDB container.
+From the project's root directory, run:
 
-1. **Run the export script:**
+```bash
+docker-compose up -d --build
+```
 
-   The script automatically loads credentials from your `.env` file.
+This command will build the scraper image, pull the necessary MongoDB images, and start all services in the background.
 
-   ```bash
-   ./dump_mongo.sh
-   ```
+### 2. Monitor the Crawl
 
-   This will create a gzipped archive file in the current directory, named like `askthws_scraper_backup_YYYYMMDD_HHMMSS.gz`. This backup contains the `pages` and `files` collections, including files stored in GridFS.
+- **Live HTML Dashboard:**
+  Open your browser to [http://localhost:7000/live](http://localhost:7000/live) to see a real-time table of crawl statistics per subdomain.
 
-## Importing (Restoring) Data into MongoDB
+- **Scraper Logs:**
+  To view the detailed, JSON-formatted logs from the scraper, run:
+  ```bash
+  docker-compose logs -f scraper
+  ```
 
-You can restore a previously exported database backup into the MongoDB container.
+- **Database UI:**
+  To browse the MongoDB database, open [http://localhost:8081](http://localhost:8081) in your browser.
 
-1. **Run the Restore Command:**
+### 3. Data Management
 
-   Replace `<BACKUP_FILE_NAME.gz>` with the actual name of your backup file. The `mongodb` is the service name/container name defined in `docker-compose.yml`.
-   The `--drop` flag will clear existing collections in the target database before restoring, effectively replacing the content. Remove `--drop` if you want to merge without deleting (be cautious with existing data).
+#### Exporting Data
 
-   ```bashher habe ich aktuell 200GB 
-   docker exec -i mongodb mongorestore \
-       --username scraper \
-       --password password \
-       --authenticationDatabase "admin" \
-       --archive \
-       --gzip \
-       --drop < ./<BACKUP_FILE_NAME.gz>
-   ```
+The project includes a convenient script to back up the entire scraper database from the running MongoDB container.
 
-   This command streams the backup file into the `mongorestore` command running inside the `mongodb` container. The database will be restored under its original name (`askthws_scraper`).
-   
+```bash
+./dump_mongo.sh
+```
+
+This creates a compressed archive (`askthws_scraper_backup_*.gz`) in the current directory.
+
+#### Importing Data
+
+You can restore a backup into the container. This is useful for seeding a new environment or restoring a previous state.
+
+```bash
+# Replace <BACKUP_FILE_NAME.gz> with your backup file
+docker exec -i mongodb mongorestore \
+    --username scraper \
+    --password password \
+    --authenticationDatabase "admin" \
+    --archive \
+    --gzip \
+    --drop < ./<BACKUP_FILE_NAME.gz>
+```
+
+**Note:** The `--drop` flag will delete existing collections before restoring. Remove it if you need to merge data.
+
+### 4. Analyzing Scraped Data
+
+A Python script is provided to generate a detailed statistical report from the data stored in MongoDB. This can be run from your local machine if you have Python and the required packages installed, or inside the scraper container.
+
+```bash
+# Ensure you have a .env file with credentials
+python3 mongo_stats.py
+```
+
+This script provides insights into:
+- Content types and language distribution.
+- Scraped items per day.
+- HTTP status code distribution.
+- Content freshness and metadata completeness.
