@@ -31,3 +31,5 @@ OLLAMA_NUM_PREDICT = 4096
 
 # Controls LightRAG's entity extraction feature (0 disables it)
 ENTITY_EXTRACT_MAX_GLEANING = 1
+
+RERANKER_MODEL_NAME = "mixedbread-ai/mxbai-rerank-xsmall-v1"

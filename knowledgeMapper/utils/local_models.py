@@ -3,6 +3,7 @@ import asyncio
 import requests
 import torch
 from langchain_huggingface import HuggingFaceEmbeddings
+from sentence_transformers import CrossEncoder
 
 from knowledgeMapper.config import (
     EMBEDDING_MODEL_NAME,
@@ -13,6 +14,7 @@ from knowledgeMapper.config import (
     OLLAMA_HOST,
     OLLAMA_NUM_CTX,
     OLLAMA_NUM_PREDICT,
+    RERANKER_MODEL_NAME,
 )
 
 # Semaphore to throttle concurrency of embedding requests (avoids OOM)
@@ -69,6 +71,29 @@ embedding_wrapper_func.embedding_dim = _async_embedder_instance.embedding_dim
 embedding_func = embedding_wrapper_func
 
 
+class Reranker:
+    """
+    A wrapper for the mxbai-rerank-xsmall-v1 model using sentence-transformers.
+    """
+    def __init__(self, model_name: str = RERANKER_MODEL_NAME, device: str = EMBEDDING_DEVICE):
+        self.model = CrossEncoder(model_name, device=device)
+
+    def rerank(self, query: str, documents: list[str]) -> list[int]:
+        """
+        Reranks a list of documents based on a query.
+
+        Args:
+            query: The user's query.
+            documents: A list of documents to be reranked.
+
+        Returns:
+            A list of indices representing the reranked order of the documents.
+        """
+        pairs = [(query, doc) for doc in documents]
+        scores = self.model.predict(pairs)
+        return sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)
+
+
 class OllamaLLM:
     """
     Async wrapper around Ollama's local LLM endpoint (`/api/generate`).
@@ -76,11 +101,11 @@ class OllamaLLM:
     """
 
     async def __call__(
-        self,
-        prompt: str,
-        system_prompt: str | None = None,
-        history_messages: list[dict] | None = None,
-        **kwargs,
+            self,
+            prompt: str,
+            system_prompt: str | None = None,
+            history_messages: list[dict] | None = None,
+            **kwargs,
     ) -> str:
         # Strip unused keys to avoid API incompatibilities
         for k in ("hashing_kv", "max_tokens", "response_format"):
@@ -127,6 +152,7 @@ __all__ = [
     "embedding_func",
     "OllamaLLM",
     "HFEmbedFunc",
+    "Reranker",
     "EMBEDDING_MODEL_NAME",
     "OLLAMA_MODEL_NAME",
 ]

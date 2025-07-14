@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import json
 
 # Konfigurierbare Basis-URL der API
 if "api_base" not in st.session_state:
@@ -27,23 +28,44 @@ def submit_callback():
         # Anfrage an API
         with st.spinner("Bot denkt nach…"):
             try:
-                resp = requests.post(API_URL, json={"query": user_input}, timeout=30)
+                resp = requests.post(API_URL, json={"query": user_input}, timeout=10000)
                 resp.raise_for_status()
                 data = resp.json()
                 answer_text = data.get("answer", {}).get("answer", "Keine Antwort erhalten.")
                 duration = str(data.get("duration_seconds", ""))
+
+                # Hole sources
                 sources = data.get("answer", {}).get("sources", "")
+
+                # Wenn sources ein JSON-String ist, versuche ihn zu parsen
+                if isinstance(sources, str):
+                    try:
+                        parsed_sources = json.loads(sources)
+                        if isinstance(parsed_sources, list):
+                            sources_list = parsed_sources
+                        else:
+                            sources_list = [sources]
+                    except json.JSONDecodeError:
+                        # Falls kein valider JSON-String, als einfacher String behandeln
+                        sources_list = [sources]
+                elif isinstance(sources, list):
+                    sources_list = sources
+                else:
+                    sources_list = [str(sources)]
+
             except Exception as e:
                 answer_text = f"Fehler beim Abruf: {e}"
                 duration = ""
-                sources = ""
+                sources_list = []
+
         # Speichere Bot-Antwort
         st.session_state.messages.append({
             "role": "bot",
             "answer": answer_text,
             "duration": duration,
-            "sources": sources
+            "sources": sources_list
         })
+
     # Input-Feld zurücksetzen
     st.session_state.user_input = ""
 
@@ -52,13 +74,16 @@ for i, msg in enumerate(st.session_state.messages):
     if msg["role"] == "user":
         st.markdown(f"**Du:** {msg['content']}")
     elif msg["role"] == "bot":
-        # Drei Felder: Antwort, Dauer, Quellen
         st.text_area("Antwort", msg.get("answer", ""), key=f"answer_{i}", height=150)
         st.text_input("Antwortdauer (s)", msg.get("duration", ""), key=f"duration_{i}")
         st.markdown("**Quellen:**")
-        for src in msg.get("sources", "").splitlines():
-            if src:
-                st.markdown(f"- {src}")
+        sources = msg.get("sources", [])
+        if sources:
+            for src in sources:
+                if src:
+                    st.markdown(f"- {src}")
+        else:
+            st.markdown("_Keine Quellen vorhanden._")
 
 # Chat-Eingabe-Formular mit Callback
 with st.form(key="chat_form"):
