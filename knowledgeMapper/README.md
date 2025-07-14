@@ -113,5 +113,3 @@ RAG_STORAGE/
 ```
 
 ---
-
-Let me know if you'd like this rendered into a real `README.md` file, or if you want a `make` or bash script for easier running.
