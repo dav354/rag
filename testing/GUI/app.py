@@ -28,7 +28,7 @@ def submit_callback():
         # Anfrage an API
         with st.spinner("Bot denkt nach…"):
             try:
-                resp = requests.post(API_URL, json={"query": user_input}, timeout=30)
+                resp = requests.post(API_URL, json={"query": user_input}, timeout=10000)
                 resp.raise_for_status()
                 data = resp.json()
                 answer_text = data.get("answer", {}).get("answer", "Keine Antwort erhalten.")
