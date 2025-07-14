@@ -2,11 +2,10 @@ import requests
 import re
 import time
 import os
+import json  # This import is essential
 
 from datetime import datetime
 from typing import List, Dict, Any, Tuple, Union
-
-
 
 MARKDOWN_FILE = "../docs/tests/fragen.md"
 API_URL = "http://localhost:8000/ask"
@@ -73,40 +72,44 @@ def write_header(f, metadata):
 
 
 def save_result(
-    f, question: str, duration: float, api_response: Dict[str, Any], status_code: int
+        f, question: str, duration: float, api_response: Dict[str, Any], status_code: int
 ):
     """Saves a single test result or an error to the file."""
     f.write(f"### Frage: {question}\n\n")
     f.write(f"**Status**: `{status_code}` | **Dauer**: `{duration:.2f}s`\n\n")
 
     if status_code == 200:
-        nested_data = api_response.get(
-            "answer", {}
-        )  # This is the dictionary from retrieval.py
-        raw_answer_text = nested_data.get(
-            "answer", "No answer provided from RAG module (raw)."
-        )  # This is now citable_answer_text
-        raw_sources_str = nested_data.get("sources", "")  # This is now context_data_str
+        # The main 'answer' key from the API response contains the nested dictionary
+        nested_data = api_response.get("answer", {})
 
-        # Clean the answer text by removing citations, if present (optional)
-        clean_answer_text = re.sub(r"\s*<(\d+)>", "", raw_answer_text).strip()
+        # Get the actual answer text
+        answer_text = nested_data.get("answer", "No answer text found.")
 
-        f.write(f"**Antwort:**\n```\n{clean_answer_text}\n```\n\n")
+        # --- THIS IS THE FIX ---
+        # 1. Get the sources, which is a LIST of dictionaries, not a string.
+        sources_list = nested_data.get("sources", [])
 
-        f.write("#### 🔗 Quellen (Raw Context String):\n")  # <--- Changed header
-        # --- MODIFICATION START ---
-        # Directly append the raw_sources_str as a code block
-        if raw_sources_str:
-            f.write(raw_sources_str)
-        else:
-            f.write("- Keine Kontextdaten vom API erhalten.\n")
-        # --- MODIFICATION END ---
+        # 2. Convert the list of source dictionaries into a formatted JSON string.
+        #    - indent=2 makes it readable.
+        #    - ensure_ascii=False correctly handles special characters like umlauts.
+        sources_as_json_string = json.dumps(sources_list, indent=2, ensure_ascii=False)
+        # --- END OF FIX ---
+
+        f.write(f"**Antwort:**\n```\n{answer_text.strip()}\n```\n\n")
+        f.write("#### 🔗 Quellen (nach Reranking):\n")
+        f.write("```json\n") # Add json language tag for nice formatting
+        f.write(sources_as_json_string) # Write the correctly formatted JSON string
+        f.write("\n```\n")
+
     else:
-        error_type = api_response.get("error", "Unknown Error")
-        error_detail = api_response.get(
-            "detail", "An unknown error occurred on the server side."
-        )
-        f.write(f"**Fehler ({error_type}):**\n```json\n{error_detail}\n```\n")
+        # Handle error case
+        error_detail = api_response.get("detail", "An unknown error occurred on the server side.")
+        # Pretty print the error detail if it's a dict/list
+        if isinstance(error_detail, (dict, list)):
+            error_detail_str = json.dumps(error_detail, indent=2, ensure_ascii=False)
+        else:
+            error_detail_str = str(error_detail)
+        f.write(f"**Fehler:**\n```\n{error_detail_str}\n```\n")
 
     f.write("\n---\n\n")
     f.flush()
@@ -127,7 +130,7 @@ def run_tests():
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     result_file = os.path.join(
         "test_results", f"test_results_{timestamp}.md"
-    )  # Use a specific folder
+    )
 
     # Ensure output directory exists
     os.makedirs(os.path.dirname(result_file), exist_ok=True)
