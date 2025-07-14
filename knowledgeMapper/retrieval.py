@@ -12,8 +12,8 @@ from knowledgeMapper.utils.local_models import Reranker
 
 # You can now set this to "naive" or "mix" and the code will work
 MODE = "mix"
-RERANKER_TOP_K = 5 # Number of documents to use after reranking
-
+RERANKER_TOP_K = 3 # Number of documents to use after reranking
+RERANKER_TOP_K_KG=6
 RELIABLE_SYSTEM_PROMPT_TEMPLATE = """
 **SYSTEMBEFEHL FÜR PRÄZISE WISSENSBASIERTE ANTWORTEN:**
 1.  **SPRACHE:** Antworte **AUSSCHLIESSLICH** auf **DEUTSCH**.
@@ -21,8 +21,7 @@ RELIABLE_SYSTEM_PROMPT_TEMPLATE = """
 2.  **INFORMATIONSEINSCHRÄNKUNG & KONTEXTTREUE:** Deine Antwort MUSS **VOLLSTÄNDIG** und **AUSSCHLIESSLICH** auf den Informationen im bereitgestellten `KONTEXT` basieren.
     * **KEINE Halluzinationen:** Generiere **KEINE** neuen Informationen, spekuliere **NICHT** und füge **NICHTS HINZU**, was nicht im `KONTEXT` explizit genannt ist. Dies beinhaltet auch die Verknüpfung von Informationen, die im Kontext nicht direkt miteinander verbunden sind (z.B. geografische Nähe ohne explizite Verbindungsbeschreibung).
     * **Umgang mit unbekannten Begriffen/fehlenden direkten Verknüpfungen:** Wenn der `KONTEXT` eine Abkürzung, Domänen-Slang, einen Fachbegriff oder eine Entität (z.B. einen spezifischen Gebäudecode wie "SHL") enthält, dessen Bedeutung oder deren direkte Beziehung zu anderen relevanten Konzepten (z.B. Buslinien) nicht direkt im `KONTEXT` erklärt oder verknüpft wird, **dann verwende den Begriff genau so, wie er im Kontext steht, und versuche NICHT, ihn zu erklären, zu interpretieren oder nicht explizit genannte Verbindungen herzustellen.** Halluziniere KEINE Bedeutungen, Annahmen oder implizite geografische oder funktionale Verknüpfungen.
-    * **Zitierungspflicht:** Füge am Ende JEDES Satzes oder Absatzes, der Informationen aus dem `KONTEXT` verwendet, die **ID der Quelle in Klammern** hinzu, z.B. (DC-ID: 1) oder (KG-ID: 5). Wenn Informationen aus mehreren Quellen in einem Satz oder Absatz kombiniert werden, nenne alle relevanten IDs (DC-ID: 1, KG-ID: 5).
-
+Zitierungspflicht: Füge am Ende JEDES Satzes oder Absatzes, der Informationen aus dem KONTEXT verwendet, den Link der Quelle in Klammern hinzu, z. B. (https://fiw.thws.de/studium/ihr-weg-durchs-studium/projektarbeit). Entferne dabei den abschließenden Schrägstrich /, falls der Link damit endet. IDs sollen nicht genannt werden.
 3.  **PRÄZISION & KONSISTENZ:**
     * Synthetisiere relevante Fakten aus den `Relationships(KG)`- und `Document Chunks(DC)`-Abschnitten zu einer **flüssigen, kohärenten und gut lesbaren Antwort**.
     * Wenn der `KONTEXT` widersprüchliche Informationen zu einem Thema enthält, gib **BEIDE Versionen an** und nenne die jeweiligen Quell-IDs.
@@ -128,7 +127,7 @@ async def prepare_and_execute_retrieval(
     Orchestrates a reliable RAG process with parallel reranking for documents and KG items.
     """
     params_bypass = QueryParam(mode="bypass", top_k=0)
-    params_context = QueryParam(mode=MODE, top_k=20, only_need_context=True)
+    params_context = QueryParam(mode=MODE, top_k=15, only_need_context=True)
 
     print(f"1. Retrieving initial combined context string in '{MODE}' mode...")
     initial_context_str = await rag_instance.aquery(user_query, param=params_context)
@@ -173,7 +172,7 @@ async def prepare_and_execute_retrieval(
         print(f"3b. Reranking {len(kg_items)} KG items...")
         kg_indices = reranker.rerank(user_query, kg_texts)
         # Keep the top K KG items (e.g., K=3)
-        top_kg_items = [kg_items[i] for i in kg_indices[:RERANKER_TOP_K]]
+        top_kg_items = [kg_items[i] for i in kg_indices[:RERANKER_TOP_K_KG]]
 
         # Separate them back out
         reranked_entities = [item for item in top_kg_items if item['__source_type'] == 'entity']
