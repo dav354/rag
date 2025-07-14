@@ -1,0 +1,31 @@
+question,bot_answer,gold_answer,genauigkeit,F1,BLEU
+Welche Öffnungszeiten haben die Gebäude der THWS während der Vorlesungs- und Prüfungszeit?,"```json
+[
+  {
+    ""id"": ""1"",
+    ""content"": ""Die Gebäude der THWS haben während der Vorlesungs- und Prüfungszeit folgende Öffnungszeiten:\n\n*   **Vorlesungen:** 8:00 - 17:00 Uhr\n*   **Bibliothek:** 9:00 - 18:00 Uhr (Änderungen können aufgrund von Veranstaltungen oder Wartungsarbeiten erforderlich sein. Bitte informieren Sie sich vorab auf der Webseite der Bibliothek.)\n*   **Studentenwerk:** Die Öffnungszeiten des Studentenwerks können je nach Dienstleistung variieren. Bitte informieren Sie sich auf der Webseite des Studentenwerks Wilhelmshaven.\n*   **Hochschulservice Studium:** Die Öffnungszeiten können je nach Bedarf variieren. Bitte informieren Sie sich auf der Webseite des Hochschulservice Studium.\n\nBitte beachten Sie, dass es zu Änderungen der Öffnungszeiten aufgrund von Veranstaltungen, Wartungsarbeiten oder Sonderveranstaltungen kommen kann. Wir empfehlen Ihnen, vorab die aktuellen Informationen auf der Webseite der THWS zu überprüfen.""
+  }
+]
+```",Während der Vorlesungs- und Prüfungszeit sind die Gebäude der THWS von Montag bis Freitag von 6:30 bis 22:00 Uhr und am Samstag von 8:00 bis 18:00 Uhr geöffnet,0,0.1566265060240964,0.09826541096288845
+Wann haben die THWS Gebäude geschlossen?,"Die THWS Gebäude haben in verschiedenen Kontexten geschlossen, und die genauen Daten variieren je nach Anlass. Hier sind die relevanten Informationen aus den bereitgestellten Daten:
+
+*   **Allgemeine Schließzeiten:** Es gibt keine expliziten, dauerhaften Schließzeiten im Sinne von Wochenenden oder Feiertagen. Die Gebäude sind grundsätzlich während der angegebenen Öffnungszeiten zugänglich.
+*   **Januar:** Die Gebäude sind im Januar geschlossen, um Lehrveranstaltungen (z.B. ""Einführung in die Betriebswirtschaft für Ingenieure"", ""Einführung in die Rechtswissenschaft"") durchzuführen.
+*   **Eltern-Kind-Zimmer:** Das Eltern-Kind-Zimmer ist geschlossen, wenn sich dort ansteckende Krankheiten (Windpocken, Mumps, Masern, Scharlach, Röteln oder Läusen) oder alkoholisierte Personen befinden.
+*   **Sonstige Schließzeiten:** Die vollständige Liste der Schließzeiten wird durch die Notwendigkeit der Wartung, Reparaturen oder besondere Veranstaltungen ergänzt.
+*   **Neubau:** Der Neubau im September 2011
+*   **15-Jahre-Festakt:** Die Gebäude waren im Kontext der THWS-15-Jahre-Festakt geschlossen.
+*   **Online-Prüfungen:** Die Online-Prüfungen wurden von der Hochschule durchge­führt.
+*   **Feier aus Anlass des 15-Jahre-Fest-Aktes:** Die THWS Gebäude waren im Kontext der THWS-15-Jahre-Fest-Akt-Feier geschlossen.
+
+Es gibt keine einheitliche, allgemein verfügbare Schliessdatenliste. Die Schliesszeiten können je nach Situation variieren.","Die aktuellen vorlesungsfreien Termine, sowie Semester Beginn, Ende der Semester und des Pürfungszeitraumes können Sie auf der Website der THWS im Bereich ""Termine"" oder direkt unter dem Link https://www.thws.de/termine/ finden",1,0.058091286307053944,0.006229660741131143
+Wo kann ich Informationen über Beratungsangebote an der THWS finden?,"Basierend auf den bereitgestellten Dokumenten-Chunks kann man folgende Informationen über Beratungsangebote an der THWS finden:
+
+*   **Hochschulservice Studium:** Bietet allgemeine Beratungsangebote für Studierende und Studieninteressierte, insbesondere zu Prüfungsanmeldungen, Fristen und akademischen Fragen.  Die Kontaktdaten (E-Mail und Telefonnummer) sind unter anderem in den Dokumenten verfügbar.
+*   **Studienberatung der THWS:** Bietet allgemeine Beratungsangebote für Studierende und Studieninteressierte, insbesondere zu Prüfungsanmeldungen, Fristen und akademischen Fragen.
+*   **Beratung durch die Fakultät für angewandte Natur- und Geisteswissenschaften:** Bietet Beratungsangebote, insbesondere zu den AWPM/AWPF
+*   **Studienabbrecher-Beratung:** Bietet Unterstützung für Studierende, die über einen Studienabbruch nachdenken.
+*   **Frauenbeauftragte der Hochschule:** Bietet Informationen zu Hilfen in Notfällen.
+
+Es ist empfehlenswert, die entsprechenden Webseiten des Hochschulservice Studium oder der Fakultät für angewandte Natur- und Geisteswissenschaften zu besuchen, um detailliertere Informationen zu erhalten.","Studierende können Informationen über Beratungsangebote unter ""Beratung und Service"" auf der THWS-Website finden. Dort sind die wichtigsten Seiten für Studierende zusammengestellt, einschließlich Informationen zur Bibliothek, zu Terminen und zu verschiedenen Beratungsangeboten.",1,0.17751479289940827,0.053523024472966696
+Was ist das Studentische Gesundheitsmanagement?,"Das Studentische Gesundheitsmanagement ist ein umfassender Ansatz, der darauf abzielt, die Gesundheit und das Wohlbefinden von Studierenden zu fördern und zu erhalten. Im Rahmen dieses Programms werden verschiedene Maßnahmen ergriffen, darunter die Unterstützung bei der Vorbeugung von psychischen und physischen Problemen sowie die Förderung eines gesunden Lebensstils. Im Rahmen des Studentischen Gesundheitsmanagements werden vor allem die Angebote für das Betreuungs- und Beratungsangebot der THWS genutzt. Die Hochschule bietet über die Angebote des Hochschulservices Studenten und Studierenden in den verschiedensten Studienprogrammen den Zugang zu einem umfassenden Angebot an Präventions- und Beratungsangeboten. Es werden beispielsweise Angebote zur Förderung der psychischen Gesundheit (z. B. Stressmanagementkurse, Workshops zur Bewältigung von Prüfungsstress) sowie Angebote zur Förderung der körperlichen Gesundheit (z. B. Workshops zum Thema gesunde Ernährung, Angebote zum Thema Bewegung) angeboten. Die Hochschule bietet diese Programme und Angebote, um Studenten vor oder während des Studiums vor gesundheitlichen Risiken zu schützen. Der Fokus liegt dabei auf der präventiven Gesundheitsförderung, die sichere und gesundheitliche Rahmenbedingungen bietet.",Das Studentische Gesundheitsmanagement ist eine zentrale Anlaufstelle an der THWS für Anliegen von Studierenden rund um ihre Gesundheit.,1,0.10309278350515463,0.12586347848916266

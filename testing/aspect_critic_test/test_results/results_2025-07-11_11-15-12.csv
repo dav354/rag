@@ -1,0 +1,15 @@
+question,bot_answer,gold_answer,genauigkeit,F1,BLEU
+Welche Öffnungszeiten haben die Gebäude der THWS während der Vorlesungs- und Prüfungszeit?,"```json
+{
+  ""answer"": ""Die Gebäude der THWS haben während der Vorlesungs- und Prüfungszeit folgende Öffnungszeiten:\n\n* **Vorlesungszeiten:** Die Vorlesungszeiten variieren je nach Studiengang und Lehrveranstaltung. Die genauen Zeiten finden Sie im Stundenplan, der über das Campusportal zugänglich ist.\n* **Gebäudezeiten:** Während der Vorlesungszeit sind alle Gebäude der THWS für Studierende zugänglich.  Die genauen Gebäudezeiten variieren je nach Bedarf.  In der Regel sind die Gebäude während der Vorlesungszeit geöffnet.\n\nFür genaue Informationen zu den Öffnungszeiten während der Prüfungszeit, sowie zu Sonderöffnungen, wenden Sie sich bitte an den Hochschulservice Studium.""
+}
+```",Während der Vorlesungs- und Prüfungszeit sind die Gebäude der THWS von Montag bis Freitag von 6:30 bis 22:00 Uhr und am Samstag von 8:00 bis 18:00 Uhr geöffnet,0,0.19718309859154928,0.08852818280995221
+Wann haben die THWS Gebäude geschlossen?,"Die THWS Gebäude sind in folgenden Fällen geschlossen:
+
+*   **Feier aus Anlass des 15-jährigen Bestehens der Stiftung** (siehe Datei „21“).
+*   **Neue Work - Digitale Transformation und Wertewandel in der Arbeitswelt** (siehe Datei „19”).
+*   **Internetkompetenz: Webdesign 2** (siehe Datei „20”).
+*   **Internetkompetenz: Webdesign 3** (siehe Datei „20”).
+*   **Einführung in die Betriebswirtschaft für Ingenieure** (siehe Datei „10”).
+*   **Einführung in die Rechtswissenschaft** (siehe Datei „20”).
+*   **Feier aus Anlass des 15-jährigen Bestehens der Stiftung** (siehe Datei „21”).","Die aktuellen vorlesungsfreien Termine, sowie Semester Beginn, Ende der Semester und des Pürfungszeitraumes können Sie auf der Website der THWS im Bereich ""Termine"" oder direkt unter dem Link https://www.thws.de/termine/ finden",1,0.08695652173913045,0.004745200745451393

@@ -40,7 +40,12 @@ from lightrag import LightRAG
 from lightrag.kg.shared_storage import initialize_pipeline_status
 
 # --- Device Info ---
-device = "cuda" if torch.cuda.is_available() else "cpu"
+if torch.cuda.is_available():
+    device = "cuda"
+elif torch.backends.mps.is_available():
+    device = "mps"
+else:
+    device = "cpu"
 print(f"🔥 Using device: {device}")
 
 
@@ -51,7 +56,7 @@ async def lifespan(app: FastAPI):
     print("🚀 Server starting up...")
     print("🧠 Initializing LightRAG framework...")
     app.state.rag = LightRAG(
-        working_dir="../RAG_STORAGE",
+        working_dir="/Users/lelange/Uni/askTHWS/RAG_STORAGE",
         embedding_func=HFEmbedFunc(),
         llm_model_func=OllamaLLM(),
         enable_llm_cache=False,

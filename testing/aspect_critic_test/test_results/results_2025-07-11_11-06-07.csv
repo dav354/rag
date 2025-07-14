@@ -1,0 +1,49 @@
+question,bot_answer,gold_answer,genauigkeit,F1,BLEU
+Welche Öffnungszeiten haben die Gebäude der THWS während der Vorlesungs- und Prüfungszeit?,"```json
+[
+  {
+    ""id"": ""1"",
+    ""content"": ""Die Gebäude der THWS haben während der Vorlesungs- und Prüfungszeit folgende Öffnungszeiten:\n\n* **Vorlesungsräume:** Von Montag bis Freitag, 8:00 - 22:00 Uhr\n* **Bibliothek:** Von Montag bis Freitag, 9:00 - 22:00 Uhr\n* **Aula:** Von Montag bis Freitag, 9:00 - 22:00 Uhr\n* **Laboratorien:** Die Öffnungszeiten der Laboratorien variieren je nach Fachrichtung. Bitte informieren Sie sich bei Ihrem Betreuer oder der Fakultät.\n* **Weitere Gebäude:** Die Öffnungszeiten der weiteren Gebäude variieren je nach Bedarf. Bitte informieren Sie sich bei den zuständigen Stellen.""
+  }
+]
+```",Während der Vorlesungs- und Prüfungszeit sind die Gebäude der THWS von Montag bis Freitag von 6:30 bis 22:00 Uhr und am Samstag von 8:00 bis 18:00 Uhr geöffnet,0,0.2985074626865672,0.07335544025390545
+Wann haben die THWS Gebäude geschlossen?,"Die THWS Gebäude sind in verschiedenen Phasen geschlossen gewesen. Im Bereich der THWS Geschichte, sind es vor allem die Festlegungen, in denen sich Gebäude aufgrund von Renovierungen, Wartungsarbeiten oder Feiertagen geschlossen haben. Um genaue Angaben zu den Schließzeiten zu machen, sind die folgenden Informationen relevant:
+
+*   **Gesetzliche Feiertage:** Die THWS ist, wie alle anderen öffentlichen Einrichtungen in Deutschland, auch an gesetzlichen Feiertagen geschlossen. Die genauen Daten können variieren, basierend auf dem jeweiligen Jahr.
+*   **Renovierungsarbeiten:** Es gab und gibt regelmäßige Renovierungsarbeiten, die zeitweise zu Schließungen führten. Diese wurden oft im Voraus kommuniziert.
+*   **Wartungsarbeiten:** Auch routinemäßige Wartungsarbeiten, insbesondere an den Gebäudetechnik-Systemen, können zu temporären Schließungen führen.
+*   **Winterferien:** Während der Winterferien (typischerweise von Anfang bis Mitte Februar) sind die Gebäude geschlossen.
+*   **Sommerferien:** Während der Sommerferien (typischerweise von Anfang bis Mitte August) sind die Gebäude geschlossen.
+
+Für spezifische Daten zu Schließfällen sind die entsprechenden Dokumente der THWS zu konsultieren (siehe JSON Dokumente).","Die aktuellen vorlesungsfreien Termine, sowie Semester Beginn, Ende der Semester und des Pürfungszeitraumes können Sie auf der Website der THWS im Bereich ""Termine"" oder direkt unter dem Link https://www.thws.de/termine/ finden",1,0.0784313725490196,0.001038458465631914
+Wo kann ich Informationen über Beratungsangebote an der THWS finden?,"Basierend auf den bereitgestellten Informationen lassen sich die folgenden Beratungsangebote an der THWS identifizieren:
+
+*   **Studienberatung:**  Die Studienberatung bietet Unterstützung bei der Studienwahl, dem Aufbau und der Planung des Studiums, einschließlich Auskünfte zu Studiengängen und den Anforderungen an den Studienbeginn.  Die Kontaktdaten sind unter dem Link zu den Ansprechstellen zu finden.
+*   **Hochschulservice Studium:**  Bietet allgemeine Unterstützung, insbesondere im Zusammenhang mit der Anmeldung zu Prüfungen und anderen administrativen Angelegenheiten.
+*   **Fakultätsberatung:** Die Beratungsangebote der Fakultät für Angewandte Natur- und Geisteswissenschaften sind besonders relevant, wenn man in diesen Fachbereichen studiert.
+*   **Laborleitung:** Bietet im Rahmen der Forschung und Nutzung von Laboren Beratungs- und Supportangebote.
+
+Um den genauen Ort für weitere Informationen zu finden, können Sie Folgendes tun:
+
+*   **Link zu den Ansprechstellen:** Die Seite mit den Ansprechstellen ([https://fiw.thws.de/studium/beratungsmoeglichkeiten/](https://fiw.thws.de/studium/beratungsmoeglichkeiten/)) enthält eine detaillierte Auflistung aller Beratungsstellen und Ansprechpartner.
+*   **Die Webseite des Hochschulservice Studium:** Die Webseite des Hochschulservice Studium ([https://fiw.thws.de/studium/](https://fiw.thws.de/studium/)) ist der zentrale Ort für administrative Informationen und Beratungsangebote.
+*   **Direkte Kontaktaufnahme:** Sie können die Beratungsstellen direkt kontaktieren, um Ihre Fragen zu besprechen.","Studierende können Informationen über Beratungsangebote unter ""Beratung und Service"" auf der THWS-Website finden. Dort sind die wichtigsten Seiten für Studierende zusammengestellt, einschließlich Informationen zur Bibliothek, zu Terminen und zu verschiedenen Beratungsangeboten.",1,0.10344827586206896,0.0227457437979845
+Was ist das Studentische Gesundheitsmanagement?,"Hier ist eine Zusammenfassung des Inhalts der bereitgestellten Dokumente, die sich auf das Studentische Gesundheitsmanagement bezieht:
+
+**Studentisches Gesundheitsmanagement (HSST)**
+
+Das Studentische Gesundheitsmanagement (HSST) ist eine Einrichtung der Technischen Hochschule Würzburg-Schweinfurt (THWS), die Studierenden bei gesundheitlichen und sozialen Fragen unterstützt. Die Kernbereiche sind:
+
+*   **Beratung:** HSST bietet umfassende Beratung zu verschiedenen Themen, darunter psychische Gesundheit, chronische Erkrankungen, Suchtprobleme und die Bewältigung des Studienalltags.
+*   **Gesundheitsförderung:** Es werden Angebote zur Gesundheitsförderung durchgeführt, die den Studierenden helfen, einen gesunden Lebensstil zu führen.
+*   **Spezielle Angebote:** Es gibt besondere Angebote für Studierende mit Behinderung oder chronischer Erkrankung, die auf ihre individuellen Bedürfnisse zugeschnitten sind.
+*   **Psychologische Beratung:** Das HSST bietet auch psychologische Beratung, um Studierende bei Belastungen und Problemen im Zusammenhang mit dem Studium und dem Privatleben zu unterstützen.
+
+**Die Angebote des HSST umfassen:**
+
+*   **Individuelle Beratungsgespräche**
+*   **Gruppenangebote**
+*   **Workshops und Seminare**
+*   **Informationen und Materialien**
+
+**Zusammenfassend** ist das Studentische Gesundheitsmanagement eine wichtige Ressource für Studierende der THWS, die Unterstützung bei der Bewältigung von gesundheitlichen und sozialen Herausforderungen während ihres Studiums bietet.",Das Studentische Gesundheitsmanagement ist eine zentrale Anlaufstelle an der THWS für Anliegen von Studierenden rund um ihre Gesundheit.,1,0.11224489795918367,0.03686467508351105

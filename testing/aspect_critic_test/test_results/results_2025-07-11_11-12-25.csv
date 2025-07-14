@@ -1,0 +1,20 @@
+question,bot_answer,gold_answer,genauigkeit,F1,BLEU
+Welche Öffnungszeiten haben die Gebäude der THWS während der Vorlesungs- und Prüfungszeit?,"```json
+[
+  {
+    ""id"": ""1"",
+    ""text"": ""Die Gebäude der THWS haben während der Vorlesungs- und Prüfungszeit folgende Öffnungszeiten:\n\n*   **Hauptgebäude (Hochschule):**\n    *   Montag - Freitag: 8:00 - 22:00 Uhr\n    *   Samstag, Sonntag: Geschlossen\n\n*   **Bibliothek:**\n    *   Montag - Freitag: 9:00 - 22:00 Uhr\n    *   Samstag, Sonntag: 10:00 - 18:00 Uhr\n\n*   **IT-Schaltzentrale:**\n    *   Montag - Freitag: 8:00 - 22:00 Uhr\n    *   Samstag, Sonntag: Geschlossen\n\n*   **Weitere Gebäude (z.B. Fachbereiche):** Die Öffnungszeiten können je nach Fachbereich variieren. Bitte informieren Sie sich auf den Webseiten der jeweiligen Fachbereiche oder kontaktieren Sie die zuständigen Ansprechpartner."",
+    ""file_path"": null
+  }
+]
+```",Während der Vorlesungs- und Prüfungszeit sind die Gebäude der THWS von Montag bis Freitag von 6:30 bis 22:00 Uhr und am Samstag von 8:00 bis 18:00 Uhr geöffnet,0,0.2517482517482517,0.058536284293048045
+Wann haben die THWS Gebäude geschlossen?,"Die THWS Gebäude sind aufgrund verschiedener Gründe geschlossen gewesen. Hier eine Zusammenfassung der relevanten Informationen aus den bereitgestellten Daten:
+
+*   **Gesamte Öffnungszeiten:** Die THWS Gebäude sind von Montag bis Freitag von 06:30-22:00 Uhr geöffnet. Samstag von 08:00 - 18:00 Uhr.
+*   **Feiertage:** Die Gebäude bleiben auch an gesetzlichen Feiertagen geschlossen.
+*   **Spezifische Schließungen:**
+    *   Es gibt Hinweise auf eine ""vollständige Schließung"", wenn die „KidsBox ist wieder vollständig einzuräumen und in verschlossenem Zustand zu hinterlassen.“
+    *   Es wurden ""Sperrvermerkslisten"" bereitgestellt, die im Zusammenhang mit der „Kinderräume“ genutzt wurden.
+*   **Ausstellung:** Eine Gebäudeausstellung ist ebenfalls ein Thema.
+
+Die vollständige, detaillierte Aufzählung aller Gründe für den Schließbetrieb ist in den bereitgestellten Daten nicht enthalten.","Die aktuellen vorlesungsfreien Termine, sowie Semester Beginn, Ende der Semester und des Pürfungszeitraumes können Sie auf der Website der THWS im Bereich ""Termine"" oder direkt unter dem Link https://www.thws.de/termine/ finden",1,0.04938271604938271,0.001038458465631914

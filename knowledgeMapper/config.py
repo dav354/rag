@@ -19,12 +19,12 @@ MONGO_EXTRACTED_CONTENT_COLLECTION = "extracted_content"
 
 # Embedding model settings
 EMBEDDING_MODEL_NAME = "aari1995/German_Semantic_V3"
-EMBEDDING_DEVICE = "cpu"
+EMBEDDING_DEVICE = "mps"
 EMBEDDING_BATCH_SIZE = 16
 EMBEDDING_CONCURRENCY = 1  # Controls number of concurrent embedding jobs
 
 # LLM configuration (e.g., for Ollama server)
-OLLAMA_MODEL_NAME = "gemma3:4b"
+OLLAMA_MODEL_NAME = "gemma3:12B"
 OLLAMA_HOST = "http://localhost:11434"
 OLLAMA_NUM_CTX = 16384
 OLLAMA_NUM_PREDICT = 4096

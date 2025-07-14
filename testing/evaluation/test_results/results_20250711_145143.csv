@@ -1,0 +1,30 @@
+id,question,predicted,reference,sem_sim,entailment,correct
+1,Welche Studiengänge bietet die THWS aktuell an?,"Here's a breakdown of the available study programs at the THWS, based on the provided text chunks:
+
+**Bachelor Programs:**
+
+*   **Informatik (B. Sc.)** - A standard Bachelor program in Computer Science.
+*   **Wirtschaftsinformatik (B. Sc.)** - A program combining computer science with business administration.
+*   **E-Commerce (B. Sc.)** - A program focused on electronic commerce.
+*   **Informationssysteme (M. Sc.)** - A Master program in Information Systems.
+
+**Important Notes & Considerations from the Text:**
+
+*   **Dual Study Programs:** The THWS also offers dual study programs (studying while working for a company) in E-Commerce.
+*   **Modular System:** The university uses a modular system, so students can often tailor their studies with elective courses.
+
+To get the most up-to-date and comprehensive list, it's always recommended to visit the official THWS website: [https://www.thws.de/](https://www.thws.de/)","Aktuell bietet die THWS folgende Studiengänge an: 
+Digitale Gesellschaft (B.Sc.)
+E-Commerce (B.Sc.)
+Informatik (B.Eng.)
+Informationssicherheit (B.Sc.)
+Software Engineering (online) (B.Eng., ab Wintersemester 2025/26)
+Wirtschaftsinformatik (B.Sc.)
+Digital Business Systems (M.Sc.)
+Artificial Intelligence (M.Sc., englischsprachig)",0.561612606048584,False,False
+2,Gibt es eine Zulassungsbeschränkung für den Studiengang Wirtschaftsinformatik an der THWS?,"```json
+[{""id"": ""1"", ""content"": ""3,3\n""}]
+```","Nein, der Studiengang Wirtschaftsinformatik ist nicht zulassungsbeschränkt.",0.004103341139853001,False,False
+3,Wie lange dauert das Studium der Wirtschaftsinformatik an der THWS?,Das Bachelorstudium Wirtschaftsinformatik an der THWS dauert 6 Semester (3 Jahre).,Das Vollzeitstudium Wirtschaftsinformatik dauert sieben Semester,0.8210152387619019,False,True
+4,In welcher Sprache wird der Studiengang Wirtschaftsinformatik angeboten?,Deutsch/Englisch,Der Studiengang Wirtschaftsinformatik wird hauptsächlich auf Deutsch mit Wahlmodulen auch in englischer Sprache angeboten,0.3786469101905823,False,False
+5,Wie viele ECTS-Punkte müssen im Studium Wirtschaftsinformatik erworben werden?,Basierend auf den bereitgestellten Informationen müssen im Studium Wirtschaftsinformatik insgesamt 210 ECTS-Punkte erworben werden.,Es müssen insgesamt 210 ECTS-Punkte erworben werden.,0.7322157025337219,False,True

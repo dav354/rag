@@ -1,0 +1,41 @@
+id,question,bot_answer,ref_answer,score
+1,Welche Studiengänge bietet die THWS aktuell an?,"Hier ist eine Zusammenfassung der Studiengänge, die die THWS aktuell anbietet, basierend auf den bereitgestellten Dokumenten:
+
+**Bachelorstudiengänge:**
+
+*   **Informatik** (Bachelor of Science)
+*   **Wirtschaftsinformatik** (Bachelor)
+*   **E-Commerce** (Bachelor, auch in dualer Form)
+*   **Informationssysteme** (Master)
+
+**Zusammenfassende Antwort:**
+
+Die THWS bietet aktuell folgende Studiengänge an: Informatik, Wirtschaftsinformatik, E-Commerce (auch dual), und Informationssysteme (Master).","Aktuell bietet die THWS folgende Studiengänge an: 
+Digitale Gesellschaft (B.Sc.)
+E-Commerce (B.Sc.)
+Informatik (B.Eng.)
+Informationssicherheit (B.Sc.)
+Software Engineering (online) (B.Eng., ab Wintersemester 2025/26)
+Wirtschaftsinformatik (B.Sc.)
+Digital Business Systems (M.Sc.)
+Artificial Intelligence (M.Sc., englischsprachig)",0.0
+2,Gibt es eine Zulassungsbeschränkung für den Studiengang Wirtschaftsinformatik an der THWS?,"3,3","Nein, der Studiengang Wirtschaftsinformatik ist nicht zulassungsbeschränkt.",1.0
+3,Wie lange dauert das Studium der Wirtschaftsinformatik an der THWS?,Basierend auf den bereitgestellten Dokumenten dauert das Studium des Bachelorstudiengangs Wirtschaftsinformatik an der THWS (Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt) **6 Semester**.,Das Vollzeitstudium Wirtschaftsinformatik dauert sieben Semester,0.0
+4,In welcher Sprache wird der Studiengang Wirtschaftsinformatik angeboten?,Deutsch/Englisch,Der Studiengang Wirtschaftsinformatik wird hauptsächlich auf Deutsch mit Wahlmodulen auch in englischer Sprache angeboten,1.0
+5,Wie viele ECTS-Punkte müssen im Studium Wirtschaftsinformatik erworben werden?,5,Es müssen insgesamt 210 ECTS-Punkte erworben werden.,1.0
+6,Wo findet das Studium der Wirtschaftsinformatik an der THWS statt?,"Die Fakultät Informatik und Wirtschaftsinformatik an der THWS befindet sich am Standort der THWS in Würzburg.  Das Studium der Wirtschaftsinformatik findet dort statt.  Es bietet Praxisstudien und ein Praxissemester, um die erworbenen Kenntnisse zu vertiefen.",Der Studienort ist am Sanderheinrichsleitenweg 20 in Würzburg.,0.0
+7,Wann beginnt das Studium Wirtschaftsinformatik an der THWS?,Das Studium Wirtschaftsinformatik an der THWS beginnt im Winter- und Sommersemester. Der Studienbeginn für die Studierenden ist meist der 1. Oktober.,Der Studienbeginn ist jeweils zum Wintersemester am 1. Oktober.,0.0
+8,Welchen Abschluss erhält man im Studiengang Wirtschaftsinformatik an der THWS?,"Im Studiengang Wirtschaftsinformatik an der THWS erhält man einen Bachelor of Science (B.Sc.). Außerdem bietet die THWS einen konsekutiven Masterstudiengang ""Informationssysteme"" an.",Der Abschluss ist der „Bachelor of Science“ (B.Sc.).,1.0
+9,Gibt es im Studium Wirtschaftsinformatik internationale Komponenten?,"Basierend auf den bereitgestellten Dokumenten gibt es im Studium Wirtschaftsinformatik zahlreiche internationale Komponenten. Hier eine Zusammenfassung:
+
+*   **Internationale Woche:** Studierende haben die Möglichkeit, an einer „Internationale Woche“ teilzunehmen, bei der Gastdozenten aus dem Ausland (USA, England, Rumänien) Seminare halten.
+*   **Fremdsprachen:** Englisch wird in vielen Kursen (z.B. Projektarbeiten, Seminare) gesprochen und geschrieben.
+*   **Auslandspraktikum:** Das Praxissemester kann im Ausland absolviert werden.
+*   **Internationale Projekte:** Es gibt die Möglichkeit, an internationalen Projekten mit Partnerhochschulen zu arbeiten.
+*   **Globalisierung & Wirtschaftdeutschland:** Das Studium beinhaltet die Auseinandersetzung mit den Auswirkungen der Globalisierung und der wirtschaftlichen Situation in Deutschland.
+*   **Internationales Studiengangsbeschreibung:** Das Geschriebene,  beschreibt  die ""Zunehmende Verbreitung von IT in unserer Gesellschaft"" und  die ""Interaktion von Menschen mit Informationssystemen"".
+*   **Fach- und Vertiefungsstudien:** Es gibt Module zu aktuellen Themen, wie z.B. ""Agile Enterprise"",  ""Big Data and Analytics"".
+*   **Partnerschaften:** Es werden mit Partnerhochschulen Projekte durchgeführt.
+
+Die Dokumente weisen also eindeutig auf eine starke internationale Ausrichtung des Studiengangs Wirtschaftsinformatik hin.","Ja, es gibt ein Pflichtmodul zur Vertiefung der englischen Sprache, Exkursionen ins Ausland, sowie die Möglichkeit, im 6. Semester ein Auslandssemester zu absolvieren.",1.0
+10,Ab wann können im Studium Module auf Englisch belegt werden?,"Die Module auf Englisch können ab dem 6. Semester belegt werden. Dies gilt für alle Studiengänge, die in englischer Sprache angeboten werden. Einige Module werden im Rahmen der Internationalen Woche angeboten.","Ab dem 6. Semester können Wahlmodule auf Englisch belegt werden, zum Beispiel im Rahmen der Internationalen Woche.",1.0

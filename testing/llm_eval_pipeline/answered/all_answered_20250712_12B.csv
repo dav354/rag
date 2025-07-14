@@ -1,0 +1,795 @@
+id,question,bot_answer,ref_answer
+1,Welche Studiengänge bietet die THWS aktuell an?,"Die THWS (Technische Hochschule Würzburg-Schweinfurt) bietet eine Vielzahl von Studiengängen an. Hier ist eine Übersicht basierend auf den bereitgestellten Texten:
+
+**Bachelorstudiengänge:**
+
+*   **Informatik:** (auch in einer dualen Studienvariante)
+*   **E-Commerce:** (auch in einer dualen Studienvariante)
+*   **Wirtschaftsinformatik**
+*   Weitere Bachelorstudiengänge (spezifische Details sind in den Texten nicht genannt, aber es wird erwähnt, dass es eine Vielzahl gibt).
+
+**Masterstudiengänge:**
+
+*   **Informationssysteme (M. Sc.)**
+
+**Zusätzliche Informationen:**
+
+*   Die THWS bietet auch eine Vielzahl von Modulen in verschiedenen Bachelor- und Masterstudiengängen an.
+*   Die THWS bietet auch Studieninfotage an, um Interessenten einen Einblick in die Studiengänge und das Hochschulleben zu ermöglichen.
+
+Es wird angedeutet, dass es weitere Studiengänge gibt, deren Namen in den Texten nicht explizit genannt werden. Die genannten Studiengänge sind die, die am deutlichsten hervorgehoben werden.","Aktuell bietet die THWS folgende Studiengänge an: 
+Digitale Gesellschaft (B.Sc.)
+E-Commerce (B.Sc.)
+Informatik (B.Eng.)
+Informationssicherheit (B.Sc.)
+Software Engineering (online) (B.Eng., ab Wintersemester 2025/26)
+Wirtschaftsinformatik (B.Sc.)
+Digital Business Systems (M.Sc.)
+Artificial Intelligence (M.Sc., englischsprachig)"
+2,Gibt es eine Zulassungsbeschränkung für den Studiengang Wirtschaftsinformatik an der THWS?,"Ja, es gibt eine Zulassungsbeschränkung (NC) für den Studiengang Wirtschaftsinformatik an der THWS. Der Numerus Clausus (NC) beträgt 3,3.","Nein, der Studiengang Wirtschaftsinformatik ist nicht zulassungsbeschränkt."
+3,Wie lange dauert das Studium der Wirtschaftsinformatik an der THWS?,Das Studium der Wirtschaftsinformatik an der THWS (Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt) dauert **6 Semester oder 3 Jahre** und führt zum Abschluss Bachelor of Science (B.Sc.).,Das Vollzeitstudium Wirtschaftsinformatik dauert sieben Semester
+4,In welcher Sprache wird der Studiengang Wirtschaftsinformatik angeboten?,"Der Studiengang Wirtschaftsinformatik wird in Deutsch und Englisch angeboten.
+
+Here's a breakdown of the evidence from the provided texts:
+
+*   **""Sprache\nDeutsch/Englisch""**: This phrase appears repeatedly in several module descriptions (e.g., in the lists for BEC 6, Informatik, Wirtschaftsinformatik).
+*   **""English for IT""**: A specific course listed within the curriculum explicitly states ""English for IT.""
+*  **""Allgemeinwissenschaftliches Wahlpflichtmodul (9999999)\nSprache\nDeutsch/Englisch""**: Again, confirms Deutsch/Englisch.
+
+
+
+This indicates a bilingual (German/English) approach to the Wirtschaftsinformatik program.",Der Studiengang Wirtschaftsinformatik wird hauptsächlich auf Deutsch mit Wahlmodulen auch in englischer Sprache angeboten
+5,Wie viele ECTS-Punkte müssen im Studium Wirtschaftsinformatik erworben werden?,"Die benötigte Anzahl an ECTS-Punkten im Studium Wirtschaftsinformatik variiert je nach Studienordnung und Phase des Studiums. Hier sind einige Informationen aus den bereitgestellten Texten:
+
+*   **Gesamt:** Es wird erwähnt, dass im 5. Semester ein Praxismodul (Praktikum) vorgesehen ist, welches Teil der Ausbildungsziele ist.
+*   **FWPM:** Es müssen 20 ECTS-Punkte in fachbezogenen Wahlpflichtmodulen (FWPM) erworben werden.
+*   **Praktikum**: Es wird erwähnt, dass das Praktikum im 5. Semester stattfindet und ein Bestandteil der Ausbildungsziele ist.
+
+Weitere Informationen findest du unter folgenden Links:
+
+* [https://fiw.thws.de/studium/bachelor-wirtschaftsinformatik-bwi/studienziel/](https://fiw.thws.de/studium/bachelor-wirtschaftsinformatik-bwi/studienziel/)
+* [https://fiw.thws.de/fileadmin/redaktion/dokumente/bachelor/wirtschaftsinformatik/20190510_wirtschaftsinformatik_bachelor_faltblatt_druck_2mm-sf.pdf](https://fiw.thws.de/fileadmin/redaktion/dokumente/bachelor/wirtschaftsinformatik/20190510_wirtschaftsinformatik_bachelor_faltblatt_druck_2mm-sf.pdf)
+*   [https://fiw.thws.de/studium/ihr-weg-durchs-studium/praktikum/](https://fiw.thws.de/studium/ihr-weg-durchs-studium/praktikum/)",Es müssen insgesamt 210 ECTS-Punkte erworben werden.
+6,Wo findet das Studium der Wirtschaftsinformatik an der THWS statt?,"Das Studium der Wirtschaftsinformatik an der THWS (Technischen Hochschule Würzburg-Schweinfurt) findet an mehreren Orten statt:
+
+*   **Technische Hochschule Würzburg-Schweinfurt (THWS):** Der Hauptstandort ist hier.
+*   **Raum I.1.1:** Hier befindet sich die Fachschaft Informatik und Wirtschaftsinformatik.
+*   **Raum I.2.15 (Seminarraum):** Ein Lern- und Arbeitsraum.
+*   **Weitere Räume:** I.2.1, I.2.15a, I.2.18/19, I.3.15, I.3.18, I.3.19, I.3.20/21, I.3.24 werden ebenfalls für Lern- und Arbeitszwecke genutzt.",Der Studienort ist am Sanderheinrichsleitenweg 20 in Würzburg.
+7,Wann beginnt das Studium Wirtschaftsinformatik an der THWS?,"Das genaue Datum des Studienbeginns für den Bachelorstudiengang Wirtschaftsinformatik an der THWS (Technische Hochschule Würzburg-Schweinfurt) wird nicht explizit in den bereitgestellten Dokumenten angegeben.  Allgemein beginnt der Bachelorstudiengang Wirtschaftsinformatik an der THWS jedoch jeweils im **Wintersemester**. Für weitere spezifische Informationen über Semesterzeiten und -anfänge wird empfohlen, die offizielle Website der THWS zu konsultieren oder sich direkt an die Fakultät zu wenden.",Der Studienbeginn ist jeweils zum Wintersemester am 1. Oktober.
+8,Welchen Abschluss erhält man im Studiengang Wirtschaftsinformatik an der THWS?,Man erhält den akademischen Grad „Bachelor of Science“ (abgekürzt „B.Sc.“) im Studiengang Wirtschaftsinformatik an der THWS.,Der Abschluss ist der „Bachelor of Science“ (B.Sc.).
+9,Gibt es im Studium Wirtschaftsinformatik internationale Komponenten?,"Ja, es gibt mehrere internationale Komponenten im Studium Wirtschaftsinformatik an der Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt. Hier sind einige Beispiele:
+
+*   **Internationale Partnerschaften und Kooperationen:** Die Fakultät Informatik und Wirtschaftsinformatik hat Partnerschaften mit Hochschulen weltweit. Dies ermöglicht Studierenden, an Austauschprogrammen teilzunehmen.
+*   **Auslandssemester:**  Die Möglichkeit eines Auslandssemesters ist gegeben.
+*   **Internationale Woche:** Die Fakultät bietet eine Internationale Woche an, in der Dozenten aus Partnerhochschulen Gastvorlesungen halten.
+*   **Englischsprachige Module:** Es gibt auch englischsprachige Module, die im Rahmen des Studiums angeboten werden.
+*   **Praxisphasen im Ausland:** Durch die Kooperationen mit Unternehmen gibt es auch die Möglichkeit, Praxisphasen im Ausland zu absolvieren.
+
+Die genauen Möglichkeiten und Bedingungen für internationale Erfahrungen sollten Sie direkt bei der Hochschule oder im Studienverlauf erfahren.","Ja, es gibt ein Pflichtmodul zur Vertiefung der englischen Sprache, Exkursionen ins Ausland, sowie die Möglichkeit, im 6. Semester ein Auslandssemester zu absolvieren."
+10,Ab wann können im Studium Module auf Englisch belegt werden?,"According to the provided texts, here's when you can start taking modules in English:
+
+*   **From the 6th Semester:** You can take modules in English starting from the 6th semester.
+*   **Specific Modules:** There are specific modules offered in English, such as ""Introduction to Distributed Systems"" and ""Information Security Management"".
+*   **International Week:** You can also take modules in English through the International Week.","Ab dem 6. Semester können Wahlmodule auf Englisch belegt werden, zum Beispiel im Rahmen der Internationalen Woche."
+11,Welche Voraussetzungen muss man für das Studium Wirtschaftsinformatik erfüllen?,"Voraussetzung für die Aufnahme des Studiums im Studiengang Bachelor Wirtschaftsinformatik ist der Nachweis:
+
+*   der allgemeinen Hochschulreife,
+*   der fachgebundenen Hochschulreife,
+*   der Fachhochschulreife oder
+*   einer aufgrund einer durch Rechtsvorschrift oder von der zuständigen staatlichen Stelle als gleichwertig anerkannten Zugangsberechtigung für einen Bachelorstudiengang an Fachhochschulen.","Erforderlich ist die allgemeine Hochschulreife, fachgebundene Hochschulreife, Fachhochschulreife oder ein gleichwertiger anerkannter Abschluss."
+12,Wer ist Ansprechpartner für Fragen zum Studium Wirtschaftsinformatik?,Ansprechpartner für Fragen zum Studium Wirtschaftsinformatik sind die Studiengangsleitung.,"Ansprechpartner ist der Hochschulservice Studium, erreichbar unter 0931-3511-6139 oder per E-Mail an shl.hsst[at]thws.de."
+13,Wann ist die Bewerbungsfrist für den Studiengang Wirtschaftsinformatik?,"Leider gibt es in den bereitgestellten Dokumenten keine spezifischen Informationen über die Bewerbungsfristen für den Studiengang Wirtschaftsinformatik. Es wird empfohlen, die Webseiten der Hochschule und des Studiengangs direkt zu konsultieren, um die aktuellsten Informationen zu den Bewerbungsterminen zu erhalten.",Die Bewerbungsfrist läuft jährlich vom 1. Mai bis zum 15. Juli.
+14,Wie erfolgt die Bewerbung für den Studiengang Wirtschaftsinformatik an der THWS?,"Die Bewerbung für den Studiengang Wirtschaftsinformatik an der THWS erfolgt über die THWS und beinhaltet folgende Punkte:
+
+*   **Bewerbungsprozess:** Hier finden Sie den Prozess zur Bewerbung für den Bachelor-Studiengang E-Commerce (dies gilt auch für Wirtschaftsinformatik).
+*   **Zulassungsvoraussetzungen:** Die Voraussetzungen sind:
+    *   Allgemeine Hochschulreife,
+    *   Fachgebundene Hochschulreife,
+    *   Fachhochschulreife oder
+    *   Eine gleichwertige Zugangsberechtigung.
+*   **Weitere Informationen:** Es wird keine vorherige Praxiserfahrung erwartet.",Die Bewerbung erfolgt ausschließlich online über die Webseite der Hochschule.
+15,Wie ist das Studium Wirtschaftsinformatik an der THWS aufgebaut?,"The Bachelor's program in Business Informatics at THWS (Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt) is structured as follows:
+
+**Overall Structure:**
+
+*   **Duration:** Standard duration is not explicitly stated in the provided texts, but it's a Bachelor of Science (B.Sc.) program.
+*   **ASIIN Accreditation:** The program holds ASIIN accreditation, signifying a high standard of quality.
+
+**Curriculum & Content (Based on the provided texts - may not be exhaustive):**
+
+1.  **Orientation Phase (Semesters 1-4):** This phase covers a blend of areas:
+    *   **Business Informatics:** Business Software, Business Technologies, Information and Technology Management, IT Organization
+    *   **Informatics:** Programming, Databases, Data Communication, Software Engineering
+    *   **Business Administration/Economics:** Fundamentals of Economics, Innovation Management & Company Foundation, Accounting, Commercial Law, Logistics
+    *   **Auxiliary Subjects:** Mathematics, Statistics, IT Law, IT Project Management, English
+2.  **Practical Semester:** Typically in the 5th semester.
+3.  **Bachelor Thesis:** Culminates the program.
+
+**Key Aspects & Emphasis:**
+
+*   **Practical Orientation:** The program emphasizes practical application, with students working on projects, programming exercises, and Bachelor theses to develop real-world solutions.
+*   **Modern Campus & Facilities:** The THWS provides a modern campus with well-equipped labs and software.
+*   **Faculty Expertise:** The faculty is described as dedicated and knowledgeable, contributing to a productive learning environment.
+
+**More Detailed Breakdown (from the provided sources):**
+
+*   **Study Plan for Wirtschaftsinformatik (Business Informatics)** includes areas such as Business Software, Business Technologies, IT Management, and more (see the ""Wirtschaftsinformatik Curriculum"" document for a list of these).
+*   **Practical Semester:** A semester dedicated to gaining practical work experience.
+*   **Bachelor Thesis:** A final project to demonstrate competence.
+
+
+
+**Please note:** The provided documents are excerpts and may not represent the complete and most up-to-date curriculum. For the most accurate and detailed information, it's always best to consult the official THWS website or program documentation.","In den ersten vier Semestern werden Grundlagen vermittelt, im fünften Semester folgt die Praxisphase, in den letzten beiden Semestern können Wahlmodule belegt werden. Im sechsten Semester wird eine Projektarbeit, im siebten die Bachelorarbeit geschrieben."
+16,Wie läuft die Bewerbung für einen Studiengang an der THWS ab?,"Here's a breakdown of the application process for a degree program at the THWS (Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt), compiled from the provided text chunks:
+
+**1. General Information & Requirements:**
+
+*   **Eligibility:** You'll need one of the following to be eligible:
+    *   General Hochschulreife (general university entrance qualification)
+    *   Fachgebundene Hochschulreife (specialized university entrance qualification)
+    *   Fachhochschulreife (technical college entrance qualification)
+    *   Equivalent qualification recognized by the relevant authorities.
+*   **Overall Process:**  You can find information on the application process on the THWS website.
+
+**2. Application Steps (Details are not explicitly laid out in one chunk, so this is a synthesis):**
+
+*   **Online Application:** The provided text mentions ""online application,"" implying an online application system on the THWS website.
+*   **Deadlines & Numerus Clausus (NC):** There's a mention of an application deadline and a numerus clausus (NC) of 3.3 for Wirtschaftsinformatik (Business Informatics).
+*   **Studieninfotage (Study Information Days):** These days provide orientation and information about degree programs (next one: 10.03.2025)
+
+**Where to Find More Information:**
+
+*   **THWS Website:**  The primary source for detailed information, deadlines, and application procedures.
+*   **Fakultät (Faculty):**  For specific questions regarding requirements.
+*   **Hochschulservice Studium (Student Services):** For questions relating to eligibility.
+
+
+
+**Please note:** The provided text is a collection of snippets and doesn't present a complete step-by-step guide to the application process. For the most accurate and up-to-date information, consult the official THWS website.","Die Bewerbung erfolgt online über das THWS CampusPortal in folgenden Schritten:
+
+1. Registrierung mit einer gültigen E-Mail-Adresse.
+2. Eingabe aller Bewerbungsdaten und Dokumente, dann digitale Abgabe des Antrags.
+3. Die Bewerbung wird durch die THWS geprüft, Änderungen des Status werden per E-Mail mitgeteilt.
+4. Fehlende Unterlagen können innerhalb der Frist nachgereicht werden.
+5. Bei Zulassung muss der Studienplatz über das Portal angenommen, die Online-Einschreibung durchgeführt und der Semesterbeitrag überwiesen werden.
+6. Nach erfolgreicher Einschreibung wird der Status auf „immatrikuliert“ gesetzt und der Accountbrief bereitgestellt."
+17,Wann ist das Gebäude der THWS am Sanderheinrichsleitenweg 20 geöffnet?,"Es gibt keine direkte Angabe zu den Öffnungszeiten des Gebäudes am Sanderheinrichsleitenweg 20.  Allerdings werden in den bereitgestellten Texten folgende Informationen gegeben:
+
+*   **Erste Semesterbegrüßung:** Die Erste Semesterbegrüßung findet am 01.10.2024 in diesem Gebäude statt.
+*   **Veranstaltungen:**  Es finden regelmäßig Veranstaltungen statt, wie die Jubiläumsfeier (geplant für Herbst 2020) und die Erste Semesterbegrüßung.
+*   **Es gibt verschiedene Räume:** Dazu gehören Hörsäle (z.B. H.1.1), Seminarräume (z.B. I.3.20/21) und eine Cafeteria.
+
+Um die genauen Öffnungszeiten zu erfahren, wird empfohlen, die THWS-Website zu besuchen oder sich direkt an die Fakultät zu wenden.",Das Gebäude am Sanderheinrichtsleitenweg ist montags bis freitags von 06:30 bis 22:00 Uhr und samstags von 08:00 bis 18:00 Uhr geöffnet. An Feiertagen und während der Weihnachtsferien ist es geschlossen.
+18,Wie lautet die Adresse der Fakultät Informatik und Wirtschaftsinformatik an der THWS?,"Die Adresse der Fakultät Informatik und Wirtschaftsinformatik an der THWS lautet:
+
+Sanderheinrichsleitenweg 20
+97074 Würzburg","Die Adresse lautet: Sanderheinrichsleitenweg 20, 97074 Würzburg."
+19,Gibt es Parkmöglichkeiten am Gebäude der Fakultät FIW?,"Unter dem Gebäude befindet sich ein Parkdeck mit ca. 250 Parkplätzen. Die Zufahrt ist durch eine Schranke gesichert. Ansonsten nutzen Sie bitte die öffentlichen Parkplätze an der Straße gegenüber dem Gebäude der Hochschule. Mitarbeiter der Hochschule, Studierende der Fakultät und Lehrbeauftragte können die Schranke mit ihrer FHWS-Karte öffnen. Für Fahrräder und Motorräder gibt es Abstellmöglichkeiten im Außenbereich links vom Hörsaal-Gebäude und im Parkdeck.","Ja, unter dem Gebäude befindet sich ein Parkdeck mit ca. 250 Stellplätzen. Die Zufahrt ist durch eine Schranke geregelt."
+20,Wer kann die Schranke am Parkdeck des Sanderheinrichsleitenweg öffnen?,"Mitarbeiter der Hochschule, Studierende der Fakultät und Lehrbeauftragte können die Schranke mit ihrer THWS-Karte öffnen.","Studierende, Mitarbeitende und Lehrbeauftragte können die Schranke mit ihrer THWS-Karte öffnen."
+21,Gibt es Abstellmöglichkeiten für Fahrräder und Motorräder am Sanderheinrichsleitenweg?,"Ja, es gibt Abstellmöglichkeiten für Fahrräder und Motorräder am Sanderheinrichsleitenweg:
+
+*   im Außenbereich links vom Hörsaal-Gebäude
+*   im begrenzten Umfang im Parkdeck unter dem Gebäude","Ja, es gibt Stellplätze links vom Hörsaalgebäude im Außenbereich sowie begrenzt im Parkdeck."
+22,Welche Buslinie fährt direkt zur THWS am Sanderheinrichsleitenweg?,"Nutzen Sie die Buslinie 214, die vom Busbahnhof (Bussteig 2, vor dem Hauptbahnhof Würzburg) zur THWS am Sanderheinrichsleitenweg benötigt. Alternativ können Sie abends oder am Wochenende die Buslinien 110 oder 114 zur Haltestelle vor der Julius-Maximilians-Universität Würzburg am Hubland nutzen und von dort aus ca. 10 Minuten Fußweg zur THWS zurücklegen.","Die Buslinie 214 fährt tagsüber direkt zur Endhaltestelle THWS, ab dem Hauptbahnhof Würzburg."
+23,Wie sind die Öffnungszeiten der Cafeteria am Sanderheinrichsleitenweg?,Die Cafeteria am Sanderheinrichsleitenweg ist geöffnet: Dienstag von 13:00 bis 16:00 Uhr und Mittwoch von 11:00 bis 15:00 Uhr.,"Montag bis Donnerstag: 08:00–11:00 Uhr und 11:30–14:15/14:45 Uhr, Freitag bis 13:15 Uhr."
+24,Wie wird in der Cafeteria am Sanderheinrichsleitenweg bezahlt?,In der Cafeteria am Sanderheinrichsleitenweg kann bar oder mit der THWS-Card bezahlt werden.,Bevorzugt mit der THWS-Card. Bei Barzahlung an der Kasse wird ein Aufschlag von 10 % erhoben.
+25,Gibt es Sitzplätze in der Cafeteria am Sanderheinrichsleitenweg?,Es gibt eine Cafeteria am Sanderheinrichsleitenweg mit ca. 100 Plätzen. Zusätzlich stehen im Außenbereich ca. 70 weitere Plätze zur Verfügung.,"Ja, ca. 100 Plätze im Innenbereich und ca. 70 weitere im Außenbereich (Innenhof)."
+26,Gibt es an der THWS einen kostenlosen Wasserspender?,"Ja, es gibt an der THWS einen kostenlosen Wasserspender. Er befindet sich im Instituts-Gebäude, Raum I.3.29. Sie können Trinkwasser für den Verzehr im Gebäude entnehmen.","Ja, im Raum I.3.29 im Institutsgebäude. Bitte eigene Flasche oder Becher mitbringen."
+27,"Was sollte ich mitbringen, wenn ich Wirtschaftsinformatik an der THWS studieren möchte?","Okay, here's a breakdown of what you'd likely need to bring or know for studying Wirtschaftsinformatik (Business Informatics) at the THWS (Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt). I've divided it into categories: academic preparedness, technical equipment, and general supplies.  I'll also include some notes about the THWS specifically.
+
+**1. Academic Preparedness (What you should *know* before you start)**
+
+*   **Strong Foundation in Mathematics:**  Wirtschaftsinformatik heavily uses mathematics. Expect to need a solid grasp of:
+    *   Algebra
+    *   Calculus (basic understanding)
+    *   Statistics (basic understanding)
+    *   Discrete Mathematics (becomes important later)
+*   **Basic Computer Literacy:**  You don't need to be a programming expert, but you should be comfortable using computers, navigating operating systems (Windows and/or macOS), and using common office software (Microsoft Office or similar).
+*   **English Language Skills:** While lectures will be in German, a good level of English is beneficial for accessing additional materials, reading technical documentation, and participating in international projects. The study materials often refer to english literature.
+*   **Interest in Business and Technology:** A genuine interest in the intersection of business and technology is crucial for success in this field.
+
+**2. Technical Equipment (What to *bring*)**
+
+*   **Laptop/Computer:** This is *essential*. Most coursework, assignments, and projects will be computer-based. THWS doesn's specify any particular brand or OS.
+*   **Software:** You'll need access to standard office software (Microsoft Office, LibreOffice, or similar).
+*   **Internet Access:** Reliable internet access is crucial for accessing online resources, submitting assignments, and participating in online discussions.
+*   **External Storage (Optional but Recommended):**  A USB drive or external hard drive for backups is a good idea.
+*   **Headphones/Earphones:**  Useful for studying in shared spaces.
+
+**3. General Supplies & Documents**
+
+*   **Student ID:** Once you are officially enrolled.
+*   **Health Insurance Card:**  Absolutely essential for healthcare.
+*   **Semester Fee Payment Confirmation:** Proof of payment of the semester fee.
+*   **Important Documents:** Passport/ID card, birth certificate (may be needed for enrollment).
+*   **Stationery:** Pens, pencils, notebooks, highlighters, etc.
+*   **Backpack/Bag:** To carry your books and supplies.
+*   **Comfortable Clothing:** For lectures and labs.
+
+**4. Specific Notes about the THWS (Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt):**
+
+*   **No Specific Laptop Requirements:** The THWS doesn't mandate a specific laptop model or operating system. Bring what you're comfortable with.
+*   **Library Resources:** The THWS has a library with computers and access to online resources.  Check their website for details. [https://bibliothek.thws.de/](https://bibliothek.thws.de/)
+*   **Student Organizations:**  Consider joining student organizations (Fachschaft) for support and networking. ([https://www.thws.de/studium/fachschaften/](https://www.thws.de/studium/fachschaften/))
+*   **Online Information:**  Keep an eye on the THWS website and your email for important announcements and updates regarding enrollment, orientation, and course materials. ([https://www.thws.de/](https://www.thws.de/))
+
+
+
+To help me narrow down the recommendations, can you tell me:
+
+*   What is your current level of math and computer skills?
+*   Are you already enrolled, or are you preparing for the enrollment process?","Sie sollten logisch und wirtschaftlich denken können, Interesse an IT mitbringen sowie kommunikativ und teamfähig sein."
+28,Welche beruflichen Perspektiven habe ich nach dem Studium der Wirtschaftsinformatik an der THWS?,"Nach dem Studium der Wirtschaftsinformatik an der THWS eröffnen sich Ihnen vielfältige Berufsperspektiven. Hier sind einige Bereiche und konkrete Jobmöglichkeiten, die sich aus den bereitgestellten Dokumenten ableiten lassen:
+
+**1. Allgemeine Berufsbereiche:**
+
+*   **Lösungsentwicklung für komplexe Problemstellungen:** Wirtschaftsinformatiker lösen komplexe Aufgabenstellungen in Bezug auf Informationsversorgung und -verarbeitung.
+*   **Bindeglied zwischen IT und Wirtschaft:** Sie agieren als Schnittstelle zwischen der IT-Abteilung und den Fachabteilungen eines Unternehmens.
+*   **Anwendungsgebiete in verschiedenen Branchen:** Die Absolventen können in einer Vielzahl von Branchen tätig sein, da Wirtschaftsinformatik in fast allen Unternehmen relevant ist.
+*   **Problemlösung und schnelle Einarbeitung:** Das Studium vermittelt Fähigkeiten zur Problemlösung und eine schnelle Einarbeitung in neue Anwendungsbereiche.
+
+**2. Konkrete Jobmöglichkeiten (abgeleitet aus Dokumenten und üblichen Aufgaben):**
+
+*   **IT-Consulting:** Beratung von Unternehmen bei der Einführung und Optimierung von IT-Systemen. Prof. Dr. Saueressig gibt in diesem Bereich Seminare.
+*   **IT-Organisation und IT-Controlling:**  Steuerung und Überwachung von IT-Prozessen.
+*   **Geschäftsprozessmanagement:**  Analyse und Optimierung von Geschäftsprozessen unter Einsatz von IT.
+*   **Business Technologies:**  Umsetzung von IT-Lösungen zur Unterstützung von Geschäftsprozessen.
+*   **Softwareentwicklung:** Konzeption und Programmierung von Softwarelösungen (wenn Sie entsprechende Programmierkenntnisse entwickeln).
+*   **Projektmanagement:** Leitung von IT-Projekten.
+*   **Analyse und Optimierung von Geschäftsprozessen.**
+*   **IT-Consulting:** Beratung von Unternehmen in IT-Fragen.
+*   **Software Engineer**
+*   **Business Analyst:** Analyse von Geschäftsanforderungen und Übersetzung in IT-Lösungen.
+
+**3. Hinweise aus den Dokumenten:**
+
+*   **Praxisnähe:**  Das Studium legt Wert auf Praxisnähe durch Projekte, Programmieraufgaben und Bachelorarbeiten. Dies soll Sie gut auf den Arbeitsmarkt vorbereiten.
+*   **ASINN-Akkreditierung:** Der Studiengang ist ASIIN-akkreditiert, was ein Qualitätsmerkmal ist.
+*   **Netzwerk:** Durch die Kontakte zu Unternehmen und durch die enge Zusammenarbeit mit Professoren können Sie wertvolle Kontakte für Ihre berufliche Zukunft knüpfen.
+
+**Wo Sie arbeiten können:**
+
+*   In großen Unternehmen
+*   In mittelständischen Unternehmen
+*   In Beratungsunternehmen
+*   In der öffentlichen Verwaltung
+
+Um eine genaue Vorstellung von den Gehaltsaussichten und den aktuellen Jobangeboten zu bekommen, empfehle ich Ihnen, die Karriereservices der THWS zu kontaktieren und auf einschlägigen Jobportalen nach Stellenangeboten zu suchen.","Absolventinnen und Absolventen arbeiten in verschiedensten Unternehmen an innovativen IT- und Digitalisierungsprojekten, oft an der Schnittstelle zwischen Technik und Management."
+29,Wie ist der Ruf der Fakultät Informatik und Wirtschaftsinformatik an der THWS?,"Based on the provided text, here's a summary of the reputation and standing of the Faculty of Computer Science and Business Informatics at THWS (Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt):
+
+**Positive Aspects & Indicators of a Good Reputation:**
+
+*   **Size & Student Body:** It's one of the largest faculties at the university, with over 1200 students. A larger faculty often suggests a popular and well-regarded program.
+*   **Faculty Expertise:** There are 24 lecturers, including five research professors specializing in areas like socio-informatics, IoT, and AI. This indicates a commitment to research and advanced expertise.
+*   **Industry Collaboration:** The faculty emphasizes cooperation with companies, indicating a practical, industry-relevant focus.
+*   **Internationalization:** They actively support student exchange programs and international weeks, suggesting a global perspective.
+*   **Digitalization Focus:**  The faculty is actively involved in digitalizing teaching and administration, embracing modern approaches.
+*   **Research:** Focus on co-operative promotions with doctorate candidates.
+*   **Program Popularity**: Large student body.
+
+**Overall Impression:**
+
+The provided text paints a picture of a well-established, growing, and forward-thinking faculty. It suggests a reputation for strong industry connections, a commitment to research and modern teaching methods, and a broad range of expertise. However, **the text doesn't offer direct ranking data or external reviews/ratings.** It relies on showcasing positive aspects rather than presenting objective comparisons to other institutions.
+
+
+
+**To get a more complete picture of the faculty's reputation, it would be necessary to consult external sources like:**
+
+*   University rankings (if available)
+*   Student reviews and testimonials
+*   Accreditation reports
+*   Employer feedback","Die Fakultät genießt einen sehr guten Ruf bei Studierenden und Unternehmen, bestätigt z. B. durch das ZEIT-Hochschulranking."
+30,Wie ist die Ausstattung an der Fakultät Informatik und Wirtschaftsinformatik?,"Die Fakultät Informatik und Wirtschaftsinformatik verfügt über eine gute Ausstattung, die Praxisnähe und eine produktive Lernumgebung unterstützt. Hier sind einige Details:
+
+*   **Campusneubau:** Die Fakultät ist in einem modernen Campusneubau untergebracht.
+*   **Medientechnik:** Es gibt eine beispielhafte Ausstattung an Medientechnik.
+*   **Labore und Hörsäle:** Die Labore und Hörsäle sind gut ausgestattet mit Hard- und Software.
+*   **Institute:** Die Fakultät arbeitet mit verschiedenen Forschungsinstituten zusammen, die Spezialausstattung und Ressourcen bieten (z.B. Center for Artificial Intelligence, Institut für Design und Informationssysteme).
+*   **Moderne Lernumgebung:** Die Kombination aus modernem Gebäude, Medientechnik und Laboren schafft eine produktive Lernumgebung.","Die Fakultät verfügt über moderne Labore, Hörsäle mit aktueller Medientechnik sowie ein engagiertes Team aus Lehrenden."
+31,Welche Inhalte werden in den ersten vier Semestern im Studiengang Wirtschaftsinformatik vermittelt?,"Hier ist eine Zusammenfassung der Inhalte, die in den ersten vier Semestern des Studiengangs Wirtschaftsinformatik vermittelt werden, basierend auf den bereitgestellten Texten:
+
+**1. Semester:**
+
+*   Programmieren 1
+*   Grundlagen Informatik & E-Commerce
+*   Mathe 1
+*   Grundlagen der Wirtschaftsinformatik
+*   Oberflächengestaltung & Usability
+*   Grundlagen der Wirtschaftswissenschaften
+
+**2. Semester:**
+
+*   Absatz- & Produktionswirtschaft
+*   Datenbanken
+*   English for IT
+*   Mathe 2
+*   Programmieren 2
+*   Rechnungswesen und Steuern
+
+**3. Semester:**
+
+*   Datenkommunikation
+*   IT-Organisation & IT-Controlling
+*   IT-Projektmanagement
+*   Logistik
+*   Softwareentwicklung
+*   Unternehmensführung & Organisation
+
+**4. Semester:**
+
+*   Business Software
+*   Business Technologies
+*   Informations- & Technologiemanagement
+*   Softwareentwicklungsprojekt
+*   Statistik & Operation Research
+*   Wirtschaft- & IT-Recht
+
+Es handelt sich hierbei um eine allgemeine Übersicht. Die genauen Inhalte und Schwerpunkte können je nach aktueller Studienordnung variieren.","Grundlagen in Wirtschaftsinformatik, Informatik, Wirtschaftswissenschaften sowie Mathematik, Statistik, IT-Recht und Englisch."
+32,Was passiert im Praxissemester des Studiengangs Wirtschaftsinformatik?,Im Praxissemester (5. Semester) des Studiengangs Wirtschaftsinformatik absolvieren die Studierenden eine 20-wöchige Praxisphase in einem Unternehmen.,Im 5. Semester absolvieren die Studierenden eine 20-wöchige Praxisphase in einem Unternehmen.
+33,Welche Spezialisierungen sind im späteren Studienverlauf möglich?,"Based on the provided documents, here's a breakdown of potential specializations and areas of focus within later stages of your studies:
+
+**1. Fach- und Vertiefungsstudium/Spezialisierung (Specialized Studies/Specialization):**
+
+*   This is a key area for specialization, occurring in the 6th and 7th semesters.
+*   The document mentions a ""Vertiefung"" (specialization) consisting of 3 modules.
+*   The specific areas of focus are not detailed in the provided context but it is possible to choose from a few different specializations.
+
+**2. Wahlmöglichkeiten (Choice/Options):**
+
+*   The text indicates the opportunity to choose individual modules.
+
+**3.  Specific Example from 'Kollaborative Business-Prozesse und -Systeme' module:**
+*   Digital Geschäftsmodelle (Digital Business Models)
+*   Informationssystemlandschaften (Information System Landscapes)
+
+**4.  Webseite & Conversion Optimierung (Website & Conversion Optimization):**
+*   Focus on user behavior and website optimization techniques.
+*   Includes statistics, hypothesis formulation and A/B testing.
+
+**5.  Digital Transformation Module:**
+*   Focus on Digital Business Models.
+
+**Please note:**
+
+*   The provided documents are limited and don't offer a complete list of all possible specializations.
+*   To get the complete information, you're advised to refer to official module descriptions, study guides, and speak with academic advisors.","Vertiefungen sind z. B. in Business Software, Information Security, Medieninformatik oder Mobile Solutions möglich. Es gibt Wahlmodule zu Themen wie Big Data oder SAP."
+34,Wie ist der Studiengang Wirtschaftsinformatik international ausgerichtet?,"Der Studiengang Wirtschaftsinformatik an der Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt ist auf verschiedene Weise international ausgerichtet:
+
+*   **Internationale Kooperationen:** Die Fakultät unterhält Partnerschaften mit Hochschulen weltweit, was Studierenden Möglichkeiten für Auslandssemester und -aufenthalte bietet.
+*   **Internationale Wochen:** Es werden regelmäßig internationale Wochen veranstaltet, bei denen Gastdozenten von Partnerhochschulen englischsprachige Lehrveranstaltungen anbieten.
+*   **Auslandsaufenthalte:** Studierende haben die Möglichkeit, an Austauschprogrammen teilzunehmen, z.B. im Rahmen von Erasmus+ oder über andere Partnerschaften. Es gibt auch die Möglichkeit, ein Praxissemester im Ausland zu absolvieren.
+*   **Internationale Themen:** Die Lehrveranstaltungen behandeln oft internationale Themen und Fallstudien, um den Studierenden ein globales Verständnis der Wirtschaftsinformatik zu vermitteln.
+*   **Kooperationen mit Unternehmen:** Es gibt Partnerschaften mit internationalen Unternehmen, die Praktika und Projekte im Ausland ermöglichen.
+*   **Vielfältige Lehrangebote**: Die Lehrveranstaltungen sind so konzipiert, dass sie auf globale Herausforderungen und technologische Entwicklungen eingehen, um so Studenten auf eine internationale Arbeitswelt vorzubereiten.","Es gibt englischsprachige Module, eine Internationale Woche, Austauschprogramme mit Partnerhochschulen weltweit sowie das India Gateway Program."
+35,In welchen Studiengängen ist ein Praktikum verpflichtend vorgesehen?,"Based on the provided text, a Praktikum (internship) is a mandatory component of the following Bachelor's degree programs:
+
+*   **E-Commerce**
+*   **Informatik (Computer Science)**
+*   **Wirtschaftsinformatik (Business Informatics)**
+*   **Informationssicherheit (Information Security)**
+*   **Software Engineering (Software Engineering)**
+
+The text also mentions that for these programs, there are designated Praktikumsbeauftragte (internship officers) within each degree program who can answer specific questions.","Im 5. Semester der Bachelorstudiengänge E-Commerce, Informatik, Wirtschaftsinformatik, Informationssicherheit und Digitale Gesellschaft ist ein Praktikum verpflichtend."
+36,Wie lange dauert das verpflichtende Praktikum im Bachelorstudium?,"Das verpflichtende Praktikum (auch Praxisphase) im Bachelorstudium dauert mindestens **20 Wochen Vollzeit**. Es sollte eine Vollzeittätigkeit sein, und die Dauer sollte länger als 20 Wochen sein, um eventuelle Krankheitstage abzufangen.",Das Praktikum dauert mindestens 20 und höchstens 26 Wochen und muss zusammenhängend absolviert werden.
+37,Welche Voraussetzungen müssen für den Antritt des Praktikums erfüllt sein?,"Um ein Praktikum antreten zu können, müssen folgende Voraussetzungen erfüllt sein:
+
+*   **Mindest-ECTS-Punkte:** Studierende müssen zum Start des Praktikums mehr als **90 ECTS-Punkte** erreicht haben.
+*   **Informatik-Spezifisch:** Studierende im Studiengang Informatik müssen außerdem das Modul ""Algorithmen und Datenstrukturen I"" erfolgreich abgeschlossen haben.
+*   **Genehmigung:** Ein ausgefüllter und abgezeichneter ""Antrag auf Genehmigung der Ausbildungsstelle"" muss beim Praktikantenamt vorgelegt werden.
+*   **Ausbildungsvertrag:** Ein Ausbildungsvertrag muss vorliegen.
+*   **Themenabstimmung:** Die Inhalte der Praxisphase müssen mit dem Beauftragten des Studiengangs abgestimmt werden.",Es müssen mehr als 90 ECTS-Punkte erreicht sein. Im Studiengang Informatik muss zusätzlich das Modul „Algorithmen und Datenstrukturen I“ bestanden sein.
+38,Kann das Pflichtpraktikum auch im Ausland absolviert werden?,"Ja, das Pflichtpraktikum kann auch im Ausland absolviert werden. Es gibt die Möglichkeit, ein Auslandspraktikum zu absolvieren, und es ist möglich, dass sich das Praktikum mit einem Auslandssemester ergänzen kann. Bei der Planung sollten Sie berücksichtigen, ob der Auslandsaufenthalt nach dem Praktikum vielleicht noch um ein Auslandssemester ergänzt werden kann. Die Rahmenbedingungen, also Voraussetzungen, Dauer und abzugebende Dokumente unterscheiden sich nicht zwischen einem Praktikum im Inland und Ausland. Für ein Praktikum im Ausland gibt es die Möglichkeit, das Projekt Praxis International zu nutzen.","Ja, das Praktikum kann im Ausland absolviert werden. Die Rahmenbedingungen entsprechen denen eines Praktikums im Inland."
+39,In welchem Semester findet die Praxisphase im Studiengang Wirtschaftsinformatik statt?,Die Praxisphase im Studiengang Wirtschaftsinformatik findet im **fünften Semester** statt.,Die Praxisphase ist im 5. Fachsemester vorgesehen.
+40,Welche Inhalte soll das Praktikum im Bereich Wirtschaftsinformatik abdecken?,"Based on the provided documents, a practical experience/internship (Praktikum) in Business Informatics (Wirtschaftsinformatik) should cover the following:
+
+**Overall Focus:**
+
+*   **Digital Transformation & Innovation:** Application of digital technologies and innovation within a business context.
+*   **Problem Solving:** Analyzing business problems and developing IT solutions.
+*   **Practical Application:**  Putting theoretical knowledge into practice.
+*   **Teamwork:**  Collaborating on projects, especially within a team setting.
+
+**Specific Areas/Tasks (drawn from multiple document mentions):**
+
+*   **Digitalisierung (Digitization):** Working with digitization-related tasks, including the development, implementation, and evaluation of digital applications.
+*   **Software Development:** Experience with programming languages and methodologies.
+*   **IT Project Management:** Understanding and participating in IT project phases.
+*   **Business Process Analysis:** Analyzing and improving business processes.
+*   **Management of Information Systems:**  Gaining insight into managing IT systems and technologies.
+*   **Data Analysis:** Working with data and using it to improve business decisions.
+*   **Cybersecurity & Data Protection:** Understanding and addressing cybersecurity risks and data protection requirements.
+*   **Business Informatics Methodology:** Applying theoretical knowledge of business informatics concepts and methods.
+*   **Agile development:** working with agile methodologies in practice.
+
+
+
+**Specific Focus during the final year (Bachelor):**
+
+*   **Application of Digitalization:** Working on digitization-related tasks, including the development, implementation, and evaluation of digital applications
+*   **Theoretical and practical knowledge:** Combining theoretical knowledge with practical, hands-on know-how.
+*   **Teamwork:** Working in teams on project work.
+
+
+
+The documents emphasize a balanced approach, combining theoretical understanding with practical experience, and encourage participation in team projects to foster collaboration and problem-solving skills.",Die Studierenden sollen in möglichst allen Projektphasen eines größeren IT-Projekts mitarbeiten und idealerweise verschiedene Unternehmensbereiche kennenlernen.
+41,Muss ein Projektthema für die Praxisphase vereinbart werden?,"Ja, ein Projektthema für die Praxisphase muss vereinbart werden. Es sollte im Vertrag zwischen dem Unternehmen/der Einrichtung und dem Studierenden festgelegt sein und einen zeitlichen Umfang von mindestens 12 Wochen haben. Die Festlegung kann jedoch auch später erfolgen, spätestens vier Wochen nach Beginn der Praxisphase, sofern sie nicht bereits im Antrag auf Genehmigung der Praxisphase enthalten war.","Ja, ein grobes Projektthema muss im Praktikumsvertrag festgelegt werden, die genaue Ausarbeitung kann spätestens vier Wochen nach Beginn erfolgen."
+42,Was ist das Ziel der Praxisphase im Studiengang E-Commerce?,"The primary goal of the Praxisphase (practical phase) in the E-Commerce Bachelor's program is to provide students with practical experience and connect theoretical knowledge with real-world application. Here's a breakdown of the goals, pulled from the provided documents:
+
+*   **Practical Application:** To apply theoretical knowledge to real-world E-Commerce scenarios.
+*   **Skill Development:** To develop skills in areas like requirements engineering, project management, system design, logistics, and more.
+*   **Problem Solving:** To gain experience solving problems encountered in an E-Commerce environment.
+*   **Real-World Experience:** Connects the program with the actual customer problems and helps the students to understand and solve the problems, and develop the necessary skills.
+*   **Exposure to the E-Commerce Lifecycle:** To experience all phases of an E-Commerce project, from requirements gathering to system design and implementation.
+*   **Connecting Theory and Practice:** To bridge the gap between theoretical knowledge and practical application in the E-Commerce field.
+*   **Conversion Optimization:** To develop skills related to conversion optimization and usability in E-commerce.
+
+
+
+Essentially, the Praxisphase is designed to give students a taste of what working in the E-Commerce industry is like and to equip them with the skills and experience they need to succeed.","Die Studierenden sollen praktische Erfahrungen im E-Commerce-Umfeld sammeln, eigenverantwortlich in Projekten mitarbeiten und das Berufsfeld E-Commerce kennenlernen."
+43,In welchem Semester findet die Projektarbeit im Bachelorstudium üblicherweise statt?,Die Projektarbeit findet im 6. Semester des Bachelorstudiums üblicherweise statt.,Die Projektarbeit wird in der Regel im 6. Semester durchgeführt.
+44,"Welche Voraussetzungen müssen erfüllt sein, um mit der Projektarbeit zu beginnen?","Um mit der Projektarbeit zu beginnen, müssen mehrere Voraussetzungen erfüllt sein. Demnach müssen Sie mindestens 90 ECTS-Punkte erreicht haben und das Modul Algorithmen und Datenstrukturen I erfolgreich abgelegt haben. Zudem muss die Ausbildungsstelle genehmigt sein, und es sollte eine Beschreibung des Projekts vorliegen.",Es müssen mindestens 100 ECTS-Punkte erreicht sein.
+45,Wie viele ECTS-Punkte werden für die Projektarbeit vergeben?,"Basierend auf den bereitgestellten Dokumenten werden für die Projektarbeit **5 ECTS-Punkte** vergeben.
+
+Hier sind die entsprechenden Textstellen:
+
+*   ""Das Praxismodul wird mit **25 ECTS-Punkten** und dem Prädikat „mit Erfolg abgelegt“ oder „ohne Erfolg abgelegt“ bewertet."" (Datei: `https://fiw.thws.de/fileadmin/redaktion/dokumente/bachelor/wirtschaftsinformatik/2021-07-26_SPO_B_WI_kF_komplett.pdf`)
+* ""Das Praxismodul wird mit **25 ECTS-Punkten** und dem Prädikat „mit Erfolg abgelegt“ oder „ohne Erfolg abgelegt“ bewertet."" (Datei: `https://fiw.thws.de/fileadmin/redaktion/dokumente/bachelor/informatik/2021-07-26_SPO_2._%C3%84S_SPO_BIN_kF_komplett.pdf`)
+* ""Das Praxismodul wird mit **25 ECTS-Punkten** und dem Prädikat „mit Erfolg abgelegt“ oder „ohne Erfolg abgelegt“ bewertet."" (Datei: `https://fiw.thws.de/fileadmin/redaktion/dokumente/bachelor/e-commerce/2020-04-27_SPO_B_EC_kF_komplett.pdf`)
+*  ""Das Praxismodul wird mit **25 ECTS-Punkten** und dem Prädikat „mit Erfolg abgelegt“ oder „ohne Erfolg abgelegt“ bewertet."" (Datei: `https://fiw.thws.de/studium/bachelor-wirtschaftsinformatik-bwi/spo-bwi-barrierefrei/`)","Für die Projektarbeit werden 10 ECTS-Punkte vergeben, was ca. 300 Stunden Arbeitsaufwand pro Person entspricht."
+46,Wird die Projektarbeit alleine oder im Team durchgeführt?,"Die Projektarbeit wird in der Regel in Teams durchgeführt, üblicherweise mit mindestens drei Studierenden. Es gibt auch Projekte, die von einzelnen Studierenden durchgeführt werden können.","Die Projektarbeit ist in der Regel eine Gruppenarbeit mit mindestens drei Studierenden, wobei die individuelle Leistung erkennbar sein muss."
+47,Wie erfolgt die Bewertung der Projektarbeit?,"Die Bewertung der Projektarbeit erfolgt durch ein Portfolio und eine abschließende Präsentation. Die Projektarbeit ist ein wesentlicher Bestandteil des Moduls und wird durch ein begutachtungsprozess beurteilt. Die Bewertung der Projektarbeit findet im Rahmen einer ""sonstigen Prüfung"" (soP) gemäß den Bestimmungen der Prüfungsordnung statt. Die genaue Festlegung der abzuverlangenden Leistungen erfolgt durch das Modul.","Die Bewertung basiert auf der schriftlichen Dokumentation und einer persönlichen Präsentation der Ergebnisse, bei der jede Person etwa 15 Minuten präsentiert."
+48,Können Studierende eigene Themen für die Projektarbeit vorschlagen?,"Ja, Studierende können eigene Themen für die Projektarbeit vorschlagen. Professoren schlagen Themen vor, aber Studierende können auch selbst Themen vorschlagen.","Ja, neben Vorschlägen durch Professorinnen und Professoren können auch Studierende eigene Themen einbringen."
+49,Wie erfolgt die Anmeldung zur Projektarbeit?,Die Anmeldung zur Projektarbeit erfolgt über den Prüfungsausschuss. Die Studierenden müssen einen separaten Antrag an die Prüfungskommissionen stellen.,Die Anmeldung erfolgt über die betreuende Professorin oder den betreuenden Professor bei der jeweiligen Prüfungskommission.
+50,In welcher Form muss die Projektarbeit abgegeben werden?,Die Projektarbeit muss in gebundener oder getackerter Form abgegeben werden. Zusätzlich ist ein Titelblatt mit bestimmten Angaben beizufügen.,Die Arbeit ist in gedruckter Form und zusätzlich zweimal digital (davon einmal anonymisiert) fristgerecht abzugeben.
+51,Welche Voraussetzungen müssen für die Anmeldung der Bachelorarbeit erfüllt sein?,"Gemäß § 13 Absatz 1 Satz 1, zur Aufnahme des Masterstudiengangs Digital Business Systems, benötigt man einen sehr guten bis guten Hochschulabschluss mit hohem Digitalanteil (z.B. Informatik, Wirtschaftsinformatik, E-Commerce), sowie einschlägige Kenntnisse betrieblicher Abläufe.
+
+Für die Bachelorarbeit sind folgende Bedingungen zu beachten:
+
+*   Es müssen mehr als 90 ECTS-Punkte erreicht sein.
+*   Das Modul Algorithmen und Datenstrukturen I muss erfolgreich abgelegt sein.
+
+Es ist auch wichtig zu beachten, dass es Ausnahmen geben kann und die Entscheidung über die genauen Anforderungen letztendlich von der Prüfungskommission getroffen wird.","Es müssen mindestens 150 ECTS-Punkte, das Praxismodul, das Modul „Soft and Professional Skills“, die Projektarbeit und im Studiengang E-Commerce zusätzlich das Modul „English Communication“ abgeschlossen sein."
+52,Wie lange ist die Bearbeitungszeit für eine Bachelorarbeit?,"Laut den bereitgestellten Texten, sollte eine Bachelorarbeit in der Regel in **zwei Monaten** fertig gestellt werden.",Die Bearbeitungszeit für eine Bachelorarbeit beträgt fünf Monate.
+53,Wie wird die Bachelorarbeit an der THWS abgegeben?,"According to the provided text, here's how a Bachelor's thesis (Bachelorarbeit) is submitted at the THWS:
+
+*   **Through the assigned supervisor:** The Bachelor's thesis is submitted through the supervising professor or lecturer (betreuender Professor bzw. die betreuende Professorin) to the relevant examination committee (Prüfungskommission).
+*   **Submission of the work:** The thesis should be submitted through the assigned supervisor.
+*   **Presentation:** Following submission, there's a personal presentation of the thesis by the student in the presence of the examiners (Prüfungskommission).","Gedruckt persönlich, per Briefkasten oder im Dekanat; zusätzlich zweifach digital (eine Version anonymisiert) per E-Mail an die betreuende Person."
+54,Was gehört zur formalen Struktur einer Bachelorarbeit?,"Basierend auf den bereitgestellten Dokumenten, hier eine Zusammenfassung der formalen Struktur und Anforderungen an eine Bachelorarbeit, sowie Aspekte der Gliederung und Aufbau:
+
+**1. Gliederung und Aufbau (allgemein):**
+
+*   **Einleitung:**  Sollte einen Überblick geben (0.5 - 1 Seite).
+*   **Unternehmensvorstellung:** (Max. 2 Seiten) - wenn im Kontext einer Praxisphase.
+*   **Projektbeschreibung/Aufgabenbeschreibungen:** Detaillierte Beschreibungen der durchgeführten Projekte und Aufgaben.
+*   **Zusammenfassung:**  Wichtige Erkenntnisse sollten hier aufgeführt werden. Eine persönliche Wertung der Erfahrungen ist ebenfalls möglich.
+*   **Anhänge:**  Benötigte Anhänge wie ein kurzes Quellenverzeichnis.
+
+**2. Formale Anforderungen:**
+
+*   **Umfang:**  Die Arbeit sollte einen Umfang von 10-20 Seiten haben.
+*   **Sprache:** Deutsch oder Englisch.
+*   **Layout:** Professionell gestaltet mit strukturierter Gliederung, verständlichem Schreibstil und ggf. Grafiken und Tabellen zur Visualisierung.
+*   **Titelblatt:**  Muss bestimmte Angaben enthalten:
+    *   Matrikelnummer, Name
+    *   Semester, Zeitraum der Praxisphase
+    *   Adresse des Unternehmens
+    *   Angaben zur betreuenden Person (Telefon, E-Mail)
+    *   Titel des Projekts.
+*   **Unterschriften:**  Die Arbeit muss von der Betreuerin/dem Betreuer im Unternehmen/in der Einrichtung und von der Studierenden/dem Studierenden unterschrieben sein.
+*   **Vorlage:** Es gibt eine online erhältliche Vorlage für die Gestaltung.
+
+**3. Präsentation (im Kontext der Abschlussprüfung):**
+
+*   **Mündliche Präsentation:** Die Arbeit wird vor den Prüfern präsentiert.
+*   **Inhalt der Präsentation:** Erläuterungen zur Arbeit.
+*   **Bewertung:** Die Präsentation fließt in die Gesamtbewertung der Bachelorarbeit ein (Verhältnis 1:4).
+
+
+
+Es gibt eine Vorlage für das Titelblatt, die online verfügbar ist. Das Dokument empfiehlt, die Arbeit professionell zu gestalten.","Titelblatt mit Abgabedatum, Kurzfassung auf Deutsch und Englisch, Eigenständigkeitserklärung, Gliederung, Literatur- und ggf. Abkürzungsverzeichnis sowie die Einwilligung zur Plagiatsprüfung."
+55,Muss die Bachelorarbeit präsentiert werden?,"Yes, according to the provided texts, the Bachelor's thesis must be presented. Here's a breakdown of the relevant information:
+
+*   **§ 8 Bachelorarbeit:** ""¹Nach Abgabe der Bachelorarbeit findet eine persönliche Präsentation der Arbeit durch die Studierende/ den Studierenden mit mündlichen Erläuterungen statt."" (A presentation of the thesis by the student with verbal explanations takes place after submission.)
+*   Several texts mention a presentation as part of the Bachelor's or Master's thesis process.
+
+Therefore, a presentation is a required component of completing the Bachelor's thesis.","Ja, nach der Abgabe findet in Absprache mit den Betreuenden eine Präsentation der Arbeitsergebnisse statt."
+56,Wie erfolgt die Anmeldung zur Bachelorarbeit?,"The process for registering for a Bachelor's thesis involves submitting an application to the examination committees. Here's a breakdown from the provided documents:
+
+*   **Separate Application:**  A separate application is required for the Bachelor's thesis, not handled through the standard exam registration process. This applies to both the thesis itself and the associated seminar.
+*   **Application to Examination Committees:** You need to submit this application to the examination committees.
+*   **Master's Thesis:** The same applies to Master's thesis registration, requiring a separate application to the examination committees.
+
+
+
+Please note that the exact process and deadlines can be found on the university's website and through communication with the examination committees.","Die Anmeldung läuft über den betreuenden Professor oder die Professorin, die dann bei der Prüfungskommission beantragt wird. Studierende erhalten alle Unterlagen per E-Mail."
+57,Wo finde ich eine Übersicht der Module im Studiengang Wirtschaftsinformatik?,"You can find an overview of the modules in the Wirtschaftsinformatik (Business Informatics) program in several places:
+
+*   **Curriculum Overview in the Bachelor's Brochure:** Several documents mention the curriculum, study plan, or module plan for Wirtschaftsinformatik (Business Informatics). [https://fiw.thws.de/fileadmin/redaktion/dokumente/bachelor/wirtschaftsinformatik/20190510_wirtschaftsinformatik_bachelor_faltblatt_druck_2mm-sf.pdf](https://fiw.thws.de/fileadmin/redaktion/dokumente/bachelor/wirtschaftsinformatik/20190510_wirtschaftsinformatik_bachelor_faltblatt_druck_2mm-sf.pdf) describes the curriculum.
+*   **Module Plan (AWPF):**  [https://fiw.thws.de/studium/infos-fuer-erstsemester/](https://fiw.thws.de/studium/infos-fuer-erstsemester/) mentions the module plan and AWPF (Allgemeinwissenschaftliche Wahlpflichtfächer) for the first semester.
+*   **Detailed Module Listing (Example):**  [https://fiw.thws.de/fileadmin/share/vlplan/BaInf4_2025ss.html](https://fiw.thws.de/fileadmin/share/vlplan/BaInf4_2025ss.html) provides a detailed listing of modules for the fourth semester.
+*   **Bachelor's Brochure:** [https://fiw.thws.de/studienangebot/bachelor-wirtschaftsinformatik/](https://fiw.thws.de/studienangebot/bachelor-wirtschaftsinformatik/) provides an overview of modules and courses for the program.",Die Modulübersicht gilt für alle Studierenden mit Studienbeginn ab dem 01.10.2025 und ist auf der Webseite der Fakultät verfügbar.
+58,In welchem Semester wird das Modul Programmieren I angeboten?,Das Modul Programmieren I wird im **1. Semester** angeboten.,Das Modul wird im 1. Semester angeboten und steht jedes Semester zur Verfügung.
+59,Welche Programmiersprache wird im Modul Programmieren I verwendet?,Im Modul Programmieren I wird die Programmiersprache Java verwendet., Im Modul wird mit der Programmiersprache Java gearbeitet.
+60,Welche Inhalte vermittelt das Modul „Programming I“?,"Okay, here's a breakdown of the content typically covered in a ""Programming I"" module, synthesized from the provided documents.  It's a bit challenging because the documents don's directly list ""Programming I"" contents. I extracted from relevant Module descriptions.
+
+**Overall Goals:**
+
+*   Introduction to Programming: The goal is to provide a foundation in programming concepts and skills.
+*   Technical Understanding: Understanding the basics of algorithms and data structures.
+*   Foundation for Further Study: Prepare students for more advanced programming courses.
+
+**Specific Content Areas (extrapolated from similar modules):**
+
+*   **Basic Programming Concepts:**
+    *   Variables and Data Types
+    *   Control Flow (Conditional Statements: `if`, `else`; Loops: `for`, `while`)
+    *   Functions (definition, calls, parameters, return values)
+    *   Input/Output operations
+*   **Algorithms and Data Structures:**
+    *   Basic Algorithms: Sorting, Searching
+    *   Data Structures: Arrays, Lists (often, but specific implementation depends on language)
+*   **Problem Solving:**
+    *   Breaking down problems into smaller, manageable steps.
+    *   Translating algorithms into code.
+*   **Debugging Techniques:**  Understanding how to find and fix errors in code.
+* **Tooling and Environment:** Familiarization with development environments (IDEs), compilers, and other essential programming tools.
+
+**Important Note:**
+
+Because the provided documents do not explicitly state the contents of ""Programming I"", the above is a general estimation.",Es vermittelt Grundlagen der prozeduralen und objektorientierten Programmierung sowie die Umsetzung einfacher mathematischer und technischer Probleme.
+61,Wie erfolgt die Prüfung im Modul „Programming I“?,"According to the provided texts, the exam for ""Programming I"" is a written exam (Schriftliche Prüfung). However, specifics like the format, content, or whether it's a multiple-choice or open-book exam are not detailed in the provided documents. You may want to contact the examination committee for your degree program for more information.",Die Prüfung erfolgt durch eine 90-minütige schriftliche Klausur.
+62,Für welche Studiengänge ist das Modul „Programming I“ relevant?,"Based on the provided text, ""Programming I"" is relevant for the following study programs:
+
+*   **Informatik (Computer Science)**
+*   **Software Engineering (Softwareentwicklung)**
+*   **Wirtschaftsinformatik (Business Informatics)**","Das Modul ist Pflichtbestandteil in den Studiengängen Informatik, Informationssicherheit und Wirtschaftsinformatik."
+63,In welchem Semester wird das Modul „Mathematik II“ angeboten?,"According to the provided texts, ""Mathematik II"" (Mathematics II) is offered in the **second semester**.","Das Modul wird im 2. Semester angeboten, jeweils im Sommersemester."
+64,Welche mathematischen Themen werden im Modul „Mathematik II“ behandelt?,"Im Modul „Mathematik II“ werden komplexe Zahlen, elementare Funktionen und deren Eigenschaften, Differential- und Integralrechnung (in einer und mehreren Variablen), Integralrechnung in einer Variablen, Finanzmathematik (Anwendung der Analysis in Zinsrechnung und Rentenrechnung) sowie Eigenwerte und Eigenvektoren behandelt.","Behandelt werden unter anderem Funktionen, Folgen, Grenzwerte, Stetigkeit, Differentialrechnung, Integralrechnung sowie Anwendungen aus der Finanzmathematik."
+65,Welches Vorwissen wird für das Modul empfohlen?,"Here's a summary of the recommended prerequisites for various modules, based on the provided text:
+
+**General Prerequisites & Recommended Knowledge (Across Multiple Modules):**
+
+*   **Mathematics I:**  Several modules (like 5102530) explicitly mention Mathematics I as a prerequisite or basis.
+*   **120 ECTS-Punkte:** For certain modules, having already completed 120 European Credit Transfer and Accumulation System (ECTS) points is a requirement.
+*   **Scientific Working Skills:** Several modules emphasize developing scientific working skills, including literature research and applying methods.
+
+**Module-Specific Prerequisites:**
+
+*   **Mathematics II (Module 5102530):**  Requires completion of *Mathematik I* and knowledge of existing concepts.
+*   **Seminar (Business Intelligence and Business Process Management):** Requires a basis in scientific working, including literature research and application of methods. It also involves working on a seminar paper.
+*   **Programmierseminar:** Requires Mathematics I.
+
+**Please note:** The text doesn's provide full details of every module, but this information summarizes what's explicitly stated regarding recommended or required prior knowledge.",Empfohlen werden die in „Mathematik I“ erworbenen Kenntnisse in mathematischen Grundlagen.
+66,Wie erfolgt die Prüfungsleistung im Modul „Mathematik II“?,Die Prüfungsleistung im Modul „Mathematik II“ erfolgt durch eine schriftliche Prüfung (sP) mit einer Dauer von 90 Minuten. Die konkrete Festlegung der abzuverlangenden Prüfungsleistungen erfolgt im Studienplan.,Die Prüfungsleistung besteht aus einer 90-minütigen schriftlichen Klausur.
+67,Wie hoch ist der gesamte Arbeitsaufwand im Modul „Datenbanken“?,"The total workload for the ""Datenbanken"" (Databases) module varies slightly depending on the specific document consulted, but consistently indicates a workload of **150 hours**.
+
+Here's a breakdown from the provided sources:
+
+*   **From the module description on page 23 of the `20240312-FIW-Modulhandbuch-BIN-2024ss.pdf`:** ""Dauer 1 Semester. Angeboten Wintersemester. Art der Note Differenzierte Note. Verwendbarkeit E-Commerce, Informatik, Wirtschaftsinformatik. **Gesamt 150 Stunden**""
+*   **From the module description in the  `20240312-FIW-Modulhandbuch-BIN-2024ss.pdf`:** ""Nach erfolgreicher Teilnahme am Modul sind die Studierenden in der Lage: ... **Gesamt 150 Stunden**""
+*   **From the module description in the `20250319-FIW-Modulhandbuch-BISD-2025ss.pdf`:**  ""**Gesamt 150 Stunden**""
+
+Therefore, the entire workload for the ""Datenbanken"" module is approximately **150 hours**.",Der gesamte Arbeitsaufwand beträgt 150 Stunden.
+68,Wie viele Stunden Präsenzzeit sind im Modul vorgesehen?,"The provided text mentions several modules and their associated details. Here's a breakdown of the information available about the number of presence hours in each:
+
+**1. Software Qualität (Module 1511500):**
+*   Workload:
+    *   Synchrone Teilnahme: 1 Std.
+    *   Asynchrone Teilnahme: 3 Std.
+    *   Selbststudienzeit: 90 Std.
+    *   **Total: 150 Std.** (This includes presence and self-study time)
+
+**2. Finanzmathematik (Module 1511500):**
+* The exact number of presence hours is not specified but this module requires 150 hours in total.
+
+**3. Grundlagen verteilter Systeme:**
+* The exact number of presence hours is not specified but this module requires 150 hours in total.
+
+**4. Praxisseminar:**
+*   The exact number of presence hours is not specified but this module has both a block seminar and an option to attend during the fourth semester.
+
+**5. Data Management and Data Science:**
+* The exact number of presence hours is not specified but this module requires 150 hours in total.
+
+**General Notes:**
+
+*   The phrase ""Präsenzzeit"" (presence time) is used consistently to refer to the time spent in synchronous learning activities.
+*   Most modules include a combination of synchronous participation (presence time), asynchronous participation, and self-study time.",Es sind 60 Stunden Präsenzzeit eingeplant.
+69,Was zählt als Grundlagenmodule im Bachelorstudium laut Prüfungsordnung?,"According to the provided documents, **Kernmodule** (core modules) and **Pflichtmodule** (mandatory modules) count as Grundlagenmodule (foundation modules) in the Bachelor's program.  Specifically, they are modules that contribute to building fundamental competencies and often have a direct, related connection to other modules within the degree program.
+
+
+
+Here's a breakdown of how they are described in the provided texts:
+
+*   **""¹Die fachwissenschaftlichen Wahlpflichtmodule (FWPM) gemäß § 7 Absatz 3 APO dienen dem Aufbau vertiefender Kompetenzen und stehen daher in einem unmittelbar fachlichen Zusammenhang mit anderen Modulen des Bachelorstudiengangs Informatik.""** (This refers to modules contributing to building fundamental competencies)
+*   **""¹Die fachwissenschaftlichen Wahlpflichtmodule (FWPM) gemäß § 7 Absatz 3 APO dienen dem Aufbau vertiefender Kompetenzen und stehen daher in einem unmittelbar fachlichen Zusammenhang mit anderen Modulen des Bachelorstudiengangs Informatik.""**
+
+
+
+The other options are not directly identified as ""Grundlagenmodule"":
+
+*   **""Studienordnung""** is the overall document governing the program, not the modules themselves.
+*   **""Curriculum""** is a broader term describing the overall plan of study, also not specific modules.","Grundlagenmodule umfassen 60 ECTS-Punkte. Sind sie nicht ausdrücklich benannt, gelten die Module der ersten beiden Semester als Grundlagenmodule."
+70,"Besteht ein Anspruch darauf, dass jedes Modul in jedem Semester angeboten wird?","Nein, es besteht kein Anspruch darauf, dass jedes Modul in jedem Semester angeboten wird. Die Studienordnungen und das Lehrveranstaltungsangebot unterliegen einer Planung und können sich ändern.
+
+Hier sind einige Hinweise aus den bereitgestellten Dokumenten, die diese Aussage stützen:
+
+*   **Planung und Änderungen:** Die Studienordnungen und das Lehrveranstaltungsangebot unterliegen einer Planung und können sich ändern.
+*   **Elektronische Verfahren und Bekanntmachung:** Die Belegung von Modulen und Wahlpflichtmodulen erfolgt elektronisch und die Termine sowie Teilnahmebedingungen werden fakultätsweit bekannt gemacht. Dies deutet darauf hin, dass die Verfügbarkeit von Modulen nicht garantiert ist und von der Planung abhängt.
+*   **Flexibilität und Entscheidungsfreiheit:** Die Fakultät Informatik und Wirtschaftsinformatik hat Entscheidungsfreiheit bei der Zuordnung von Pflicht- und Wahlpflichtmodulen zu Vertiefungsmodulen.
+
+Zusammenfassend lässt sich sagen, dass die Teilnahme an Modulen von der Planung und Verfügbarkeit durch die Hochschule abhängt.","Nein, es besteht kein Anspruch auf das Angebot jedes Moduls in jedem Semester, insbesondere bei zu geringer Teilnehmerzahl."
+71,Wann gilt ein Auslandssemester laut Prüfungsordnung als anerkannt?,"Gemäß der Prüfungsordnung ist die Anerkennung eines Auslandssemesters möglich, wenn vor Beginn des Auslandssemesters ein Learning Agreement abgeschlossen wird. Dieses muss vom Vorsitzenden der Prüfungskommission für Ihren Studiengang genehmigt werden.",Wenn über mindestens drei Monate Studien- oder Prüfungsleistungen im Ausland erbracht wurden und diese anhand der erworbenen Kompetenzen anerkannt werden.
+72,Wie viele Stunden Arbeitsaufwand entspricht ein ECTS-Punkt laut Prüfungsordnung?,"According to the provided documents, a general guideline is that one ECTS point corresponds to roughly **30 hours** of workload.
+
+Here's a breakdown of where this information appears:
+
+*   **Project Work Section (multiple documents):**  The documents consistently state that a project work assignment, worth a certain number of ECTS points, requires approximately 30 hours of work per student when done individually.
+* **General statement** ""ein ECTS Punkt entspricht in der Regel 30 Arbeitsstunden"" (one ECTS point corresponds to 30 working hours)
+
+**Important Note:**  This is a guideline. The actual workload can vary depending on the specific module and its requirements.","Ein ECTS-Punkt entspricht in der Regel 30 Stunden Arbeitsaufwand, bestehend aus Präsenz- und Selbststudium."
+73,Gilt die Regelstudienzeit auch für Teilzeit- oder berufsbegleitende Studiengänge?,"Based on the provided text, here's the answer to your question:
+
+The text does not directly address whether the ""Regelstudienzeit"" (standard period of study) applies to part-time or work-integrated study programs. However, it is implicitly suggested that flexibility exists within the study program design, with options like delayed participation in seminars and variations in program structure. This implies a potential for adjusted timelines for part-time or work-integrated studies, though it does not explicitly state this.","Ja, auch für Teilzeit- oder berufsbegleitende Studiengänge wird die Regelstudienzeit in der jeweiligen Studien- und Prüfungsordnung festgelegt."
+74,Unter welchen Bedingungen kann ich mich an der THWS beurlauben lassen?,"According to the available information, here's a summary of the conditions for a leave of absence (""Beurlaubung"") at the THWS (Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt):
+
+**General Principles & Where to Find More Information:**
+
+*   **THWS Hochschulrecht (Higher Education Law):** The conditions for leave of absence are governed by the *THWS Hochschulrecht*. This is the primary legal framework for these situations.
+*   **Studienfachberatung (Subject-Specific Counseling):** The *Studienfachberatung* (Subject-Specific Counseling) is a good point of contact for inquiries about leave of absence.  They can provide guidance specific to your situation.
+
+**Key Conditions/Reasons (Based on the available documents):**
+
+*   **Possible Reasons for Beurlaubung (Leave of Absence):** While the documents do not provide an exhaustive list, leave of absence is generally granted for:
+    *   **Illness:** Leave due to illness is a common reason.
+    *   **Family Reasons/Parental Leave:** Leave for family-related matters, including parental leave.
+    *   **Military Service:** Leave for military service.
+    *   **Other Important Reasons:** Leave for other significant reasons that prevent you from pursuing your studies.
+* **Application Process:** You'll need to apply for a leave of absence. Details about the application process and required forms likely exist within the *THWS Hochschulrecht* or on the THWS website.
+* **Contact:** You should directly contact the *Studienfachberatung* or the appropriate office within the THWS to obtain the specific details and application forms regarding a leave of absence.
+
+**Where to find more information:**
+
+*   **THWS Website:** Start with the THWS website: [https://www.thws.de/](https://www.thws.de/) and look for sections related to ""Studienrecht"" (Study Law/Regulations), ""Beratung"" (Counseling), or ""Beurlaubung"" (Leave of Absence).
+*   **Contacting the THWS:** Contact the *Studienfachberatung* (Subject-Specific Counseling) at the THWS.
+*   **Check the *THWS Hochschulrecht*** : Review the official *THWS Hochschulrecht* document for specific legal details and regulations.
+
+**Disclaimer:**
+
+*   The provided information is based on the limited documents available. It is essential to consult the official THWS documentation and directly contact the relevant offices for the most accurate and up-to-date information.","Eine Beurlaubung ist auf Antrag aus wichtigem Grund möglich, z. B. Krankheit, Elternzeit oder Pflege von Angehörigen."
+75,Wie lange darf eine Beurlaubung an der THWS maximal dauern?,"I am sorry, but I cannot find any information regarding the maximum duration of a leave of absence (Beurlaubung) at the THWS (Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt) in the provided documents.",In der Regel sind maximal zwei Semester Beurlaubung im gesamten Studienverlauf zulässig.
+76,Werden Mutterschutzzeiten oder Elternzeit auf die maximale Beurlaubungsdauer angerechnet?,"Gemäß der bereitgestellten Informationen wird die Frage, ob Mutterschutzzeiten oder Elternzeit auf die maximale Beurlaubungsdauer angerechnet werden, nicht explizit beantwortet. Es wird jedoch allgemein auf die einschlägigen Regelungen verwiesen.","Nein, Zeiten von Mutterschutz, Elternzeit oder Pflege naher Angehöriger zählen nicht zu den zwei regulären Urlaubssemestern."
+77,Wo finde ich die rechtlichen Regelungen zur Beurlaubung an der THWS?,"The information about leave of absence regulations at THWS can be found in the ""Satzung über das Verfahren zur Immatrikulation, Beurlaubung und Exmatrikulation an der Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt (Immatrikulationssatzung FHWS)"".  You'll find this referenced in several documents. To find the full text of this Immatrikulationssatzung FHWS, you will need to search the THWS website.",Die Regelungen sind in der Immatrikulationssatzung der THWS sowie in § 39 Abs. 3 und § 36 Abs. 6 der Prüfungsordnung festgelegt.
+78,Kann ich während der Beurlaubung an Prüfungen teilnehmen?,"Die Teilnahme an Prüfungen während der Beurlaubung ist grundsätzlich möglich. Um an Prüfungen teilnehmen zu können, müssen Sie form- und fristgerecht angemeldet sein. Wenn Sie die Prüfungsanmeldung versäumt haben, können Sie einen Antrag auf nachträgliche Prüfungsanmeldung stellen, wobei Sie den Grund für das Versäumnis nachweisen müssen. Es ist wichtig, vor Beginn einer Prüfung zu überprüfen, ob Sie angemeldet sind, da bei nicht korrekter Anmeldung die Teilnahme versagt werden kann.","Die Teilnahme an Prüfungen während der Beurlaubung ist möglich, sofern § 35 der Prüfungsordnung dies erlaubt."
+79,Wie viele ECTS-Punkte umfasst der Bachelorstudiengang E-Commerce und wie lange dauert das Studium regulär?,Der Bachelorstudiengang E-Commerce umfasst 240 ECTS-Punkte und dauert regulär 8 Semester (entspricht 240 ECTS).,Das Studium umfasst 210 ECTS-Punkte und hat eine Regelstudienzeit von sieben Semestern.
+80,Welche Vertiefungsmodule stehen im Bachelorstudiengang E-Commerce zur Auswahl?,"Im Bachelorstudiengang E-Commerce werden folgende Vertiefungsmodule angeboten:
+
+*   Conversion Optimierung (CO)
+*   Web-Management (WM)
+*   Shop-Systeme (SH)
+
+Zusätzlich können die folgenden Vertiefungsmodule aus anderen Studiengängen gewählt werden:
+
+*   Information Security (IS) aus dem Bachelorstudiengang Informatik
+*   Management digitaler Innovationen (MdI) aus dem Bachelorstudiengang Wirtschaftsinformatik
+*   Mobile and Ubiquitous Solutions (MS) aus dem Bachelorstudiengang Wirtschaftsinformatik","Es stehen die Vertiefungen „Conversion Optimierung“, „Web-Management“, „Shop-Systeme“ sowie „Mobile und Ubiquitous Solutions“ aus dem Studiengang Wirtschaftsinformatik zur Auswahl."
+81,"Welche Voraussetzungen müssen erfüllt sein, um ein Vertiefungsmodul im Studiengang E-Commerce belegen zu können?","Um ein Vertiefungsmodul im Studiengang E-Commerce belegen zu können, müssen mindestens 120 ECTS-Punkte erreicht sein und das Praxismodul erfolgreich abgeleistet sein.",Es müssen mindestens 120 ECTS-Punkte erreicht und das Praxismodul erfolgreich abgeschlossen sein.
+82,Wann kann mit der Bachelorarbeit im Studiengang E-Commerce begonnen werden?,"Der genaue Zeitpunkt für den Beginn der Bachelorarbeit im Studiengang E-Commerce ist nicht explizit in den bereitgestellten Dokumenten angegeben. Allerdings lassen sich folgende Informationen ableiten:
+
+*   **Zeitliche Nähe zum Semesterende:** Die Dokumente deuten darauf hin, dass die Abschlussarbeit typischerweise im letzten Semester des Studiums erfolgt.
+*   **Akkreditierungsverfahren:** Der Studiengang E-Commerce startete im WS 2011/12 und erhielt die Akkreditierung im April 2014. Es ist anzunehmen, dass ein ähnlicher Zeitplan für die Abschlussarbeiten gilt.
+*   **Doppelstudium**: Im dualen Studiengang wird empfohlen, dass die Praxisphase (inklusive Abschlussarbeit) vor Beginn des nächsten Semesters endet.
+
+Um den genauen Zeitplan zu erfahren, empfiehlt es sich, die folgenden Stellen zu konsultieren:
+
+*   Den aktuellen Studienplan für den Studiengang E-Commerce.
+*   Die zuständigen Dozenten und Betreuer.","Frühestens nach erfolgreichem Abschluss des Praxismoduls, der Module English Communication und Soft & Professional Skills, der Projektarbeit sowie bei Erreichen von mindestens 150 ECTS-Punkten."
+83,Wo und wie erfolgt die Anmeldung zu Prüfungen an der THWS?,"According to the provided text, here's how the examination registration process works at THWS:
+
+*   **Where:** The examination registration occurs through the **Campusportal** (Campus Portal).
+*   **How:**
+    *   Registration deadlines can be found on the website of the Hochschulservice Studium (Student Services).
+    *   Registration is mandatory for almost all modules, including programming projects, seminars, and elective courses.
+    *   There are specific forms for the practical phases and Bachelor/Master theses.
+    *   There is also a way to obtain a ""notenbestätigung"" (grade confirmation) instead of a standard transcript.
+
+**Important Note:** There are specific deadlines and procedures. It is best to consult the Hochschulservice Studium website and the applicable examination regulations (Prüfungsordnung) for detailed information.",Die Prüfungsanmeldung erfolgt über das Campusportal innerhalb der vom Hochschulservice Studium veröffentlichten Frist.
+84,Für welche Prüfungen ist keine Anmeldung über das Campusportal notwendig?,"Here's a breakdown of the exceptions to the standard online exam registration process, based on the provided text:
+
+*   **Soft and Professional Skills:** No registration is needed for this module, only a participation confirmation.
+*   **Praxismodul:** This doesn't require registration; a separate application to the examination committee is needed.
+*   **Bachelorarbeit:** A separate application to the examination committee is required.
+*   **Masterarbeit:** A separate application to the examination committee is needed.","Für Soft- und Professional Skills, das Praxismodul, die Projektarbeit, die Bachelor- und Masterarbeit erfolgt die Anmeldung separat, nicht über das Campusportal."
+85,"Was passiert, wenn man die Prüfungsanmeldung verpasst?","Wenn man die Prüfungsanmeldung verpasst, kann man einen Antrag auf nachträgliche Prüfungsanmeldung an den Hochschulservice Studium richten. Dabei muss der Grund für das Versäumnis nachgewiesen werden. Außerdem sollte man vor Beginn der Prüfung anhand der aushängenden Listen überprüfen, ob man angemeldet ist, da sonst die Teilnahme versagt werden kann.", Man kann einen Antrag auf nachträgliche Prüfungsanmeldung beim Hochschulservice Studium stellen und muss den Versäumnisgrund nachweisen.
+86,Wann werden die Prüfungsergebnisse veröffentlicht?,"Die Prüfungsergebnisse werden im Rahmen der Lehrveranstaltungen veröffentlicht. Es gibt keine spezifischen Daten oder Formulierungen, die sich direkt auf einen genauen Zeitpunkt für die Veröffentlichung von Prüfungsergebnissen beziehen.",Die Noten werden im Wintersemester Anfang März und im Sommersemester Ende August über das Campusportal bekannt gegeben.
+87,Wie funktioniert die Prüfungseinsicht und was ist dabei zu beachten?,"Die Anfrage zielt auf Informationen zur **Prüfungseinsicht**. Hier eine Zusammenfassung basierend auf den bereitgestellten Dokumenten und unter Berücksichtigung allgemeiner Hochschulpraktiken:
+
+**Wo finde ich Informationen?**
+
+*   **FAQ des Studenten- und Prüfungsamtes:** Der beste Ausgangspunkt ist das FAQ des Studenten- und Prüfungsamtes. Dies enthält detaillierte Informationen zur Prüfungseinsicht. (Dieser spezifische Dokument ist jedoch nicht im Text verfügbar).
+*   **Studenten- und Prüfungsamt:** Das Studenten- und Prüfungsamt ist die primäre Anlaufstelle für alle Fragen bezüglich der Prüfungseinsicht.
+
+**Was ist typischerweise bei der Prüfungseinsicht zu beachten? (Allgemeine Hinweise, da Details fehlen)**
+
+Obwohl die genauen Prozesse nicht im Text enthalten sind, sind hier die typischen Schritte und Überlegungen bei einer Prüfungseinsicht:
+
+*   **Fristen:** Es gibt in der Regel eine Frist, innerhalb derer eine Prüfungseinsicht beantragt werden muss.
+*   **Antragstellung:** Eine formelle Anfrage (Antrag) an das Studenten- und Prüfungsamt muss gestellt werden.
+*   **Art der Einsicht:** Es kann eine Möglichkeit der Einsicht in das Ergebnis und/oder eine Erläuterung des Ergebnisses durch den Prüfer geben.
+*   **Vorgehensweise:** Die genaue Vorgehensweise (z.B. ob die Arbeit physisch eingesehen werden kann oder ob eine Kopie bereitgestellt wird) wird vom Studenten- und Prüfungsamt festgelegt.
+*   **Grund für Einsicht:** Es kann erforderlich sein, einen Grund für die gewünschte Einsicht anzugeben.
+*   **Beurteilung der Einsicht:** Das Ergebnis der Prüfungseinsicht ist endgültig.
+*   **Notenbestätigung:** Wenn man sich die Noten bestätigen lassen möchte, so ist diese im Notenspiegel aufgelistet.
+
+**Wichtig:** Da die genauen Abläufe und Fristen im bereitgestellten Textmaterial nicht explizit erwähnt werden, ist es unerlässlich, sich direkt an das Studenten- und Prüfungsamt zu wenden, um die spezifischen Schritte und Bedingungen für die Prüfungseinsicht an der entsprechenden Hochschule zu erfahren.",Die Einsicht erfolgt persönlich oder durch schriftlich Bevollmächtigte im angekündigten Zeitraum. Ein Anspruch auf digitale Einsicht besteht nicht. Bei Verhinderung ist keine nachträgliche Einsicht möglich.
+88,Welche Stipendienmöglichkeiten bestehen an der THWS?,"Die THWS bietet verschiedene Stipendien- und Fördermöglichkeiten:
+
+*   **Jedes Jahr schlägt die Fakultät Informatik und Wirtschaftsinformatik Studierende mit besonders guten Leistungen für eine Förderung im Rahmen des Max Weber-Programms des Freistaats Bayern vor.**
+*   **Studierende können sich selbstständig für ein Deutschlandstipendium bewerben.**
+*   **Die Hochschule bietet darüber hinaus eine zentrale Beratungsstelle für Stipendien.**
+*   **Es gibt die Möglichkeit einer Förderung durch Erasmus+ für ein Studium in Partnerländern (Non-EU).**
+*   **Auch die Möglichkeit einer Förderung durch Erasmus+ für ein Studium in Programmländern, wie Mitgliedstaaten der Europäischen Union.**
+*   **Unterstützung durch das I.C.S. Fördermodell, in dem Partnerunternehmen attraktive Förderverträge bereitstellen.**","An der THWS bestehen u. a. folgende Stipendienmöglichkeiten: das Max Weber-Programm, das Deutschlandstipendium sowie das I.C.S. Fördermodell für überdurchschnittliche Studierende. Eine zentrale Stipendienberatung unterstützt bei der Auswahl und Bewerbung."
+89,Wann und wie kann man sich für das I.C.S. Modell bewerben?,Die Bewerbungsfrist für den nächstmöglichen Studienbeginn für den Studiengang Informatik im Wintersemester (Beginn: 1. Oktober) läuft vom 1. Mai bis zum 15. Juli jeden Jahres. Die Anmeldung erfolgt ausschließlich online. Der Onlinebewerbungsantrag steht ab Anfang Mai für das Wintersemester zur Verfügung.,Studierende mit sehr guten Leistungen und Regelstudienzeit werden im vierten Semester von der Fakultät nominiert und bewerben sich anschließend direkt bei einem I.C.S.-Partnerunternehmen.
+90,Wie hoch ist die finanzielle Förderung im I.C.S. Modell?,"The document doesn's provide specific figures for the financial support offered through the I.C.S. Fördermodell. However, it states:
+
+*   In cooperation with the Förderverein I.C.S. and well-known companies, the Faculty of Computer Science and Business Informatics offers a special version of the degree program for above-average students.
+*   It emphasizes it's a ""besondere Variante des Studiums"" (special version of the degree program) and implies it involves cooperation with companies.
+*   You need to contact the International Office for details about the support rates.
+
+Therefore, to know the exact amount, you would need to contact the International Office.","Die monatliche Förderung beträgt 900 Euro, auch während der Theoriesemester."
+91,Was ist das I.C.S. Fördermodell an der THWS?,"Das I.C.S. Fördermodell an der THWS (Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt) ist eine besondere Variante des Studiums für überdurchschnittliche Studierende. Hier sind die wichtigsten Punkte:
+
+*   **Wer kann teilnehmen?** Bewerber müssen überdurchschnittliche Prüfungsergebnisse in den ersten Semestern vorweisen.
+*   **Wie funktioniert es?** Am Ende des vierten Semesters werden Studierende von der Fakultät für Informatik und Wirtschaftsinformatik nominiert. Sie können sich dann bei einem Partnerunternehmen des I.C.S. auf einen Fördervertrag bewerben.
+*   **Was beinhaltet die Förderung?** Es handelt sich um eine finanzielle Unterstützung durch das Partnerunternehmen.",Das I.C.S. Modell ist ein Förderprogramm für überdurchschnittliche Studierende ab dem Praxissemester. Es kombiniert Theorie und Praxis und umfasst die letzten drei Semester mit monatlicher finanzieller Unterstützung.
+92,In welchen Studiengängen ist das Studium mit vertiefter Praxis an der THWS möglich?,"The following degree programs offer a dual study option (studium mit vertiefter Praxis) at the THWS:
+
+*   **Bachelor of Digital Society (BDGD):** This program offers a practical integration phase.
+*   **Bachelor of E-Commerce:** This program offers a dual study option.
+*   **Bachelor of Computer Science (Informatik):** This program also offers a dual study option.","Es ist u. a. in E-Commerce, Wirtschaftsinformatik, Informatik, Maschinenbau, Medienmanagement, Mechatronik und weiteren technischen und wirtschaftlichen Studiengängen möglich."
+93,Wer kann sich für ein Studium mit vertiefter Praxis bewerben?,"Studierende mit überdurchschnittlichen Prüfungsergebnissen in den ersten Semestern können sich für ein Studium mit vertiefter Praxis bewerben. Die Bewerbung erfolgt, nachdem die Fakultät sie zu Beginn des vierten Semesters nominiert hat, und eine Bewerbung bei einem Partnerunternehmen des I.C.S. erfolgt.","Studieninteressierte mit (Fach-)Abitur oder beruflicher Qualifikation wie der Meisterprüfung, die leistungsorientiert und praxisnah studieren möchten."
+94,Wo finde ich weitere Informationen zum Studium mit vertiefter Praxis?,"You can find more information about ""Studium mit vertiefter Praxis"" (Studies with practical experience) in the following places:
+
+*   **Faltblatt:** There's a dedicated flyer (Faltblatt) available on the THWS website detailing the program. You can find it here: [https://fiw.thws.de/fileadmin/user_upload/Vertiefte_Praxis_Faltblatt.pdf](https://fiw.thws.de/fileadmin/user_upload/Vertiefte_Praxis_Faltblatt.pdf)
+*   **Contact:** If you have questions after reviewing the flyer, contact the relevant practical phase supervisors in your degree program.",Informationen findest du unter www.fhws.de/hochschule-dual oder direkt über die Ansprechpartner Prof. Dr. Fiedler (Würzburg) und Prof. Dr. Christel (Schweinfurt).
+95,Wo befindet sich das Dekanat der Fakultät Informatik und Wirtschaftsinformatik?,Das Dekanat der Fakultät Informatik und Wirtschaftsinformatik befindet sich in der Technical Hochschule Würzburg-Schweinfurt. Die E-Mail-Adresse des Dekanats lautet: dekanat.fiw@thws.de.,"Das Dekanat befindet sich im Institutsgebäude am Sanderheinrichsleitenweg 20, 3. Etage, Raum I.3.38."
+96,Wann ist das Dekanat der Fakultät Informatik und Wirtschaftsinformatik geöffnet?,Das Dekanat der Fakultät Informatik und Wirtschaftsinformatik ist per E-Mail unter dekanat.fiw@thws.de erreichbar.,"Montag bis Donnerstag von 08:30 bis 12:00 Uhr, freitags nur nach Vereinbarung."
+97,Wofür kann ich mich an das Dekanat der Fakultät Informatik und Wirtschaftsinformatik wenden?,"Du kannst dich an das Dekanat der Fakultät Informatik und Wirtschaftsinformatik wenden für:
+
+*   **Studiengangberatung Informatik**
+*   **Ansprechpartner Informatik**","Zum Beispiel zur Abgabe von Abschlussarbeiten, HiWi-Dokumenten, für Mini-Kassen-Zahlungen oder zur Abholung von Prüfungsunterlagen und Teilnahmebescheinigungen."
+98,Wie kann ich das Dekanat der Fakultät Informatik und Wirtschaftsinformatik kontaktieren?,Sie können das Dekanat der Fakultät Informatik und Wirtschaftsinformatik per E-Mail unter dekanat.fiw@thws.de kontaktieren.,Per Telefon unter 0931 / 3511 9402 oder per E-Mail an dekanat.fiw[at]thws.de.
+99,Wie lautet die Private Telefonnummer von Michael Rott?,"Ich kann leider keine privaten Telefonnummern von Personen veröffentlichen, einschließlich der von Michael Rott.  Meine Aufgabe ist es, Informationen sicher und verantwortungsvoll bereitzustellen, und das beinhaltet den Schutz der Privatsphäre.  Die von mir bereitgestellten Informationen sind auf die öffentlich zugänglichen Kontaktdaten beschränkt.
+
+Ich kann Ihnen jedoch sagen, dass Michael Rott unter +49 3511 8429 und michael.rott@thws.de erreichbar ist.",Diese Frage kann ich leider nicht beantworten.
+100,Wie hoch ist meine individuelle Zulassungschance für Informatik?,"Die THWS veröffentlicht keine detaillierten, individuellen Zulassungschancen. Die Angabe einer genauen persönlichen Chance ist nicht möglich, da dies von vielen Faktoren abhängt, die nicht bekannt sind.  Allerdings kann ich dir Informationen über die allgemeine Situation und die Faktoren geben, die deine Chancen beeinflussen.
+
+**Allgemeine Informationen & NC:**
+
+* **Beliebtheit des Studiengangs:** Informatik ist ein sehr beliebter Studiengang, was die Konkurrenz erhöht.
+* **NC-Werte (Numerus Clausus):** Die NC-Werte für Informatik an der THWS sind in den letzten Jahren gestiegen und bewegen sich typischerweise im Bereich von **18-22 Punkten**.  Das bedeutet, dass du in diesem Bereich liegen solltest, um eine realistische Chance zu haben.  Beachte aber, dass NC-Werte *Richtwerte* sind und die tatsächliche Zulassung von den Bewerberprofilen abhängt.
+* **Aktuelle Informationen:** Die aktuellen NC-Werte für die vergangenen Semester findest du auf der Seite der THWS (Link weiter unten).
+* **Veränderungen:** Die NC-Werte können sich von Jahr zu Jahr ändern, abhängig von der Anzahl der Bewerber und dem angebotenen Studienplatzangebot.
+
+**Faktoren, die deine individuelle Zulassungschance beeinflussen:**
+
+* **Deine Abiturnote:** Je besser deine Abiturnote ist, desto größer ist deine Chance.
+* **Deine Hochbegabung:** Spezifische Kenntnisse und Interessen im Bereich Informatik (z.B. durch Praktika, Wettbewerbe, Zertifikate) können dir einen Vorteil verschaffen.
+* **Bewerberprofil:** Nicht nur die Noten sind entscheidend. Auch deine Motivation, deine Interessen und deine persönlichen Erfahrungen spielen eine Rolle.
+
+**Wo du weitere Informationen findest:**
+
+* **THWS Studiengang Informatik:** [https://www.thws.de/studienangebot/bachelor-informatik/](https://www.thws.de/studienangebot/bachelor-informatik/)
+* **THWS NC-Werte (vergangene Semester):** [https://www.thws.de/studienangebot/nc-werte/](https://www.thws.de/studienangebot/nc-werte/) (Hier findest du die NC-Werte der vergangenen Semester, um dir ein Bild von der Konkurrenz zu machen)
+* **THWS FAQ:** [https://www.thws.de/studienangebot/faq/](https://www.thws.de/studienangebot/faq/) (hier können häufig gestellte Fragen zu Zulassungsvoraussetzungen und Bewerbungsverfahren geklärt werden)
+
+**Empfehlung:**
+
+* **Bewerbe dich:** Wenn du Interesse an Informatik hast, solltest du dich bewerben.
+* **Verbessere dein Profil:** Versuche, deine Abiturnote zu verbessern und bringe deine Interessen und Erfahrungen im Bereich Informatik hervor.
+* **Kontaktiere die THWS:** Bei spezifischen Fragen zur Zulassung kannst du dich direkt an die THWS-Studienberatung wenden.
+
+Ich hoffe, diese Informationen helfen dir weiter!",Diese Frage kann ich leider nicht beantworten.
