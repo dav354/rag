@@ -2,6 +2,8 @@ from __future__ import annotations
 import asyncio
 import requests
 import torch
+import os
+import json
 from langchain_huggingface import HuggingFaceEmbeddings
 from sentence_transformers import CrossEncoder
 
@@ -15,7 +17,12 @@ from knowledgeMapper.config import (
     OLLAMA_NUM_CTX,
     OLLAMA_NUM_PREDICT,
     RERANKER_MODEL_NAME,
+    GEMINI_API_KEY,
+    GEMINI_API_URL,
+    GEMINI_MODEL_NAME,
+
 )
+
 
 # Semaphore to throttle concurrency of embedding requests (avoids OOM)
 _EMBED_SEMAPHORE = asyncio.Semaphore(EMBEDDING_CONCURRENCY)
@@ -96,9 +103,13 @@ class Reranker:
 
 class OllamaLLM:
     """
-    Async wrapper around Ollama's local LLM endpoint (`/api/generate`).
-    Suitable for fast interaction with locally running models.
+    Refactored to use Google Gemini API (keeps same name for compatibility).
     """
+
+    def __init__(self, api_key: str | None = None):
+        self.api_key = api_key or GEMINI_API_KEY or os.getenv("GEMINI_API_KEY")
+        if not self.api_key:
+            raise ValueError("Gemini API key not found. Set GEMINI_API_KEY in config or environment.")
 
     async def __call__(
             self,
@@ -107,11 +118,7 @@ class OllamaLLM:
             history_messages: list[dict] | None = None,
             **kwargs,
     ) -> str:
-        # Strip unused keys to avoid API incompatibilities
-        for k in ("hashing_kv", "max_tokens", "response_format"):
-            kwargs.pop(k, None)
-
-        # Concatenate prompt components in proper order
+        # Combine prompts into one message
         parts: list[str] = []
         if history_messages:
             parts.append("\n".join(m.get("content", "") for m in history_messages))
@@ -120,23 +127,32 @@ class OllamaLLM:
         parts.append(prompt)
         full_prompt = "\n".join(parts)
 
-        # Actual HTTP call is made in a background thread to avoid blocking
         def _call() -> str:
-            r = requests.post(
-                f"{OLLAMA_HOST}/api/generate",
-                json={
-                    "model": OLLAMA_MODEL_NAME,
-                    "prompt": full_prompt,
-                    "stream": False,
-                    "options": {
-                        "num_ctx": OLLAMA_NUM_CTX,
-                        "num_predict": OLLAMA_NUM_PREDICT,
-                    },
-                },
-                timeout=10_000,
-            )
+            headers = {
+                "Content-Type": "application/json",
+            }
+            params = {
+                "key": self.api_key
+            }
+            body = {
+                "contents": [
+                    {
+                        "parts": [
+                            {"text": full_prompt}
+                        ]
+                    }
+                ]
+            }
+
+            r = requests.post(GEMINI_API_URL, headers=headers, params=params, json=body, timeout=30)
             r.raise_for_status()
-            return r.json()["response"]
+            data = r.json()
+
+            # Try extracting response text
+            try:
+                return data["candidates"][0]["content"]["parts"][0]["text"]
+            except (KeyError, IndexError):
+                return json.dumps(data)  # Fallback to raw JSON if unexpected format
 
         return await asyncio.to_thread(_call)
 
