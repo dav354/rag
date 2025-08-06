@@ -34,6 +34,7 @@ ENTITY_EXTRACT_MAX_GLEANING = 1
 
 RERANKER_MODEL_NAME = "mixedbread-ai/mxbai-rerank-base-v1"
 
-GEMINI_MODEL_NAME = "gemini-pro"
-GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL_NAME}:generateContent"
-GEMINI_API_KEY=""
+GEMINI_API_KEY = ""
+GEMINI_API_URL ="https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
+GEMINI_MODEL_NAME = "gemini-2.0-flash"
+

@@ -17,12 +17,11 @@ from knowledgeMapper.config import (
     OLLAMA_NUM_CTX,
     OLLAMA_NUM_PREDICT,
     RERANKER_MODEL_NAME,
+    # Added for Gemini Integration
     GEMINI_API_KEY,
     GEMINI_API_URL,
     GEMINI_MODEL_NAME,
-
 )
-
 
 # Semaphore to throttle concurrency of embedding requests (avoids OOM)
 _EMBED_SEMAPHORE = asyncio.Semaphore(EMBEDDING_CONCURRENCY)
@@ -105,11 +104,17 @@ class OllamaLLM:
     """
     Refactored to use Google Gemini API (keeps same name for compatibility).
     """
-
     def __init__(self, api_key: str | None = None):
+        """
+        Initializes the client. It secures the Gemini API key from the
+        constructor, your config file, or an environment variable.
+        """
         self.api_key = api_key or GEMINI_API_KEY or os.getenv("GEMINI_API_KEY")
         if not self.api_key:
-            raise ValueError("Gemini API key not found. Set GEMINI_API_KEY in config or environment.")
+            raise ValueError(
+                "Gemini API key not found. Please set it in your config, as an "
+                "environment variable (GEMINI_API_KEY), or pass it to the constructor."
+            )
 
     async def __call__(
             self,
@@ -118,7 +123,10 @@ class OllamaLLM:
             history_messages: list[dict] | None = None,
             **kwargs,
     ) -> str:
-        # Combine prompts into one message
+        """
+        Asynchronously sends a request to the Google Gemini API.
+        """
+        # Concatenate prompt components in proper order
         parts: list[str] = []
         if history_messages:
             parts.append("\n".join(m.get("content", "") for m in history_messages))
@@ -127,32 +135,33 @@ class OllamaLLM:
         parts.append(prompt)
         full_prompt = "\n".join(parts)
 
+        # Actual HTTP call is made in a background thread to avoid blocking
         def _call() -> str:
-            headers = {
-                "Content-Type": "application/json",
-            }
-            params = {
-                "key": self.api_key
-            }
+            # Note: GEMINI_API_URL should be the full endpoint, e.g.,
+            # "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent"
+            api_url_with_key = f"{GEMINI_API_URL}?key={self.api_key}"
+
+            headers = {"Content-Type": "application/json"}
             body = {
-                "contents": [
-                    {
-                        "parts": [
-                            {"text": full_prompt}
-                        ]
-                    }
-                ]
+                "contents": [{"parts": [{"text": full_prompt}]}]
             }
 
-            r = requests.post(GEMINI_API_URL, headers=headers, params=params, json=body, timeout=30)
-            r.raise_for_status()
-            data = r.json()
-
-            # Try extracting response text
             try:
+                r = requests.post(api_url_with_key, headers=headers, json=body, timeout=60)
+                r.raise_for_status()
+                data = r.json()
+
+                # Safely extract the generated text from the response
                 return data["candidates"][0]["content"]["parts"][0]["text"]
-            except (KeyError, IndexError):
-                return json.dumps(data)  # Fallback to raw JSON if unexpected format
+            except (requests.RequestException, KeyError, IndexError) as e:
+                error_message = f"Gemini API Error: {e}"
+                try:
+                    error_details = r.json().get("error", {})
+                    error_message += f" | Details: {error_details.get('message', 'N/A')}"
+                except Exception:
+                    pass
+                print(error_message)
+                return f"An error occurred while communicating with the Gemini API."
 
         return await asyncio.to_thread(_call)
 
