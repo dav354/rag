@@ -23,6 +23,14 @@ from knowledgeMapper.config import (
     GEMINI_MODEL_NAME,
 )
 
+# --- Device selection: prefer CUDA, then Apple MPS, else CPU ---
+if torch.cuda.is_available():
+    _DEVICE = "cuda"
+elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+    _DEVICE = "mps"
+else:
+    _DEVICE = "cpu"
+
 # Semaphore to throttle concurrency of embedding requests (avoids OOM)
 _EMBED_SEMAPHORE = asyncio.Semaphore(EMBEDDING_CONCURRENCY)
 
@@ -30,7 +38,7 @@ _EMBED_SEMAPHORE = asyncio.Semaphore(EMBEDDING_CONCURRENCY)
 _hf = HuggingFaceEmbeddings(
     model_name=EMBEDDING_MODEL_NAME,
     encode_kwargs={"normalize_embeddings": True},  # Ensure unit-length vectors
-    model_kwargs={"device": EMBEDDING_DEVICE},  # e.g., "cuda" or "cpu"
+    model_kwargs={"device": _DEVICE},  # auto: cuda -> mps -> cpu
 )
 
 # Calculate and expose the dimensionality of the embedding space
@@ -59,7 +67,14 @@ class AsyncEmbedder:
             batch = texts[i : i + EMBEDDING_BATCH_SIZE]
             with torch.no_grad():  # No gradients needed for inference
                 vecs.extend(_hf.embed_documents(batch))
-            torch.cuda.empty_cache()  # Free VRAM after each batch (helps with OOM)
+            # Free accelerator memory after each batch (helps with OOM)
+            try:
+                if _DEVICE == "cuda":
+                    torch.cuda.empty_cache()
+                elif _DEVICE == "mps" and hasattr(torch, "mps"):
+                    torch.mps.empty_cache()
+            except Exception:
+                pass
         return vecs
 
 
@@ -81,7 +96,7 @@ class Reranker:
     """
     A wrapper for the mxbai-rerank-xsmall-v1 model using sentence-transformers.
     """
-    def __init__(self, model_name: str = RERANKER_MODEL_NAME, device: str = EMBEDDING_DEVICE):
+    def __init__(self, model_name: str = RERANKER_MODEL_NAME, device: str = _DEVICE):
         self.model = CrossEncoder(model_name, device=device)
 
     def rerank(self, query: str, documents: list[str]) -> list[int]:
@@ -180,4 +195,5 @@ __all__ = [
     "Reranker",
     "EMBEDDING_MODEL_NAME",
     "OLLAMA_MODEL_NAME",
+    "_DEVICE",
 ]
