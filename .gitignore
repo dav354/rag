@@ -14,3 +14,6 @@ cachecluster
 .idea
 **RAG_STORAGE
 **.graphml
+
+# Frontend-Dependencies
+askTHWS/thws-chat/node_modules
