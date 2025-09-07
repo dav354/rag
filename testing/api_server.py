@@ -57,7 +57,7 @@ async def lifespan(app: FastAPI):
     print("🚀 Server starting up...")
     print("🧠 Initializing LightRAG framework...")
     app.state.rag = LightRAG(
-        working_dir= "/Users/lelange/Uni/askTHWS/RAG_STORAGE_v4", # "/Users/lelange/Uni/askTHWS/RAG_STORAGE_v3", #"../RAG_STORAGE",
+        working_dir="../RAG_STORAGE",
         embedding_func=HFEmbedFunc(),
         llm_model_func=OllamaLLM(),
         enable_llm_cache=False,
