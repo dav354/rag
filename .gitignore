@@ -14,3 +14,5 @@ cachecluster
 .idea
 **RAG_STORAGE
 **.graphml
+
+**/node_modules/
