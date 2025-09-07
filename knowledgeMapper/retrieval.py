@@ -29,37 +29,13 @@ from knowledgeMapper.utils.local_models import Reranker
 MODE = "mix"  # LightRAG retrieval mode: "naive" or "mix"
 
 # 1) Raise recall early; trim later via re-ranking + diversity
-INITIAL_TOP_K = 60                # initial LightRAG top_k before re-ranking
-RERANKER_TOP_K = 10               # final number of document chunks
-RERANKER_TOP_K_KG = 12            # final number of KG items (entities + relationships)
+INITIAL_TOP_K = 60  # initial LightRAG top_k before re-ranking
+RERANKER_TOP_K = 10  # final number of document chunks
+RERANKER_TOP_K_KG = 12  # final number of KG items (entities + relationships)
 
 # 2) Lightweight diversity (MMR-like without external libs)
-MMR_LAMBDA = 0.7                  # 1.0=only relevance, 0.0=only diversity
-MMR_MAX_CANDIDATES = 50           # cap number of candidates for MMR diversification
-
-# ==============================================
-#        LLM Query Optimization (unchanged)
-# ==============================================
-QUERY_OPTIMIZER_SYSTEM_PROMPT = """
-# SYSTEMBEFEHL: Hochpräzise Query-Optimierung für Vektorsuche/KG-Retrieval
-
-ZIEL: Formuliere eine **einzelne, kompakte Suchanfrage** für eine RAG‑Datenbank (LightRAG),
-die **maximal relevante Dokument-Chunks und KG-Kanten** zur **ursprünglichen Nutzerfrage**
-zurückliefert.
-
-REGELN:
-- Antworte **AUSSCHLIESSLICH** mit der optimierten Suchanfrage als **eine Zeile Text** ohne Erklärungen.
-- Nutze **präzise Schlüsselbegriffe, Synonyme, deutsch/englisch Varianten**, ggf. **Abkürzungen**.
-- Bevorzuge **eindeutige Entitäten** (Personen, Orte, Organisationen, Module, IDs).
-- Verwende sinnvolle Operatoren wie `AND`, optionale `OR`-Synonyme in Klammern, und Anführungszeichen für Phrasen.
-- Füge bei Bedarf **zeitliche Hinweise** (Jahr, Semester, Version) hinzu, wenn sie in der Nutzerfrage stecken oder
-  für die Präzision offensichtlich sind.
-- Vermeide generische Wörter, Füllwörter, oder Bremsen wie „bitte“, „erkläre“ etc.
-- Beispiel-Form: "„Begriffsphrase“ AND EntitätX AND (Synonym1 OR Synonym2) AND Jahr:2024"
-
-NUTZERFRAGE:
-{user_query}
-"""
+MMR_LAMBDA = 0.7  # 1.0=only relevance, 0.0=only diversity
+MMR_MAX_CANDIDATES = 50  # cap number of candidates for MMR diversification
 
 RELIABLE_SYSTEM_PROMPT_TEMPLATE = """
 **SYSTEMBEFEHL FÜR PRÄZISE WISSENSBASIERTE ANTWORTEN:**
@@ -91,6 +67,7 @@ RELIABLE_SYSTEM_PROMPT_TEMPLATE = """
 {user_query}
 """
 
+
 # ==============================================
 #           Context parsing / rebuilding
 # ==============================================
@@ -116,11 +93,13 @@ def _parse_context_string(context_str: str) -> Optional[Dict[str, List[Dict]]]:
             if entities_match:
                 parsed_data["entities"] = json.loads(entities_match.group(1))
 
-            relationships_match = re.search(r"-----Relationships\(KG\)-----\s*```json\n(.*?)\n```", context_str, re.DOTALL)
+            relationships_match = re.search(r"-----Relationships\(KG\)-----\s*```json\n(.*?)\n```", context_str,
+                                            re.DOTALL)
             if relationships_match:
                 parsed_data["relationships"] = json.loads(relationships_match.group(1))
 
-            doc_chunks_match = re.search(r"-----Document Chunks\(DC\)-----\s*```json\n(.*?)\n```", context_str, re.DOTALL)
+            doc_chunks_match = re.search(r"-----Document Chunks\(DC\)-----\s*```json\n(.*?)\n```", context_str,
+                                         re.DOTALL)
             if doc_chunks_match:
                 parsed_data["doc_chunks"] = json.loads(doc_chunks_match.group(1))
 
@@ -184,7 +163,8 @@ def _overlap_score(a: List[str], b: List[str]) -> float:
     return inter / union
 
 
-def _mmr_select(candidate_indices: List[int], texts: List[str], base_order: List[int], top_k: int, lambda_mult: float) -> List[int]:
+def _mmr_select(candidate_indices: List[int], texts: List[str], base_order: List[int], top_k: int,
+                lambda_mult: float) -> List[int]:
     """
     Very simple MMR variant:
     - 'base_order' approximates relevance (earlier = more relevant)
@@ -216,54 +196,8 @@ def _mmr_select(candidate_indices: List[int], texts: List[str], base_order: List
 
 
 # ==============================================
-#         One-line cleaning for LLM outputs
-# ==============================================
-
-def _extract_single_line(text: str) -> str:
-    """
-    Returns a single-line string without code fences or surrounding quotes.
-    Falls back safely to the original string if nothing to clean.
-    """
-    if not text:
-        return text
-
-    fence_match = re.search(r"```(?:\w+)?\s*(.*?)```", text, re.DOTALL)
-    if fence_match:
-        text = fence_match.group(1)
-
-    lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
-    if not lines:
-        return ""
-
-    first = lines[0]
-    first = first.strip().strip('`').strip('"').strip("'")
-    return first
-
-
-# ==============================================
 #        Query optimization and main pipeline
 # ==============================================
-
-async def _optimize_retrieval_query(user_query: str, rag_instance: LightRAG) -> Optional[str]:
-    """
-    Uses an LLM (bypass mode) to produce a compact, high-precision retrieval query string.
-    Returns None if optimization fails, so the caller can fall back to user_query.
-    """
-    try:
-        prompt = QUERY_OPTIMIZER_SYSTEM_PROMPT.format(user_query=user_query)
-        optimized = await rag_instance.aquery(
-            user_query,  # keep same input; optimization is driven by system prompt
-            param=QueryParam(mode="bypass", top_k=0),
-            system_prompt=prompt
-        )
-        cleaned = _extract_single_line(optimized)
-        if cleaned:
-            print(f"0. Optimized retrieval query: {cleaned}")
-            return cleaned
-    except Exception as e:
-        print(f"Query optimization failed, falling back to original query. Error: {e}")
-
-    return None
 
 
 async def prepare_and_execute_retrieval(
@@ -277,24 +211,25 @@ async def prepare_and_execute_retrieval(
     """
     params_bypass = QueryParam(mode="bypass", top_k=0)
     # Higher recall; we trim later via re-ranking + MMR diversification
-    params_context = QueryParam(mode=MODE, top_k=INITIAL_TOP_K, only_need_context_only=True) if hasattr(QueryParam, "only_need_context_only") else QueryParam(mode=MODE, top_k=INITIAL_TOP_K, only_need_context=True)
-
-    # --- Step 0: optimize the retrieval query ---
-    print("0. Optimizing the query for LightRAG retrieval...")
-    optimized_query = await _optimize_retrieval_query(user_query, rag_instance)
-    retrieval_query = optimized_query or user_query
+    params_context = QueryParam(mode=MODE, top_k=INITIAL_TOP_K, only_need_context_only=True) if hasattr(QueryParam,
+                                                                                                        "only_need_context_only") else QueryParam(
+        mode=MODE, top_k=INITIAL_TOP_K, only_need_context=True)
 
     # --- Step 1: retrieve combined context string ---
     print(f"1. Retrieving initial combined context string in '{MODE}' mode (top_k={INITIAL_TOP_K})...")
-    initial_context_str = await rag_instance.aquery(retrieval_query, param=params_context)
+    initial_context_str = await rag_instance.aquery(user_query, param=params_context)
     if not initial_context_str:
-        return {"answer": "Ich konnte keine passenden Informationen zu Ihrer Anfrage in meiner Wissensdatenbank finden.", "sources": []}
+        return {
+            "answer": "Ich konnte keine passenden Informationen zu Ihrer Anfrage in meiner Wissensdatenbank finden.",
+            "sources": []}
 
     # --- Step 2: parse context ---
     print("2. Parsing the context string...")
     parsed_context = _parse_context_string(initial_context_str)
     if not parsed_context:
-        return {"answer": "Ich konnte keine passenden Informationen zu Ihrer Anfrage in meiner Wissensdatenbank finden.", "sources": []}
+        return {
+            "answer": "Ich konnte keine passenden Informationen zu Ihrer Anfrage in meiner Wissensdatenbank finden.",
+            "sources": []}
 
     reranker = Reranker()
 
@@ -302,7 +237,8 @@ async def prepare_and_execute_retrieval(
     doc_chunks = parsed_context.get("doc_chunks", [])
     reranked_chunks: List[Dict[str, Any]] = []
     if doc_chunks:
-        print(f"3a. Reranking {len(doc_chunks)} document chunks (MMR candidates={min(MMR_MAX_CANDIDATES, len(doc_chunks))}, final_k={RERANKER_TOP_K})...")
+        print(
+            f"3a. Reranking {len(doc_chunks)} document chunks (MMR candidates={min(MMR_MAX_CANDIDATES, len(doc_chunks))}, final_k={RERANKER_TOP_K})...")
         doc_texts = [chunk.get("content", "") for chunk in doc_chunks]
         base_order = reranker.rerank(user_query, doc_texts)
         candidates = base_order[:min(MMR_MAX_CANDIDATES, len(base_order))]
@@ -348,7 +284,8 @@ async def prepare_and_execute_retrieval(
     reranked_relationships: List[Dict[str, Any]] = []
 
     if kg_items:
-        print(f"3b. Reranking {len(kg_items)} KG items (MMR candidates={min(MMR_MAX_CANDIDATES, len(kg_items))}, final_k={RERANKER_TOP_K_KG})...")
+        print(
+            f"3b. Reranking {len(kg_items)} KG items (MMR candidates={min(MMR_MAX_CANDIDATES, len(kg_items))}, final_k={RERANKER_TOP_K_KG})...")
         kg_base_order = reranker.rerank(user_query, kg_texts)
         kg_candidates = kg_base_order[:min(MMR_MAX_CANDIDATES, len(kg_base_order))]
         kg_mmr_selected = _mmr_select(kg_candidates, kg_texts, kg_base_order, RERANKER_TOP_K_KG, MMR_LAMBDA)
@@ -362,7 +299,9 @@ async def prepare_and_execute_retrieval(
 
     # --- STAGE 3: Combine & rebuild context ---
     if not reranked_chunks and not reranked_entities and not reranked_relationships:
-        return {"answer": 'Ich konnte keine passenden Informationen zu Ihrer Anfrage in meiner Wissensdatenbank finden.', "sources": []}
+        return {
+            "answer": 'Ich konnte keine passenden Informationen zu Ihrer Anfrage in meiner Wissensdatenbank finden.',
+            "sources": []}
 
     print("4. Rebuilding context with the best documents and KG items...")
     reranked_context_str = _rebuild_context_string(
