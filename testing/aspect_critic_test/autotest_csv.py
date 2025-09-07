@@ -8,16 +8,48 @@ import asyncio
 from ragas.dataset_schema import SingleTurnSample
 from ragas.metrics import BleuScore, RougeScore
 from ragas.metrics import AspectCritic
-from langchain.llms import Ollama
+from ragas.metrics import FactualCorrectness, SemanticSimilarity
+from langchain_google_genai import ChatGoogleGenerativeAI
 from ragas.llms import LangchainLLMWrapper
 from ragas.exceptions import RagasOutputParserException
+
+# Try to import Ragas HF embeddings; fall back to a local adapter using sentence-transformers
+try:
+    from ragas.embeddings import HuggingFaceEmbeddings as RagasHFEmb
+except ImportError:
+    RagasHFEmb = None
+    from typing import List
+    try:
+        from sentence_transformers import SentenceTransformer
+    except ImportError as _e:
+        raise ImportError("sentence-transformers is required for SemanticSimilarity when ragas.embeddings.HuggingFaceEmbeddings is unavailable. Install via `pip install sentence-transformers`.") from _e
+
+    class SBERTEmbeddings:
+        def __init__(self, model: str = "sentence-transformers/all-MiniLM-L6-v2", device: str | None = None):
+            self._model = SentenceTransformer(model, device=device)
+        def embed_documents(self, texts: List[str]) -> List[List[float]]:
+            return self._model.encode(texts, normalize_embeddings=True).tolist()
+        def embed_query(self, text: str) -> List[float]:
+            return self._model.encode([text], normalize_embeddings=True)[0].tolist()
+        async def aembed_documents(self, texts: List[str]) -> List[List[float]]:
+            return self.embed_documents(texts)
+        async def aembed_query(self, text: str) -> List[float]:
+            return self.embed_query(text)
+
+        async def embed_text(self, text: str) -> list[float]:
+            # some ragas versions `await` embed_text directly
+            return self.embed_query(text)
+
+        async def aembed_text(self, text: str) -> list[float]:
+            # async counterpart (kept for compatibility)
+            return self.embed_query(text)
 
 from datetime import datetime
 
 
 API_URL = "http://localhost:8000/ask"
 METADATA_URL = "http://localhost:8000/metadata"
-CSV_FILE = "/Users/lelange/Uni/askTHWS/testing/aspect_critic_test/fragenkatalog_askTHWS.csv"
+CSV_FILE = "/Users/lelange/Uni/askTHWS/testing/aspect_critic_test/fragenkatalog_askTHWS_fiw_neu.csv"
 
 
 def query_api(question):
@@ -49,7 +81,6 @@ def get_metadata():
         print(f"Could not fetch metadata: {e}")
         return {}
 
-
 def load_test_cases(csv_path: str):
     """Loads question/gold-answer pairs from a CSV file."""
     cases = []
@@ -70,21 +101,30 @@ def run_tests():
         return
 
     all_cases = load_test_cases(CSV_FILE)
-    cases = all_cases[6:16]
+    cases = all_cases[:100]
     if not cases:
         print("No test cases found.")
         return
 
     os.makedirs("test_results", exist_ok=True)
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    output_csv = os.path.join("test_results", f"results_{timestamp}.csv")
+    output_csv = os.path.join("test_results", f"results_fiw_v4_gemini_mix_DC7_KG4.csv")
 
-    # Initialize local Ollama LLM client
-    ollama_client = Ollama(
-        base_url="http://127.0.0.1:11434",
-        model="gemma3:4b"
+    # Initialize Gemini LLM client (requires: pip install langchain-google-genai; env var GOOGLE_API_KEY)
+    google_api_key = os.getenv("GOOGLE_API_KEY")
+    if not google_api_key:
+        raise EnvironmentError("GOOGLE_API_KEY is not set. Please export your Google API key to use the Gemini models.")
+    gemini_client = ChatGoogleGenerativeAI(
+        model="gemini-2.0-flash",
+        temperature=0.0,
+        google_api_key=google_api_key,  # pass API key explicitly to avoid ADC
     )
-    wrapped_llm = LangchainLLMWrapper(ollama_client)
+    wrapped_llm = LangchainLLMWrapper(gemini_client)
+    # Initialize embeddings for similarity metrics (robust against ragas version differences)
+    if RagasHFEmb is not None:
+        hf_embeddings = RagasHFEmb(model="sentence-transformers/all-MiniLM-L6-v2")
+    else:
+        hf_embeddings = SBERTEmbeddings(model="sentence-transformers/all-MiniLM-L6-v2")
 
     correctness_evaluator = AspectCritic(
         name="correctness",
@@ -93,10 +133,16 @@ def run_tests():
     )
     bleu_evaluator = BleuScore()
     f1_evaluator = RougeScore(rouge_type="rougeL", mode="fmeasure")
+    factual_correctness_evaluator = FactualCorrectness(llm=wrapped_llm)
+    try:
+        semantic_similarity_evaluator = SemanticSimilarity(embeddings=hf_embeddings)
+    except TypeError:
+        # fallback for older ragas versions that expect `embedding` (singular)
+        semantic_similarity_evaluator = SemanticSimilarity(embedding=hf_embeddings)
 
     with open(output_csv, 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(['question', 'bot_answer', 'gold_answer', 'genauigkeit', 'F1', 'BLEU'])
+        writer.writerow(['question', 'bot_answer', 'gold_answer', 'genauigkeit', 'F1', 'BLEU', 'factual_correctness', 'semantic_similarity', 'duration_seconds'])
         for i, (question, gold_answer) in enumerate(cases):
             print(f"Testing {i+1}/{len(cases)}: {question}")
             start_time = time.time()
@@ -137,8 +183,28 @@ def run_tests():
                     answer = raw
 
                 answer = answer.strip()
+                duration_seconds = res.get("duration_seconds", None)
+
+                # Extract retrieved contexts from API response for Faithfulness
+                retrieved_contexts = None
+                try:
+                    ans_obj = res.get("answer", {})
+                    srcs = ans_obj.get("sources", [])
+                    if isinstance(srcs, list) and srcs:
+                        tmp = []
+                        for s in srcs:
+                            # Prefer 'content', fallback to 'description'
+                            txt = (s.get("content") or s.get("description") or "").strip()
+                            if txt:
+                                tmp.append(txt)
+                        if tmp:
+                            retrieved_contexts = tmp
+                except Exception:
+                    retrieved_contexts = None
             else:
                 answer = ''
+                duration_seconds = None
+                retrieved_contexts = None
 
             # Build a sample for evaluation
             sample = SingleTurnSample(
@@ -146,6 +212,18 @@ def run_tests():
                 response=answer,
                 reference=gold_answer
             )
+            # Attach contexts for Faithfulness: prefer retrieved contexts from API, otherwise use gold answer as fallback
+            _contexts = retrieved_contexts if retrieved_contexts else [gold_answer]
+            try:
+                # Newer ragas versions
+                sample.retrieved_contexts = _contexts
+            except Exception:
+                try:
+                    # Older ragas versions
+                    sample.contexts = _contexts
+                except Exception:
+                    pass
+
             # Correctness (binary)
             try:
                 correctness_score = asyncio.run(correctness_evaluator.single_turn_ascore(sample))
@@ -167,13 +245,30 @@ def run_tests():
                 print(f"⚠️ Warning: F1 evaluation failed for question {i+1}: {e}")
                 f1_score = None
 
+            # Factual Correctness
+            try:
+                factual_correctness_score = asyncio.run(factual_correctness_evaluator.single_turn_ascore(sample))
+            except Exception as e:
+                print(f"⚠️ Warning: Factual Correctness evaluation failed for question {i+1}: {e}")
+                factual_correctness_score = None
+
+            # Semantic Similarity
+            try:
+                semantic_similarity_score = asyncio.run(semantic_similarity_evaluator.single_turn_ascore(sample))
+            except Exception as e:
+                print(f"⚠️ Warning: Semantic Similarity evaluation failed for question {i+1}: {e}")
+                semantic_similarity_score = None
+
             writer.writerow([
                 question,
                 answer,
                 gold_answer,
                 correctness_score,
                 f1_score,
-                bleu_score
+                bleu_score,
+                factual_correctness_score,
+                semantic_similarity_score,
+                duration_seconds
             ])
 
     print(f"Results saved to {output_csv}")
