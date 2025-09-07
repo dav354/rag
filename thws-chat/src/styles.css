@@ -1,0 +1,80 @@
+/* src/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fokus-Stile */
+:focus-visible {
+  outline: 2px solid theme('colors.thws-primary');
+  outline-offset: 2px;
+}
+
+/* Scrollbar dezent */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cfcfcf transparent;
+}
+
+/* Markdown-Stile in Bubbles */
+.prose-chat :where(h1, h2, h3) {
+  @apply font-semibold text-neutral-900;
+}
+.prose-chat :where(code) {
+  @apply rounded bg-neutral-100 px-1 py-0.5 text-sm;
+}
+.prose-chat pre code {
+  @apply bg-transparent p-0;
+}
+.prose-chat pre {
+  @apply my-3 overflow-auto rounded-md bg-neutral-100 p-3;
+}
+
+/* 4-Zeilen Clamp ohne Plugin */
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Button & Spinner */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-3 py-2 font-medium shadow-subtle transition disabled:opacity-60 disabled:cursor-not-allowed;
+}
+.btn-primary {
+  @apply bg-thws-primary text-white hover:brightness-95 active:brightness-90;
+}
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-top-color: white;
+  animation: spin .8s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Eingabe */
+textarea.chat-input {
+  @apply w-full resize-none rounded-xl border border-neutral-300 bg-white p-3 shadow-subtle focus:border-thws-primary;
+}
+
+/* Bubbles */
+.bubble {
+  @apply max-w-[90%] rounded-bubble p-3 shadow-subtle;
+}
+.bubble-user {
+  @apply ml-auto border border-thws-primary bg-white;
+}
+.bubble-bot {
+  @apply mr-auto bg-neutral-100 border border-transparent;
+}
+
+/* Fehlerleiste */
+.inline-error {
+  @apply my-2 rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700;
+}
