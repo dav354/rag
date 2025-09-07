@@ -10,6 +10,7 @@ import signal
 import uvicorn
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException, Request
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Dict, Any
 
@@ -29,8 +30,8 @@ from knowledgeMapper.utils.local_models import (
     OllamaLLM,
     EMBEDDING_MODEL_NAME,
     OLLAMA_MODEL_NAME,
-
 )
+
 # Import the updated retrieval logic
 from knowledgeMapper.retrieval import (prepare_and_execute_retrieval, MODE)
 
@@ -56,7 +57,7 @@ async def lifespan(app: FastAPI):
     print("🚀 Server starting up...")
     print("🧠 Initializing LightRAG framework...")
     app.state.rag = LightRAG(
-        working_dir="../RAG_STORAGE",
+        working_dir= "/Users/lelange/Uni/askTHWS/RAG_STORAGE_v4", # "/Users/lelange/Uni/askTHWS/RAG_STORAGE_v3", #"../RAG_STORAGE",
         embedding_func=HFEmbedFunc(),
         llm_model_func=OllamaLLM(),
         enable_llm_cache=False,
@@ -79,6 +80,14 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+# ⬇️ NEU: CORS Middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],  # oder ["*"] zum Testen
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class Question(BaseModel):
     query: str
