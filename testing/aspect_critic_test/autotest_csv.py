@@ -108,9 +108,9 @@ def run_tests():
 
     os.makedirs("test_results", exist_ok=True)
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    output_csv = os.path.join("test_results", f"results_fiw_v4_gemini_mix_DC7_KG4.csv")
+    output_csv = os.path.join("test_results", f"results_fiw_v4_gemini_mix_KG12.csv")
 
-    # Initialize Gemini LLM client (requires: pip install langchain-google-genai; env var GOOGLE_API_KEY)
+    # Initialize Gemini LLM client
     google_api_key = os.getenv("GOOGLE_API_KEY")
     if not google_api_key:
         raise EnvironmentError("GOOGLE_API_KEY is not set. Please export your Google API key to use the Gemini models.")
