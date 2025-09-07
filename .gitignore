@@ -16,4 +16,4 @@ cachecluster
 **.graphml
 
 # Frontend-Dependencies
-askTHWS/thws-chat/node_modules
+**/node_modules/
