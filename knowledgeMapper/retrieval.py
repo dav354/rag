@@ -43,13 +43,13 @@ FTS_DB_FILENAME = "keyword_fts.sqlite"
 MODE = "mix"  # LightRAG retrieval mode: "naive" oder "mix"
 
 # 1) Erst-Recall via LightRAG; später trimmen
-INITIAL_TOP_K = 15       # initial LightRAG top_k vor Reranking
-RERANKER_TOP_K = 10      # finale Anzahl Dokument-Chunks
-RERANKER_TOP_K_KG = 10   # finale Anzahl KG-Items
+INITIAL_TOP_K =7       # initial LightRAG top_k vor Reranking
+RERANKER_TOP_K = 6      # finale Anzahl Dokument-Chunks
+RERANKER_TOP_K_KG = 6   # finale Anzahl KG-Items
 
 # 2) MMR-ähnliche Diversifikation
 MMR_LAMBDA = 0.7
-MMR_MAX_CANDIDATES = 12
+MMR_MAX_CANDIDATES = 5
 
 # 3) Lexikalische Pre-Suche (neu)
 LEXICAL_PRESEARCH_ENABLED = True
